@@ -26,7 +26,7 @@ get_header();
 </section>
 
 <!-- SECTION KONTEN & FORMULIR DENGAN LUCIDE ICONS & MARKETPLACE CHANNELS -->
-<section class="cq-section" style="background-color: #ffffff;">
+<section class="cq-section" style="background-color: #ffffff; padding-bottom: 40px;">
     <div class="cq-container">
         <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 50px; align-items: flex-start;">
             <!-- Kolom Kiri: Info Kontak & Marketplace -->
@@ -135,6 +135,97 @@ get_header();
                         Kirim Pesan ke WhatsApp &rarr;
                     </button>
                 </form>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- SECTION PETA & ALAMAT WORKSHOP (INTERACTIVE GOOGLE MAPS) -->
+<section class="cq-section" style="background-color: var(--cq-bg-soft); padding-top: 40px; padding-bottom: 80px;">
+    <div class="cq-container">
+        <div style="text-align: center; max-width: 760px; margin: 0 auto 36px auto;">
+            <span class="cq-spotlight-badge">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+                Peta & Titik Lokasi
+            </span>
+            <h2 style="font-size: clamp(24px, 3.5vw, 36px); font-weight: 900; color: var(--cq-text-dark); margin-bottom: 12px;">
+                Lokasi Pabrik & Workshop Cleanique Lab
+            </h2>
+            <p style="font-size: 15px; color: var(--cq-text-muted); line-height: 1.6;">
+                Kunjungi workshop produksi kami untuk konsultasi sampel produk, uji coba formula, atau pengambilan pesanan langsung (self-pickup) dengan konfirmasi sebelumnya.
+            </p>
+        </div>
+
+        <div style="display: grid; grid-template-columns: 1.3fr 0.9fr; gap: 30px; align-items: stretch;">
+            <!-- Embedded Interactive Map Card -->
+            <div style="background: #ffffff; border-radius: 20px; overflow: hidden; border: 1px solid var(--cq-border-light); box-shadow: 0 10px 30px rgba(0,0,0,0.06); display: flex; flex-direction: column; min-height: 420px;">
+                <div style="padding: 16px 20px; background: #ffffff; border-bottom: 1px solid var(--cq-border-light); display: flex; align-items: center; justify-content: space-between;">
+                    <div style="display: flex; align-items: center; gap: 8px;">
+                        <span style="display: inline-block; width: 10px; height: 10px; background: #25d366; border-radius: 50%;"></span>
+                        <strong style="font-size: 14px; color: var(--cq-text-dark);">Google Maps &bull; Cleanique Lab Sabun</strong>
+                    </div>
+                    <a href="https://maps.google.com/?q=Cleanique+Lab+Sabun+Indonesia" target="_blank" rel="noopener" style="font-size: 13px; font-weight: 700; color: var(--cq-royal-blue); text-decoration: underline;">
+                        Buka di Aplikasi Maps &rarr;
+                    </a>
+                </div>
+                <div style="flex-grow: 1; position: relative; width: 100%; height: 100%; min-height: 380px;">
+                    <iframe 
+                        title="Peta Lokasi Pabrik Cleanique Lab"
+                        src="https://maps.google.com/maps?q=Jakarta%20Indonesia&t=&z=12&ie=UTF8&iwloc=&output=embed" 
+                        width="100%" 
+                        height="100%" 
+                        style="border:0; position: absolute; top: 0; left: 0; width: 100%; height: 100%;" 
+                        allowfullscreen="" 
+                        loading="lazy" 
+                        referrerpolicy="no-referrer-when-downgrade">
+                    </iframe>
+                </div>
+            </div>
+
+            <!-- Detail Alamat & Akses Kargo Card -->
+            <div style="background: #ffffff; border-radius: 20px; padding: 32px; border: 1px solid var(--cq-border-light); box-shadow: 0 10px 30px rgba(0,0,0,0.06); display: flex; flex-direction: column; justify-content: space-between;">
+                <div>
+                    <h3 style="font-size: 20px; font-weight: 800; color: var(--cq-text-dark); margin-bottom: 18px; display: flex; align-items: center; gap: 10px;">
+                        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="var(--cq-royal-blue)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+                        Alamat Pabrik & Gudang
+                    </h3>
+
+                    <div style="display: flex; flex-direction: column; gap: 16px; margin-bottom: 24px;">
+                        <div>
+                            <span style="display: block; font-size: 12px; font-weight: 800; text-transform: uppercase; color: var(--cq-text-muted); margin-bottom: 4px;">Alamat Operasional:</span>
+                            <p style="font-size: 15px; color: var(--cq-text-dark); line-height: 1.5; font-weight: 600;">
+                                Workshop & Pabrik Kimia Cleanique Lab<br>
+                                Kawasan Industri & Pergudangan Terpadu, Indonesia
+                            </p>
+                        </div>
+
+                        <div>
+                            <span style="display: block; font-size: 12px; font-weight: 800; text-transform: uppercase; color: var(--cq-text-muted); margin-bottom: 4px;">Jam Operasional Workshop:</span>
+                            <p style="font-size: 14px; color: var(--cq-text-dark); line-height: 1.5;">
+                                <strong>Senin – Jumat:</strong> 08.00 – 17.00 WIB<br>
+                                <strong>Sabtu:</strong> 08.00 – 15.00 WIB<br>
+                                <span style="color: #c61111; font-size: 13px;">Minggu & Tanggal Merah: Libur (Pemesanan WA tetap dilayani)</span>
+                            </p>
+                        </div>
+
+                        <div>
+                            <span style="display: block; font-size: 12px; font-weight: 800; text-transform: uppercase; color: var(--cq-text-muted); margin-bottom: 4px;">Akses Kendaraan & Muatan:</span>
+                            <p style="font-size: 13px; color: var(--cq-text-muted); line-height: 1.5;">
+                                Akses jalan muatan truk CDD, Fuso, dan kontainer 20ft/40ft untuk loading sabun curah jerigen dan drum.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div style="display: flex; flex-direction: column; gap: 10px; padding-top: 20px; border-top: 1px solid var(--cq-border-light);">
+                    <a href="https://maps.google.com/?q=Cleanique+Lab+Sabun+Indonesia" target="_blank" rel="noopener" class="cq-btn-primary" style="width: 100%; text-align: center;">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="3 11 22 2 13 21 11 13 3 11"/></svg>
+                        Petunjuk Arah (Google Maps)
+                    </a>
+                    <a href="<?php echo esc_url(cleaniquelab_get_whatsapp_url('Halo Cleanique Lab, saya ingin buat janji temu / kunjungan ke workshop.')); ?>" target="_blank" rel="noopener" class="cq-btn-outline cq-btn-outline-dark" style="width: 100%; text-align: center;">
+                        Konfirmasi Janji Kunjungan WA
+                    </a>
+                </div>
             </div>
         </div>
     </div>
