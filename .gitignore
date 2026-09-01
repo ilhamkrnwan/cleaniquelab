@@ -1,0 +1,25 @@
+# System & OS Files
+.DS_Store
+Thumbs.db
+ehthumbs.db
+desktop.ini
+*.log
+
+# Editor & IDE Directories
+.idea/
+.vscode/
+*.sublime-project
+*.sublime-workspace
+
+# Node & Build artifacts
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# WordPress cache & temporary files
+wp-content/cache/
+wp-content/upgrade/
+wp-content/backup-db/
+*.sql
+*.sql.gz
