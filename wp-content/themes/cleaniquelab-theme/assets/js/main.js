@@ -221,3 +221,46 @@ window.cleaniqueSendContactWA = function () {
     const waUrl = `https://wa.me/${phone}?text=${encodeURIComponent(text)}`;
     window.open(waUrl, '_blank');
 };
+
+// =============================================================================
+// 7. Copy Article Link Helper Function
+// =============================================================================
+window.cleaniqueCopyArticleLink = function (btn, url) {
+    if (!url) url = window.location.href;
+
+    function showFeedback() {
+        if (!btn) return;
+        const span = btn.querySelector('span');
+        const originalText = span ? span.innerText : 'Salin Link';
+        if (span) span.innerText = 'Tersalin! ✓';
+        btn.classList.add('cq-copied');
+        setTimeout(function () {
+            if (span) span.innerText = originalText;
+            btn.classList.remove('cq-copied');
+        }, 2200);
+    }
+
+    if (navigator.clipboard && window.isSecureContext) {
+        navigator.clipboard.writeText(url).then(function () {
+            showFeedback();
+        }).catch(function () {
+            fallbackCopy();
+        });
+    } else {
+        fallbackCopy();
+    }
+
+    function fallbackCopy() {
+        const input = document.createElement('input');
+        input.value = url;
+        document.body.appendChild(input);
+        input.select();
+        try {
+            document.execCommand('copy');
+            showFeedback();
+        } catch (err) {
+            prompt('Salin tautan artikel ini:', url);
+        }
+        document.body.removeChild(input);
+    }
+};

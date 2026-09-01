@@ -9,7 +9,7 @@ if (!defined('ABSPATH')) {
     exit; // Exit if accessed directly.
 }
 
-define('CLEANIQUELAB_VERSION', '1.3.0');
+define('CLEANIQUELAB_VERSION', '1.3.6');
 
 /**
  * Sets up theme defaults and registers support for various WordPress features.
@@ -97,6 +97,20 @@ function cleaniquelab_get_whatsapp_url($message = '') {
         $message = "Halo Cleanique Lab, saya tertarik untuk konsultasi dan order produk kebersihan / paket sabun.";
     }
     return 'https://wa.me/' . $phone . '?text=' . urlencode($message);
+}
+
+/**
+ * Helper: Calculate estimated reading time in minutes
+ *
+ * @param int|null $post_id
+ * @return int
+ */
+function cleaniquelab_get_reading_time($post_id = null) {
+    $post = get_post($post_id);
+    if (!$post) return 3;
+    $words = str_word_count(strip_tags($post->post_content));
+    $minutes = ceil($words / 200);
+    return max(1, $minutes);
 }
 
 /**
@@ -240,6 +254,40 @@ function cleaniquelab_seo_schema_markup() {
             ]
         ];
         echo '<script type="application/ld+json">' . json_encode($faq_schema, JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE) . '</script>' . "\n";
+    }
+
+    // 3. BlogPosting Schema for Single Post
+    if (is_singular('post')) {
+        global $post;
+        $author_name = get_the_author_meta('display_name', $post->post_author) ?: 'Tim Formulator Cleanique Lab';
+        $thumb_url = has_post_thumbnail($post->ID) ? get_the_post_thumbnail_url($post->ID, 'full') : $logo_url;
+
+        $article_schema = [
+            '@context'         => 'https://schema.org',
+            '@type'            => 'BlogPosting',
+            'headline'         => get_the_title($post->ID),
+            'description'      => wp_strip_all_tags(get_the_excerpt($post->ID)),
+            'image'            => $thumb_url,
+            'datePublished'    => get_the_date('c', $post->ID),
+            'dateModified'     => get_the_modified_date('c', $post->ID),
+            'author'           => [
+                '@type' => 'Person',
+                'name'  => $author_name,
+            ],
+            'publisher'        => [
+                '@type' => 'Organization',
+                'name'  => 'Cleanique Lab',
+                'logo'  => [
+                    '@type' => 'ImageObject',
+                    'url'   => $logo_url
+                ]
+            ],
+            'mainEntityOfPage' => [
+                '@type' => 'WebPage',
+                '@id'   => get_permalink($post->ID)
+            ]
+        ];
+        echo '<script type="application/ld+json">' . json_encode($article_schema, JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE) . '</script>' . "\n";
     }
 }
 add_action('wp_head', 'cleaniquelab_seo_schema_markup');
