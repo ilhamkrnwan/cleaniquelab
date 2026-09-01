@@ -239,41 +239,109 @@ get_header();
             </p>
         </div>
 
-        <div class="cq-spec-grid">
-            <div class="cq-spec-card">
-                <div class="cq-spec-header">
-                    <svg class="cq-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--cq-royal-blue)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 2v7.31M14 9.3V1.99M8.5 2h7M14 9.3a6.5 6.5 0 1 1-4 0"/></svg>
-                    <h4>Bahan Aktif (Surfactant)</h4>
+        <div class="cq-spec-grid-2x2">
+            <!-- Card 1: Surfaktan & Bahan Aktif -->
+            <div class="cq-spec-card-rich">
+                <div class="cq-spec-top">
+                    <div class="cq-spec-icon-box" style="background: #eff6ff; color: var(--cq-royal-blue);">
+                        <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 2v7.31M14 9.3V1.99M8.5 2h7M14 9.3a6.5 6.5 0 1 1-4 0"/></svg>
+                    </div>
+                    <div class="cq-spec-title-wrap">
+                        <h3>Konsentrasi Surfaktan & Bahan Aktif</h3>
+                        <span class="cq-spec-subtag" style="background: #eff6ff; color: var(--cq-royal-blue);">Formula Efektif</span>
+                    </div>
                 </div>
-                <div class="cq-spec-val">16% - 22% Active</div>
-                <p>Konsentrasi optimal surfaktan biodegradable yang efektif mengangkat molekul kotoran membandel tanpa merusak permukaan material.</p>
+                <p class="cq-spec-desc">
+                    Diformulasikan dengan konsentrasi surfaktan aktif berdaya larut tinggi yang mampu memecah rantai molekul minyak pekat, lemak industri, dan noda membandel secara cepat tanpa mengikis permukaan peralatan masak maupun merusak serat pakaian.
+                </p>
+                <ul class="cq-spec-points">
+                    <li>
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--cq-green-deep)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                        <span>Daya bersih maksimal melarutkan lemak dan kotoran membandel</span>
+                    </li>
+                    <li>
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--cq-green-deep)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                        <span>Busa stabil serta mudah dibilas tanpa meninggalkan residu</span>
+                    </li>
+                </ul>
             </div>
 
-            <div class="cq-spec-card">
-                <div class="cq-spec-header">
-                    <svg class="cq-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--cq-green-deep)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
-                    <h4>Keseimbangan pH (Kulit)</h4>
+            <!-- Card 2: Keseimbangan pH & Perlindungan Kulit -->
+            <div class="cq-spec-card-rich">
+                <div class="cq-spec-top">
+                    <div class="cq-spec-icon-box" style="background: #eafaf1; color: var(--cq-green-deep);">
+                        <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                    </div>
+                    <div class="cq-spec-title-wrap">
+                        <h3>Keseimbangan Derajat Keasaman (pH)</h3>
+                        <span class="cq-spec-subtag" style="background: #eafaf1; color: var(--cq-green-deep);">Perlindungan Kulit</span>
+                    </div>
                 </div>
-                <div class="cq-spec-val">pH 6.5 - 7.5 (Netral)</div>
-                <p>Tingkat keasaman yang aman dan seimbang, tidak menimbulkan sensasi panas atau iritasi kering pada kulit saat pemakaian harian.</p>
+                <p class="cq-spec-desc">
+                    Tingkat keasaman terjaga seimbang pada ambang netral yang selaras dengan lapisan pelindung alami kulit. Dilengkapi bahan pelembap untuk mencegah efek kulit kering, panas, atau iritasi meski digunakan berulang kali dalam aktivitas harian.
+                </p>
+                <ul class="cq-spec-points">
+                    <li>
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--cq-green-deep)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                        <span>Lembut di tangan dan aman bagi pengguna berkulit sensitif</span>
+                    </li>
+                    <li>
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--cq-green-deep)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                        <span>Bebas senyawa kaustik keras yang merusak kelembapan kulit</span>
+                    </li>
+                </ul>
             </div>
 
-            <div class="cq-spec-card">
-                <div class="cq-spec-header">
-                    <svg class="cq-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--cq-purple-bright)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10Z"/><path d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12"/></svg>
-                    <h4>Biodegradabilitas</h4>
+            <!-- Card 3: Biodegradabilitas & Ramah Lingkungan -->
+            <div class="cq-spec-card-rich">
+                <div class="cq-spec-top">
+                    <div class="cq-spec-icon-box" style="background: #fbf0fc; color: var(--cq-purple-bright);">
+                        <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10Z"/><path d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12"/></svg>
+                    </div>
+                    <div class="cq-spec-title-wrap">
+                        <h3>Formula Biodegradable & Ekologis</h3>
+                        <span class="cq-spec-subtag" style="background: #fbf0fc; color: var(--cq-purple-bright);">Ramah Lingkungan</span>
+                    </div>
                 </div>
-                <div class="cq-spec-val">> 90% Terurai Alami</div>
-                <p>Bahan baku ramah lingkungan yang mudah terurai oleh mikroorganisme tanah dan saluran air limbah tanpa merusak ekosistem.</p>
+                <p class="cq-spec-desc">
+                    Menggunakan bahan baku ramah lingkungan yang mudah terurai oleh mikroorganisme tanah dan saluran air limbah. Tidak mengandung senyawa berbahaya berlebih sehingga aman untuk saluran perpipaan, septic tank, dan kelestarian ekosistem perairan.
+                </p>
+                <ul class="cq-spec-points">
+                    <li>
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--cq-green-deep)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                        <span>Aman untuk instalasi pengolahan air limbah (IPAL) dan drainase</span>
+                    </li>
+                    <li>
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--cq-green-deep)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                        <span>Mendukung operasional usaha yang berwawasan kelestarian alam</span>
+                    </li>
+                </ul>
             </div>
 
-            <div class="cq-spec-card">
-                <div class="cq-spec-header">
-                    <svg class="cq-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--cq-orange-cta)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
-                    <h4>Masa Simpan (Shelf Life)</h4>
+            <!-- Card 4: Stabilitas Formula & Masa Simpan -->
+            <div class="cq-spec-card-rich">
+                <div class="cq-spec-top">
+                    <div class="cq-spec-icon-box" style="background: #fef4ee; color: var(--cq-orange-cta);">
+                        <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                    </div>
+                    <div class="cq-spec-title-wrap">
+                        <h3>Stabilitas Formula & Masa Simpan</h3>
+                        <span class="cq-spec-subtag" style="background: #fef4ee; color: var(--cq-orange-cta);">Kualitas Konsisten</span>
+                    </div>
                 </div>
-                <div class="cq-spec-val">24 Bulan Stabil</div>
-                <p>Stabil terhadap perubahan suhu ruang. Warna, aroma segar, dan kekentalan tidak berubah atau mengendap dalam penyimpanan jangka panjang.</p>
+                <p class="cq-spec-desc">
+                    Formulasi distabilkan dengan chelating agent khusus untuk menjaga kekentalan, kejernihan warna, dan kesegaran aroma wangi tetap prima dalam jangka panjang. Tahan terhadap fluktuasi suhu ruang penyimpanan gudang tanpa mengalami pemisahan lapisan atau endapan.
+                </p>
+                <ul class="cq-spec-points">
+                    <li>
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--cq-green-deep)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                        <span>Tidak memisah, mengendap, atau menggumpal saat disimpan</span>
+                    </li>
+                    <li>
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--cq-green-deep)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                        <span>Aroma segar tahan lama dan viskositas terjaga hingga tetes akhir</span>
+                    </li>
+                </ul>
             </div>
         </div>
     </div>
