@@ -46,7 +46,7 @@ get_header();
                         </div>
                         <div>
                             <strong style="font-size: 16px; color: var(--cq-text-dark); display: block;">WhatsApp Hotline & Konsultasi</strong>
-                            <span style="font-size: 14px; color: #2e7d32;">0812-3456-7890 (Respon Cepat)</span>
+                            <span style="font-size: 14px; color: #2e7d32;">0878-4812-0088 (Respon Cepat)</span>
                             <div style="margin-top: 4px;">
                                 <a href="<?php echo esc_url(cleaniquelab_get_whatsapp_url('Halo Cleanique Lab, saya ingin chat dengan customer care.')); ?>" target="_blank" rel="noopener" style="font-weight: 700; color: #1b5e20; text-decoration: underline; font-size: 13px;">
                                     Klik Chat WhatsApp Langsung &rarr;
@@ -67,7 +67,7 @@ get_header();
                         </a>
 
                         <!-- Shopee Card (Crisp Official Shopee Vector) -->
-                        <a href="https://shopee.co.id/cleaniquelab" target="_blank" rel="noopener" class="cq-channel-card cq-channel-shopee" title="Shopee Official Cleanique Lab">
+                        <a href="https://id.shp.ee/6dkm3Liy" target="_blank" rel="noopener" class="cq-channel-card cq-channel-shopee" title="Shopee Official Cleanique Lab">
                             <div class="cq-channel-icon" style="background: #ee4d2d;">
                                 <svg width="20" height="20" viewBox="0 0 24 24" fill="#ffffff"><path d="M19.5 7.5h-2.25V6.25a5.25 5.25 0 0 0-10.5 0V7.5H4.5A1.5 1.5 0 0 0 3 9l1.4 11.2a2.5 2.5 0 0 0 2.48 2.3h10.24a2.5 2.5 0 0 0 2.48-2.3L21 9a1.5 1.5 0 0 0-1.5-1.5zm-10.75-1.25a3.25 3.25 0 0 1 6.5 0V7.5h-6.5V6.25zm2.33 11.45c-1.3-.23-1.84-.8-1.84-1.72 0-1.1.95-1.76 2.32-1.9l1.34-.14c.64-.07.96-.28.96-.66 0-.47-.46-.76-1.2-.76-.8 0-1.37.31-1.55.83l-1.33-.39c.34-.94 1.37-1.58 2.83-1.58 1.63 0 2.63.74 2.63 1.85 0 1.04-.77 1.63-2.15 1.78l-1.4.15c-.72.08-1.08.31-1.08.72 0 .51.52.83 1.34.83.89 0 1.58-.38 1.77-.92l1.3.43c-.39 1.08-1.53 1.7-3.08 1.58z"/></svg>
                             </div>
@@ -76,7 +76,7 @@ get_header();
                         </a>
 
                         <!-- TikTok Shop Card -->
-                        <a href="https://tiktok.com/@cleaniquelab" target="_blank" rel="noopener" class="cq-channel-card cq-channel-tiktok" title="TikTok Shop @cleaniquelab">
+                        <a href="https://www.tiktok.com/@orchidcareofficial?_r=1" target="_blank" rel="noopener" class="cq-channel-card cq-channel-tiktok" title="TikTok Shop @orchidcareofficial">
                             <div class="cq-channel-icon" style="background: #010101;">
                                 <svg width="20" height="20" fill="#fff" viewBox="0 0 24 24"><path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64c.298-.002.595.042.88.13V9.4a6.33 6.33 0 0 0-1-.08A6.34 6.34 0 0 0 3 15.66a6.34 6.34 0 0 0 10.81 4.48 6.26 6.26 0 0 0 1.87-4.47V8.71a8.18 8.18 0 0 0 4.91 1.65V6.91a4.86 4.86 0 0 1-1-.22z"/></svg>
                             </div>
@@ -132,7 +132,7 @@ get_header();
                     </div>
 
                     <button type="submit" class="cq-btn-primary" style="width: 100%;">
-                        Kirim Pesan ke WhatsApp &rarr;
+                        Kirim WA &rarr;
                     </button>
                 </form>
             </div>
@@ -162,16 +162,16 @@ get_header();
                 <div style="padding: 16px 20px; background: #ffffff; border-bottom: 1px solid var(--cq-border-light); display: flex; align-items: center; justify-content: space-between;">
                     <div style="display: flex; align-items: center; gap: 8px;">
                         <span style="display: inline-block; width: 10px; height: 10px; background: #25d366; border-radius: 50%;"></span>
-                        <strong style="font-size: 14px; color: var(--cq-text-dark);">Google Maps &bull; Cleanique Lab Sabun</strong>
+                        <strong style="font-size: 14px; color: var(--cq-text-dark);">Google Maps &bull; PT Indotech Berkah Abadi</strong>
                     </div>
-                    <a href="https://maps.google.com/?q=Cleanique+Lab+Sabun+Indonesia" target="_blank" rel="noopener" style="font-size: 13px; font-weight: 700; color: var(--cq-royal-blue); text-decoration: underline;">
-                        Buka di Aplikasi Maps &rarr;
+                    <a href="https://maps.app.goo.gl/cNvQcYrS57BvLqrc6" target="_blank" rel="noopener" style="font-size: 13px; font-weight: 700; color: var(--cq-royal-blue); text-decoration: underline;">
+                        Buka Maps &rarr;
                     </a>
                 </div>
                 <div style="flex-grow: 1; position: relative; width: 100%; height: 100%; min-height: 380px;">
                     <iframe 
-                        title="Peta Lokasi Pabrik Cleanique Lab"
-                        src="https://maps.google.com/maps?q=Jakarta%20Indonesia&t=&z=12&ie=UTF8&iwloc=&output=embed" 
+                        title="Peta Lokasi Pabrik PT Indotech Berkah Abadi - Cleanique Lab"
+                        src="https://maps.google.com/maps?q=-7.7320403,110.3679988&t=&z=16&ie=UTF8&iwloc=&output=embed" 
                         width="100%" 
                         height="100%" 
                         style="border:0; position: absolute; top: 0; left: 0; width: 100%; height: 100%;" 
@@ -194,8 +194,8 @@ get_header();
                         <div>
                             <span style="display: block; font-size: 12px; font-weight: 800; text-transform: uppercase; color: var(--cq-text-muted); margin-bottom: 4px;">Alamat Operasional:</span>
                             <p style="font-size: 15px; color: var(--cq-text-dark); line-height: 1.5; font-weight: 600;">
-                                Workshop & Pabrik Kimia Cleanique Lab<br>
-                                Kawasan Industri & Pergudangan Terpadu, Indonesia
+                                PT Indotech Berkah Abadi (Cleanique Lab)<br>
+                                Jongke Tengah No. 30, RT.01/RW.23, Sendangadi, Kec. Mlati, Kabupaten Sleman, D.I. Yogyakarta 55285
                             </p>
                         </div>
 
@@ -218,12 +218,12 @@ get_header();
                 </div>
 
                 <div style="display: flex; flex-direction: column; gap: 10px; padding-top: 20px; border-top: 1px solid var(--cq-border-light);">
-                    <a href="https://maps.google.com/?q=Cleanique+Lab+Sabun+Indonesia" target="_blank" rel="noopener" class="cq-btn-primary" style="width: 100%; text-align: center;">
+                    <a href="https://maps.app.goo.gl/cNvQcYrS57BvLqrc6" target="_blank" rel="noopener" class="cq-btn-primary" style="width: 100%; text-align: center;">
                         <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="3 11 22 2 13 21 11 13 3 11"/></svg>
-                        Petunjuk Arah (Google Maps)
+                        Petunjuk Arah
                     </a>
-                    <a href="<?php echo esc_url(cleaniquelab_get_whatsapp_url('Halo Cleanique Lab, saya ingin buat janji temu / kunjungan ke workshop.')); ?>" target="_blank" rel="noopener" class="cq-btn-outline cq-btn-outline-dark" style="width: 100%; text-align: center;">
-                        Konfirmasi Janji Kunjungan WA
+                    <a href="<?php echo esc_url(cleaniquelab_get_whatsapp_url('Halo Cleanique Lab, saya ingin buat janji temu / kunjungan ke workshop PT Indotech Berkah Abadi.')); ?>" target="_blank" rel="noopener" class="cq-btn-outline cq-btn-outline-dark" style="width: 100%; text-align: center;">
+                        Janji Kunjungan
                     </a>
                 </div>
             </div>

@@ -25,35 +25,43 @@ get_header();
                rel="noopener" 
                class="cq-btn-primary">
                 <svg class="cq-icon" width="20" height="20" fill="currentColor" viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
-                Konsultasi & Penawaran Pabrik
+                Konsultasi Pabrik
             </a>
             <a href="<?php echo esc_url(home_url('/pricelist/')); ?>" class="cq-btn-outline">
-                Katalog & Daftar Harga
+                Daftar Harga
             </a>
         </div>
 
-        <div class="cq-hero-visual" style="margin-top: 40px;">
-            <div class="cq-badge-float left" style="padding: 10px 16px;">
-                <img src="<?php echo esc_url(get_template_directory_uri() . '/assets/images/promo-kemitraan.jpg'); ?>" alt="Promo Kemitraan Cleanique Lab" style="width: 48px; height: 48px; border-radius: 50%; object-fit: cover;">
-                <div>
-                    <strong style="display: block; font-size: 14px;">Peluang Agen & Maklon</strong>
-                    <span style="font-size: 12px; color: var(--cq-text-muted);">Suplai Jerigen & Drum Curah</span>
+        <div class="cq-hero-visual" style="margin-top: 40px; position: relative; max-width: 900px; margin-left: auto; margin-right: auto; text-align: center;">
+            <!-- Floating Badge Left: Langsung Dari Pabrik -->
+            <div class="cq-badge-float left" style="padding: 14px 22px; background: linear-gradient(135deg, #00d2ff 0%, #3a7bd5 100%); color: #ffffff; border-radius: 50px; box-shadow: 0 12px 30px rgba(0, 210, 255, 0.4); transform: rotate(-3deg); border: 3px solid #ffffff; z-index: 5;">
+                <div style="display: flex; align-items: center; gap: 10px;">
+                    <div style="width: 38px; height: 38px; border-radius: 50%; background: #ffffff; color: var(--cq-royal-blue); display: flex; align-items: center; justify-content: center; flex-shrink: 0; box-shadow: 0 4px 10px rgba(0,0,0,0.1);">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M2 20a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V8l-7 5V8l-7 5V4a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2Z"/><path d="M18 16h2"/><path d="M18 12h2"/><path d="M14 16h2"/><path d="M14 12h2"/></svg>
+                    </div>
+                    <div style="text-align: left;">
+                        <strong style="display: block; font-size: 14px; font-weight: 900; letter-spacing: 0.5px; text-transform: uppercase; line-height: 1.2;">LANGSUNG</strong>
+                        <span style="font-size: 13px; font-weight: 800; opacity: 0.95; letter-spacing: 0.3px;">DARI PABRIK</span>
+                    </div>
                 </div>
             </div>
 
-            <img src="<?php echo esc_url(get_template_directory_uri() . '/assets/images/hero-products.jpg'); ?>" 
-                 alt="Katalog Produk Sabun Jerigen 5L Cleanique Lab" 
+            <!-- Image Showcase: allinone.png -->
+            <img src="<?php echo esc_url(get_template_directory_uri() . '/assets/images/allinone.png'); ?>" 
+                 alt="Katalog Lengkap Sabun & Deterjen Cleanique Lab All In One" 
                  class="cq-hero-product-img"
-                 style="border-radius: 20px;"
-                 onerror="this.src='https://cdn.cleaniquelab.com/wp-content/uploads/2025/02/Aneka-Sabun-Cleanique-Lab.webp';">
+                 style="border-radius: 24px; filter: drop-shadow(0 20px 40px rgba(0,0,0,0.18)); max-width: 100%; height: auto; display: inline-block; margin: 0 auto;">
 
-            <div class="cq-badge-float right">
-                <div style="width: 40px; height: 40px; border-radius: 50%; background: #e8f3ff; display: flex; align-items: center; justify-content: center; color: var(--cq-royal-blue);">
-                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 12 2 2 4-4"/></svg>
-                </div>
-                <div>
-                    <strong style="display: block; font-size: 14px;">Segel Kargo Anti-Bocor</strong>
-                    <span style="font-size: 12px; color: var(--cq-text-muted);">Garansi Pengiriman Aman</span>
+            <!-- Floating Badge Right: Bebas Pilih Produk -->
+            <div class="cq-badge-float right" style="padding: 14px 22px; background: linear-gradient(135deg, #109733 0%, #7edb0d 100%); color: #ffffff; border-radius: 50px; box-shadow: 0 12px 30px rgba(16, 151, 51, 0.4); transform: rotate(3deg); border: 3px solid #ffffff; z-index: 5;">
+                <div style="display: flex; align-items: center; gap: 10px;">
+                    <div style="width: 38px; height: 38px; border-radius: 50%; background: #ffffff; color: #109733; display: flex; align-items: center; justify-content: center; flex-shrink: 0; box-shadow: 0 4px 10px rgba(0,0,0,0.1);">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 12 2 2 4-4"/></svg>
+                    </div>
+                    <div style="text-align: left;">
+                        <strong style="display: block; font-size: 14px; font-weight: 900; letter-spacing: 0.5px; text-transform: uppercase; line-height: 1.2;">BEBAS</strong>
+                        <span style="font-size: 13px; font-weight: 800; opacity: 0.95; letter-spacing: 0.3px;">PILIH PRODUK</span>
+                    </div>
                 </div>
             </div>
         </div>
@@ -136,6 +144,242 @@ get_header();
     </div>
 </section>
 
+<!-- 2.5. VIDEO PROFIL & PROSES PRODUKSI CLEANIQUE LAB -->
+<section id="video-profil" class="cq-section" style="background: linear-gradient(135deg, #2b2b33 0%, #1a1a22 100%); color: #ffffff; padding: 90px 0; position: relative;">
+    <div class="cq-container">
+        <div style="text-align: center; max-width: 800px; margin: 0 auto 50px auto;">
+            <span style="font-family: var(--cq-font-body); font-size: 15px; font-weight: 800; color: #b4fc6c; text-transform: uppercase; letter-spacing: 2px; display: inline-block; margin-bottom: 8px;">
+                Profil Pabrik & Pameran Produk
+            </span>
+            <h2 style="font-size: clamp(28px, 4vw, 44px); margin-top: 6px; color: #ffffff; font-weight: 900;">
+                Lihat Kualitas & Proses Produksi Kami
+            </h2>
+            <p style="font-size: 17px; color: #cbd5e1; margin-top: 12px; line-height: 1.6;">
+                Saksikan secara langsung bagaimana Cleanique Lab meracik bahan pembersih berkualitas tinggi, pengemasan jerigen anti-bocor, serta kemudahan penggunaan produk kami.
+            </p>
+        </div>
+
+        <!-- Responsive YouTube Video Container -->
+        <div class="cq-video-wrapper" style="max-width: 900px; margin: 0 auto; position: relative; border-radius: 24px; overflow: hidden; border: 1px solid rgba(255, 255, 255, 0.15); background: #000;">
+            <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+                <iframe 
+                    src="https://www.youtube.com/embed/3DUbI-5kWkw?rel=0&modestbranding=1" 
+                    title="Cleanique Lab - Profil Pabrik & Produk Sabun Kebersihan" 
+                    style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0;" 
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                    allowfullscreen>
+                </iframe>
+            </div>
+        </div>
+
+        <!-- Video Highlights Bar -->
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 20px; max-width: 900px; margin: 40px auto 0 auto;">
+            <div style="background: rgba(255,255,255,0.06); padding: 18px 24px; border-radius: 16px; border: 1px solid rgba(255,255,255,0.1); text-align: center;">
+                <strong style="display: block; color: #00d2ff; font-size: 16px; font-weight: 800;">Formulasi Kimia Presisi</strong>
+                <span style="font-size: 13px; color: #94a3b8;">Bahan aktif surfaktan konsentrasi tinggi</span>
+            </div>
+            <div style="background: rgba(255,255,255,0.06); padding: 18px 24px; border-radius: 16px; border: 1px solid rgba(255,255,255,0.1); text-align: center;">
+                <strong style="display: block; color: #b4fc6c; font-size: 16px; font-weight: 800;">Segel Kargo Berlapis</strong>
+                <span style="font-size: 13px; color: #94a3b8;">Jaminan anti-bocor pengiriman pulau</span>
+            </div>
+            <div style="background: rgba(255,255,255,0.06); padding: 18px 24px; border-radius: 16px; border: 1px solid rgba(255,255,255,0.1); text-align: center;">
+                <strong style="display: block; color: #ff6900; font-size: 16px; font-weight: 800;">Hemat Ongkir Biang 80%</strong>
+                <span style="font-size: 13px; color: #94a3b8;">Konsentrat murni siap seduh air</span>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- 2.6. KATALOG & DAFTAR HARGA DOWNLOAD SECTION -->
+<section id="download-katalog" class="cq-section" style="background: linear-gradient(135deg, #3a7bd5 0%, #2563eb 100%); color: #ffffff; padding: 100px 0 100px 0; position: relative; overflow: hidden;">
+    <!-- Top Wave Divider (Transition from #1a1a22 Video Section) -->
+    <div style="position: absolute; top: 0; left: 0; right: 0; width: 100%; overflow: hidden; line-height: 0; z-index: 1; pointer-events: none;">
+        <svg viewBox="0 0 1440 120" preserveAspectRatio="none" style="display: block; width: 100%; height: 50px;">
+            <path fill="#1a1a22" d="M0,0 L1440,0 L1440,30 Q1080,90 720,30 Q360,90 0,30 Z"></path>
+        </svg>
+    </div>
+
+    <div class="cq-container" style="position: relative; z-index: 5;">
+        <div style="text-align: center; max-width: 800px; margin: 20px auto 45px auto;">
+            <span style="font-family: var(--cq-font-body); font-size: 16px; font-weight: 900; color: #b4fc6c; text-transform: uppercase; letter-spacing: 3px; display: inline-block; margin-bottom: 8px; text-shadow: 0 2px 10px rgba(0,0,0,0.2);">
+                DOWNLOAD
+            </span>
+            <h2 style="font-size: clamp(32px, 5vw, 50px); margin-top: 4px; color: #ffffff; font-weight: 900; font-family: var(--cq-font-heading); text-shadow: 0 2px 12px rgba(0,0,0,0.15);">
+                Katalog & Daftar Harga
+            </h2>
+            <p style="font-size: 17px; color: rgba(255, 255, 255, 0.95); margin-top: 10px; line-height: 1.6; font-weight: 500;">
+                Di bawah ini adalah katalog produk cleaniquelab dan harga produk cleaniquelab
+            </p>
+        </div>
+
+        <div class="cq-download-grid">
+            <!-- Column 1: Katalog Produk -->
+            <div class="cq-download-col">
+                <div class="cq-download-icon-wrap" style="background: rgba(255, 255, 255, 0.18); border: 2px solid rgba(255, 255, 255, 0.4);">
+                    <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="#fbbf24" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H20v20H6.5a2.5 2.5 0 0 1-0.5-5"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/><path d="M8 7h8"/><path d="M8 11h8"/></svg>
+                </div>
+                <h3 style="font-size: 20px; font-weight: 900; color: #ffffff; text-transform: uppercase; margin-bottom: 12px; letter-spacing: 1px;">
+                    KATALOG PRODUK
+                </h3>
+                <p style="font-size: 15px; color: rgba(255, 255, 255, 0.9); line-height: 1.6; margin-bottom: 24px; max-width: 340px; margin-left: auto; margin-right: auto;">
+                    Untuk mendownload katalog produk dari cleaniquelab bisa di download di di bawah ini
+                </p>
+                <a href="https://drive.google.com/file/d/1xGN9GSBciiZuJVpPvewvsZZBstjVtQNE/view?usp=sharing" 
+                   target="_blank" 
+                   rel="noopener" 
+                   class="cq-btn-outline-white">
+                    DOWNLOAD
+                </a>
+            </div>
+
+            <!-- Column 2: Harga Produk -->
+            <div class="cq-download-col">
+                <div class="cq-download-icon-wrap" style="background: rgba(255, 255, 255, 0.18); border: 2px solid rgba(255, 255, 255, 0.4);">
+                    <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="#4ade80" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="12" x="2" y="6" rx="2"/><circle cx="12" cy="12" r="2"/><path d="M6 12h.01M18 12h.01"/></svg>
+                </div>
+                <h3 style="font-size: 20px; font-weight: 900; color: #ffffff; text-transform: uppercase; margin-bottom: 12px; letter-spacing: 1px;">
+                    HARGA PRODUK
+                </h3>
+                <p style="font-size: 15px; color: rgba(255, 255, 255, 0.9); line-height: 1.6; margin-bottom: 24px; max-width: 340px; margin-left: auto; margin-right: auto;">
+                    Untuk mendownload harga produk terupdate dari cleaniquelab bisa di download di di bawah ini
+                </p>
+                <a href="<?php echo esc_url(home_url('/pricelist/')); ?>" 
+                   class="cq-btn-outline-white">
+                    DOWNLOAD
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bottom Wave Divider (Transition to var(--cq-bg-soft)) -->
+    <div style="position: absolute; bottom: 0; left: 0; right: 0; width: 100%; overflow: hidden; line-height: 0; z-index: 1; pointer-events: none;">
+        <svg viewBox="0 0 1440 120" preserveAspectRatio="none" style="display: block; width: 100%; height: 50px;">
+            <path fill="#ffffff" d="M0,120 L1440,120 L1440,90 Q1080,30 720,90 Q360,30 0,90 Z"></path>
+        </svg>
+    </div>
+</section>
+
+<!-- 2.7. PAKET KEAGENAN PRICING SECTION -->
+<section id="paket-keagenan" class="cq-section" style="background-color: #ffffff; padding: 90px 0;">
+    <div class="cq-container">
+        <div style="text-align: center; max-width: 820px; margin: 0 auto 50px auto;">
+            <span style="font-family: var(--cq-font-body); font-size: 16px; font-weight: 900; color: #7edb0d; text-transform: uppercase; letter-spacing: 3px; display: inline-block; margin-bottom: 8px;">
+                DAFTAR HARGA
+            </span>
+            <h2 style="font-size: clamp(32px, 5vw, 52px); margin-top: 4px; color: var(--cq-royal-blue); font-weight: 900; font-family: var(--cq-font-heading);">
+                Paket Keagenan
+            </h2>
+            <p style="font-size: 16px; color: var(--cq-text-muted); margin-top: 10px; line-height: 1.6; font-weight: 500;">
+                Anda akan mendapatkan produk senilai uang yang anda investasikan dan juga diskon dengan besaran sesuai paket keagenan yang anda pilih
+            </p>
+        </div>
+
+        <div class="cq-keagenan-grid">
+            <!-- 1. STARTER (Green) -->
+            <div class="cq-keagenan-card starter">
+                <div>
+                    <div style="text-align: center;">
+                        <span class="cq-keagenan-badge">STARTER</span>
+                        <div class="cq-keagenan-price">1,8 JUTA</div>
+                        <div class="cq-keagenan-subdisc">Diskon 5-10%</div>
+                    </div>
+                    <ul class="cq-keagenan-list">
+                        <li>Bebas Pilih Produk Senilai 1.8 Juta Rupiah</li>
+                        <li>Dapat Diskon Pembelian sebesar 5-10% per transaksi</li>
+                        <li>Limited hanya berlaku hingga akhir bulan ini</li>
+                        <li>Bonus Gambar Media Promosi Produk</li>
+                    </ul>
+                </div>
+                <div>
+                    <a href="<?php echo esc_url(cleaniquelab_get_whatsapp_url('Halo Cleanique Lab, saya ingin daftar Paket Keagenan STARTER 1.8 Juta.')); ?>" 
+                       target="_blank" 
+                       rel="noopener" 
+                       class="cq-keagenan-btn">
+                        DAFTAR
+                    </a>
+                </div>
+            </div>
+
+            <!-- 2. RESELLER (Purple) -->
+            <div class="cq-keagenan-card reseller">
+                <div>
+                    <div style="text-align: center;">
+                        <span class="cq-keagenan-badge">RESELLER</span>
+                        <div class="cq-keagenan-price">7,5 JUTA</div>
+                        <div class="cq-keagenan-subdisc">Diskon 10-15%</div>
+                    </div>
+                    <ul class="cq-keagenan-list">
+                        <li>Bebas Pilih Produk Senilai 7.5 Juta Rupiah</li>
+                        <li>Dapat Diskon Pembelian sebesar 10-15% per transaksi</li>
+                        <li>Order berikutnya tetap dapat diskon tanpa min. order</li>
+                        <li>Bonus Gambar Media Promosi Produk</li>
+                    </ul>
+                </div>
+                <div>
+                    <a href="<?php echo esc_url(cleaniquelab_get_whatsapp_url('Halo Cleanique Lab, saya ingin daftar Paket Keagenan RESELLER 7.5 Juta.')); ?>" 
+                       target="_blank" 
+                       rel="noopener" 
+                       class="cq-keagenan-btn">
+                        DAFTAR
+                    </a>
+                </div>
+            </div>
+
+            <!-- 3. AGEN (Blue) -->
+            <div class="cq-keagenan-card agen">
+                <div>
+                    <div style="text-align: center;">
+                        <span class="cq-keagenan-badge">AGEN</span>
+                        <div class="cq-keagenan-price">15 JUTA</div>
+                        <div class="cq-keagenan-subdisc">Diskon 15-20%</div>
+                    </div>
+                    <ul class="cq-keagenan-list">
+                        <li>Bebas Pilih Produk Senilai 15 Juta Rupiah</li>
+                        <li>Dapat Diskon Pembelian sebesar 15-20% per transaksi</li>
+                        <li>Order berikutnya tetap dapat diskon tanpa min. order</li>
+                        <li>Bonus Gambar Media Promosi Produk</li>
+                    </ul>
+                </div>
+                <div>
+                    <a href="<?php echo esc_url(cleaniquelab_get_whatsapp_url('Halo Cleanique Lab, saya ingin daftar Paket Keagenan AGEN 15 Juta.')); ?>" 
+                       target="_blank" 
+                       rel="noopener" 
+                       class="cq-keagenan-btn">
+                        DAFTAR
+                    </a>
+                </div>
+            </div>
+
+            <!-- 4. SUPER AGEN (Red) -->
+            <div class="cq-keagenan-card super-agen">
+                <div>
+                    <div style="text-align: center;">
+                        <span class="cq-keagenan-badge">SUPER AGEN</span>
+                        <div class="cq-keagenan-price">50 JUTA</div>
+                        <div class="cq-keagenan-subdisc">Diskon 16-23%</div>
+                    </div>
+                    <ul class="cq-keagenan-list">
+                        <li>Bebas Pilih Produk Senilai 50 Juta Rupiah</li>
+                        <li>Dapat Diskon Pembelian sebesar 16-23% per transaksi</li>
+                        <li>Limited hanya berlaku hingga akhir bulan ini</li>
+                        <li>Bonus Gambar Media Promosi Produk</li>
+                        <li>Hak Eksklusifitas wilayah</li>
+                        <li>Voucher Belanja</li>
+                    </ul>
+                </div>
+                <div>
+                    <a href="<?php echo esc_url(cleaniquelab_get_whatsapp_url('Halo Cleanique Lab, saya ingin daftar Paket Keagenan SUPER AGEN 50 Juta.')); ?>" 
+                       target="_blank" 
+                       rel="noopener" 
+                       class="cq-keagenan-btn">
+                        DAFTAR
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
 <!-- 3. PENGGALAN & SHOWCASE KATALOG PRODUK UNGGULAN -->
 <section class="cq-section cq-section-with-wave" style="background-color: var(--cq-bg-soft);">
     <div class="cq-container">
@@ -205,13 +449,13 @@ get_header();
                     <li><svg class="cq-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--cq-gold)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg> Desinfektan Lantai & Toilet</li>
                     <li><svg class="cq-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--cq-gold)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg> Menghilangkan Bau Amis & Apek</li>
                 </ul>
-                <a href="<?php echo esc_url(cleaniquelab_get_whatsapp_url('Halo Cleanique Lab, saya ingin order Karbol Wangi 5L')); ?>" target="_blank" rel="noopener" class="cq-card-btn">Pesan via WA</a>
+                <a href="<?php echo esc_url(cleaniquelab_get_whatsapp_url('Halo Cleanique Lab, saya ingin order Karbol Wangi 5L')); ?>" target="_blank" rel="noopener" class="cq-card-btn">Pesan Produk</a>
             </div>
         </div>
 
         <div style="text-align: center; margin-top: 40px;">
             <a href="<?php echo esc_url(home_url('/pricelist/')); ?>" class="cq-btn-primary" style="background: var(--cq-royal-blue); box-shadow: 0 10px 22px rgba(58, 123, 213, 0.35);">
-                Lihat Seluruh Daftar Harga & Katalog Lengkap &rarr;
+                Daftar Harga &rarr;
             </a>
         </div>
     </div>
@@ -380,32 +624,29 @@ get_header();
 
         if ($homepage_posts->have_posts()) :
         ?>
-            <div class="cq-blog-grid">
+            <div class="cq-flat-blog-grid">
                 <?php while ($homepage_posts->have_posts()) : $homepage_posts->the_post(); ?>
-                    <article class="cq-article-card">
-                        <div class="cq-article-thumb">
-                            <?php if (has_post_thumbnail()) : ?>
-                                <?php the_post_thumbnail('cleaniquelab-card'); ?>
-                            <?php else : ?>
-                                <div style="width: 100%; height: 100%; display: flex; align-items: center; justify-content: center; background: linear-gradient(135deg, #00d2ff, #3a7bd5); color: #fff;">
-                                    <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" x2="8" y1="13" y2="13"/><line x1="16" x2="8" y1="17" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
-                                </div>
-                            <?php endif; ?>
+                    <article id="post-<?php the_ID(); ?>" <?php post_class('cq-flat-post-item'); ?>>
+                        <div class="cq-flat-post-thumb">
+                            <span class="cq-flat-date-badge"><?php echo get_the_date('M j, Y'); ?></span>
+                            <a href="<?php the_permalink(); ?>" style="display: block; width: 100%; height: 100%;">
+                                <?php if (has_post_thumbnail()) : ?>
+                                    <?php the_post_thumbnail('cleaniquelab-card'); ?>
+                                <?php else : ?>
+                                    <div style="width: 100%; height: 100%; display: flex; align-items: center; justify-content: center; background: linear-gradient(135deg, #00d2ff, #3a7bd5); color: #fff;">
+                                        <svg width="44" height="44" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 16.3c2.2 0 4-1.83 4-4.05 0-1.16-.57-2.26-1.71-3.19S7.29 6.75 7 5.3c-.29 1.45-1.14 2.84-2.29 3.76S3 11.1 3 12.25c0 2.22 1.8 4.05 4 4.05z"/><path d="M12.56 6.6A10.97 10.97 0 0 0 14 3.02c.5 2.5 2 4.9 4 6.5s3 3.5 3 5.5a6.98 6.98 0 0 1-11.91 4.97"/></svg>
+                                    </div>
+                                <?php endif; ?>
+                            </a>
                         </div>
-                        <div class="cq-article-content">
-                            <div class="cq-article-meta">
-                                <span style="display: inline-flex; align-items: center; gap: 4px;">
-                                    <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="18" height="18" x="3" y="4" rx="2" ry="2"/><line x1="16" x2="16" y1="2" y2="6"/><line x1="8" x2="8" y1="2" y2="6"/><line x1="3" x2="3" y1="10" y2="10"/></svg>
-                                    <?php echo get_the_date('d M Y'); ?>
-                                </span>
-                            </div>
-                            <h3 class="cq-article-title">
+                        <div class="cq-flat-post-content">
+                            <h3 class="cq-flat-post-title">
                                 <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
                             </h3>
-                            <div class="cq-article-excerpt">
+                            <p class="cq-flat-post-excerpt">
                                 <?php echo wp_trim_words(get_the_excerpt(), 18, '...'); ?>
-                            </div>
-                            <a href="<?php the_permalink(); ?>" class="cq-article-link">
+                            </p>
+                            <a href="<?php the_permalink(); ?>" class="cq-btn-primary cq-btn-sm" style="display: inline-flex; width: fit-content; border-radius: 30px; font-size: 13px; padding: 8px 18px;">
                                 Baca Selengkapnya &rarr;
                             </a>
                         </div>
@@ -562,45 +803,9 @@ get_header();
     </div>
 </section>
 
-<!-- 7. ALUR PEMESANAN & STANDAR KEAMANAN PENGIRIMAN CAIRAN -->
-<section class="cq-section" style="background-color: var(--cq-bg-soft);">
-    <div class="cq-container">
-        <div style="text-align: center; max-width: 760px; margin: 0 auto 50px auto;">
-            <span style="font-family: var(--cq-font-body); font-size: 16px; font-weight: 800; color: var(--cq-green-deep); text-transform: uppercase; letter-spacing: 2px;">
-                Prosedur Standar Pabrik
-            </span>
-            <h2 style="font-size: clamp(28px, 4vw, 40px); margin-top: 8px; color: var(--cq-text-dark);">
-                4 Langkah Mudah Pemesanan Sabun
-            </h2>
-        </div>
 
-        <div class="cq-step-grid">
-            <div class="cq-step-card">
-                <div class="cq-step-num">01</div>
-                <h4>Konsultasi Kebutuhan</h4>
-                <p>Sampaikan jenis sabun, kuantitas volume (jerigen/drum/biang), serta lokasi pengiriman kepada Customer Care via WhatsApp.</p>
-            </div>
 
-            <div class="cq-step-card">
-                <div class="cq-step-num">02</div>
-                <h4>Faktur & Ekspedisi Terbaik</h4>
-                <p>Tim kami akan menerbitkan invoice resmi dan memilihkan opsi ekspedisi kargo termurah dan tercepat ke kota Anda.</p>
-            </div>
 
-            <div class="cq-step-card">
-                <div class="cq-step-num">03</div>
-                <h4>Produksi & Packing Anti-Bocor</h4>
-                <p>Pesanan dipersiapkan dengan segel ganda, lakban pengaman tebal, dan plastik pembungkus berlapis standar kargo cairan.</p>
-            </div>
-
-            <div class="cq-step-card">
-                <div class="cq-step-num">04</div>
-                <h4>Resi & Pelacakan Live</h4>
-                <p>Nomor resi kargo resmi dibagikan segera setelah paket diserahkan, dengan pendampingan pelacakan hingga barang tiba di tujuan.</p>
-            </div>
-        </div>
-    </div>
-</section>
 
 <!-- 8. FAQ ACCORDION (FAQPAGE SCHEMA COMPLIANT) -->
 <section class="cq-section" style="background-color: #ffffff;">
@@ -682,7 +887,7 @@ get_header();
                    rel="noopener" 
                    class="cq-btn-primary">
                     <svg class="cq-icon" width="20" height="20" fill="currentColor" viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
-                    Gabung Kemitraan Sekarang
+                    Gabung Kemitraan
                 </a>
                 <a href="<?php echo esc_url(home_url('/contact/')); ?>" class="cq-btn-outline">
                     Konsultasi Gratis

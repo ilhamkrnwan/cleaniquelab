@@ -12,7 +12,10 @@
         <div class="cq-footer-grid">
             <!-- Col 1: Brand & Profil Pabrik -->
             <div class="cq-footer-brand">
-                <h3>CLEANIQUE<span>LAB</span></h3>
+                <a href="<?php echo esc_url(home_url('/')); ?>" class="cq-logo" rel="home" style="margin-bottom: 16px;">
+                    <img src="<?php echo esc_url(get_template_directory_uri() . '/assets/images/logo.png'); ?>" alt="Cleanique Lab Logo" width="40" height="40">
+                    <span style="color: #ffffff;">CLEANIQUE<span style="color: var(--cq-lime-primary);">LAB</span></span>
+                </a>
                 <p>
                     Pabrik dan produsen aneka sabun cair & bahan kimia pembersih berkualitas tinggi. Melayani pengadaan curah untuk industri, laundry, fasilitas kesehatan, sekolah, restoran, dan paket kemitraan reseller sabun curah.
                 </p>
@@ -22,11 +25,11 @@
                         <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/></svg>
                     </a>
                     <!-- Shopee (Official Crisp Vector) -->
-                    <a href="https://shopee.co.id/cleaniquelab" target="_blank" rel="noopener" aria-label="Shopee Cleanique Lab Official" class="cq-social-btn cq-social-shopee" title="Shopee Official Cleanique Lab">
+                    <a href="https://id.shp.ee/6dkm3Liy" target="_blank" rel="noopener" aria-label="Shopee Cleanique Lab Official" class="cq-social-btn cq-social-shopee" title="Shopee Official Cleanique Lab">
                         <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M19.5 7.5h-2.25V6.25a5.25 5.25 0 0 0-10.5 0V7.5H4.5A1.5 1.5 0 0 0 3 9l1.4 11.2a2.5 2.5 0 0 0 2.48 2.3h10.24a2.5 2.5 0 0 0 2.48-2.3L21 9a1.5 1.5 0 0 0-1.5-1.5zm-10.75-1.25a3.25 3.25 0 0 1 6.5 0V7.5h-6.5V6.25zm2.33 11.45c-1.3-.23-1.84-.8-1.84-1.72 0-1.1.95-1.76 2.32-1.9l1.34-.14c.64-.07.96-.28.96-.66 0-.47-.46-.76-1.2-.76-.8 0-1.37.31-1.55.83l-1.33-.39c.34-.94 1.37-1.58 2.83-1.58 1.63 0 2.63.74 2.63 1.85 0 1.04-.77 1.63-2.15 1.78l-1.4.15c-.72.08-1.08.31-1.08.72 0 .51.52.83 1.34.83.89 0 1.58-.38 1.77-.92l1.3.43c-.39 1.08-1.53 1.7-3.08 1.58z"/></svg>
                     </a>
                     <!-- TikTok / TikTok Shop -->
-                    <a href="https://tiktok.com/@cleaniquelab" target="_blank" rel="noopener" aria-label="TikTok Shop Cleanique Lab" class="cq-social-btn cq-social-tiktok" title="TikTok Shop @cleaniquelab">
+                    <a href="https://www.tiktok.com/@orchidcareofficial?_r=1" target="_blank" rel="noopener" aria-label="TikTok Shop Cleanique Lab" class="cq-social-btn cq-social-tiktok" title="TikTok Shop @orchidcareofficial">
                         <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24"><path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64c.298-.002.595.042.88.13V9.4a6.33 6.33 0 0 0-1-.08A6.34 6.34 0 0 0 3 15.66a6.34 6.34 0 0 0 10.81 4.48 6.26 6.26 0 0 0 1.87-4.47V8.71a8.18 8.18 0 0 0 4.91 1.65V6.91a4.86 4.86 0 0 1-1-.22z"/></svg>
                     </a>
                     <!-- WhatsApp -->
@@ -76,11 +79,11 @@
                 <h4>Pusat Operasional</h4>
                 <div class="cq-footer-contact-item">
                     <svg class="cq-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
-                    <span>Pusat Produksi & Workshop Sabun Cleanique Lab, Indonesia</span>
+                    <span>PT Indotech Berkah Abadi (Cleanique Lab) &bull; Sendangadi, Mlati, Sleman, D.I. Yogyakarta 55285</span>
                 </div>
                 <div class="cq-footer-contact-item">
                     <svg class="cq-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
-                    <span>0812-3456-7890 (Customer Care)</span>
+                    <span>0878-4812-0088 (Customer Care)</span>
                 </div>
                 <div class="cq-footer-contact-item">
                     <svg class="cq-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>

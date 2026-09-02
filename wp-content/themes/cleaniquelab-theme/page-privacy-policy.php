@@ -108,7 +108,7 @@ get_header();
                 </p>
                 <div class="cq-legal-contact-box">
                     <strong>Pusat Layanan Privasi Cleanique Lab</strong><br>
-                    WhatsApp Layanan: <a href="<?php echo esc_url(cleaniquelab_get_whatsapp_url('Halo Cleanique Lab, saya ingin menanyakan perihal Kebijakan Privasi data')); ?>" target="_blank" rel="noopener">0812-3456-7890</a><br>
+                    WhatsApp Layanan: <a href="<?php echo esc_url(cleaniquelab_get_whatsapp_url('Halo Cleanique Lab, saya ingin menanyakan perihal Kebijakan Privasi data')); ?>" target="_blank" rel="noopener">0878-4812-0088</a><br>
                     Email: <a href="mailto:admin@cleaniquelab.com">admin@cleaniquelab.com</a><br>
                     Website: <a href="<?php echo esc_url(home_url('/')); ?>">cleaniquelab.com</a>
                 </div>

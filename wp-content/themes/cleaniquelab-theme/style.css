@@ -255,24 +255,32 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .cq-logo {
-  display: flex;
+  display: inline-flex;
   align-items: center;
+  gap: 10px;
   text-decoration: none;
   font-family: var(--cq-font-heading);
   font-size: 24px;
   font-weight: 900;
   color: var(--cq-royal-blue);
   letter-spacing: -0.5px;
+  line-height: 1;
 }
 
 .cq-logo span {
-  color: var(--cq-green-deep);
-  margin-left: 4px;
+  color: var(--cq-lime-primary);
+  margin-left: 2px;
 }
 
 .cq-logo img {
-  height: 44px;
+  height: 38px;
   width: auto;
+  object-fit: contain;
+  transition: transform 0.25s ease;
+}
+
+.cq-logo:hover img {
+  transform: scale(1.08);
 }
 
 .cq-desktop-nav {
@@ -362,8 +370,8 @@ h1, h2, h3, h4, h5, h6 {
   top: 0;
   right: 0;
   bottom: 0;
-  width: 85%;
-  max-width: 340px;
+  width: 100%;
+  max-width: 400px;
   background-color: #ffffff;
   z-index: 9999;
   box-shadow: -10px 0 30px rgba(0, 0, 0, 0.2);
@@ -372,6 +380,13 @@ h1, h2, h3, h4, h5, h6 {
   display: flex;
   flex-direction: column;
   overflow-y: auto;
+}
+
+@media (max-width: 480px) {
+  .cq-mobile-drawer {
+    width: 100vw;
+    max-width: 100vw;
+  }
 }
 
 .cq-mobile-drawer.is-active {
@@ -754,6 +769,140 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /* ==========================================================================
+   FLAT BLOG LAYOUT (TANPA CARD CONTAINER - MATCHING DESAIN USER)
+   ========================================================================== */
+
+/* Flat Spotlight Section */
+.cq-spotlight-flat-wrap {
+  display: grid;
+  grid-template-columns: 1.15fr 1fr;
+  gap: 40px;
+  align-items: center;
+  margin-bottom: 50px;
+  padding-bottom: 40px;
+  border-bottom: 1px solid var(--cq-border-light);
+}
+
+@media (max-width: 991px) {
+  .cq-spotlight-flat-wrap {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+}
+
+.cq-spotlight-flat-visual {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  border-radius: 18px;
+  overflow: hidden;
+  background: #f1f5f9;
+}
+
+.cq-spotlight-flat-visual img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.4s ease;
+}
+
+.cq-spotlight-flat-wrap:hover .cq-spotlight-flat-visual img {
+  transform: scale(1.03);
+}
+
+/* Flat Grid (3 Kolom) */
+.cq-flat-blog-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 44px 28px;
+  margin-top: 24px;
+}
+
+.cq-flat-post-item {
+  display: flex;
+  flex-direction: column;
+  background: transparent;
+  border: none;
+  box-shadow: none;
+  border-radius: 0;
+  padding: 0;
+}
+
+/* Flat Post Thumbnail Container (Square / 1:1 Aspect Ratio) */
+.cq-flat-post-thumb {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  border-radius: 16px;
+  overflow: hidden;
+  background: #f1f5f9;
+}
+
+.cq-flat-post-thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  display: block;
+}
+
+.cq-flat-post-item:hover .cq-flat-post-thumb img {
+  transform: scale(1.05);
+}
+
+/* Date Badge Overlay on Top-Right of Image */
+.cq-flat-date-badge {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  background: rgba(15, 23, 42, 0.78);
+  color: #ffffff;
+  font-family: var(--cq-font-body);
+  font-size: 12px;
+  font-weight: 700;
+  padding: 4px 12px;
+  border-radius: 6px;
+  letter-spacing: 0.3px;
+  backdrop-filter: blur(4px);
+  z-index: 3;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Flat Content Below Image */
+.cq-flat-post-content {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  padding-top: 14px;
+}
+
+.cq-flat-post-title {
+  font-size: 19px;
+  font-weight: 800;
+  color: var(--cq-text-dark);
+  line-height: 1.38;
+  margin: 0 0 10px 0;
+}
+
+.cq-flat-post-title a {
+  color: var(--cq-text-dark);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.cq-flat-post-title a:hover {
+  color: var(--cq-royal-blue);
+}
+
+.cq-flat-post-excerpt {
+  font-size: 14px;
+  color: #64748b;
+  line-height: 1.6;
+  margin: 0 0 16px 0;
+}
+
+/* ==========================================================================
    9. SINGLE ARTICLE & SHARE BUTTONS (RICH ARTICLE STYLING)
    ========================================================================== */
 .cq-single-hero {
@@ -888,22 +1037,70 @@ h1, h2, h3, h4, h5, h6 {
 .cq-share-btn {
   display: inline-flex;
   align-items: center;
-  gap: 6px;
-  padding: 7px 14px;
-  border-radius: 24px;
-  font-size: 13px;
-  font-weight: 700;
+  justify-content: center;
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  padding: 0;
+  font-size: 14px;
   color: #ffffff !important;
   text-decoration: none;
   cursor: pointer;
   border: none;
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  position: relative;
+  transition: transform 0.2s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.2s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .cq-share-btn:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.18);
+  transform: translateY(-3px) scale(1.06);
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.22);
   color: #ffffff;
+}
+
+/* Tooltip Label Sosmed */
+.cq-share-btn[data-tooltip]::after {
+  content: attr(data-tooltip);
+  position: absolute;
+  bottom: calc(100% + 8px);
+  left: 50%;
+  transform: translateX(-50%) translateY(4px);
+  background-color: #1e293b;
+  color: #ffffff;
+  font-family: var(--cq-font-body);
+  font-size: 12px;
+  font-weight: 700;
+  white-space: nowrap;
+  padding: 5px 11px;
+  border-radius: 6px;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.18);
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transition: opacity 0.2s ease, transform 0.2s ease, visibility 0.2s ease;
+  z-index: 100;
+}
+
+.cq-share-btn[data-tooltip]::before {
+  content: '';
+  position: absolute;
+  bottom: calc(100% + 3px);
+  left: 50%;
+  transform: translateX(-50%) translateY(4px);
+  border-width: 5px 5px 0 5px;
+  border-style: solid;
+  border-color: #1e293b transparent transparent transparent;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transition: opacity 0.2s ease, transform 0.2s ease, visibility 0.2s ease;
+  z-index: 100;
+}
+
+.cq-share-btn[data-tooltip]:hover::after,
+.cq-share-btn[data-tooltip]:hover::before {
+  opacity: 1;
+  visibility: visible;
+  transform: translateX(-50%) translateY(0);
 }
 
 .cq-share-wa { background-color: #25d366; }
@@ -987,8 +1184,6 @@ h1, h2, h3, h4, h5, h6 {
   margin-top: 40px;
   margin-bottom: 18px;
   color: var(--cq-text-dark);
-  border-left: 5px solid var(--cq-royal-blue);
-  padding-left: 14px;
   line-height: 1.3;
 }
 
@@ -1000,11 +1195,11 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .cq-article-body blockquote {
-  border-left: 4px solid var(--cq-cyan);
+  border: 1px solid rgba(0, 0, 0, 0.08);
   background: var(--cq-bg-soft);
-  padding: 20px 24px;
+  padding: 22px 28px;
   margin: 28px 0;
-  border-radius: 0 14px 14px 0;
+  border-radius: 16px;
   font-style: italic;
   font-size: 18px;
   color: var(--cq-text-dark);
@@ -2057,8 +2252,6 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: 800;
   color: var(--cq-text-dark);
   margin-bottom: 14px;
-  border-left: 4px solid var(--cq-royal-blue);
-  padding-left: 12px;
 }
 
 .cq-legal-section p {
@@ -2424,3 +2617,343 @@ h1, h2, h3, h4, h5, h6 {
     height: 26px;
   }
 }
+
+/* Video Section & Video Responsive Wrapper */
+.cq-video-section {
+  position: relative;
+  overflow: hidden;
+}
+
+.cq-video-wrapper {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.cq-video-wrapper:hover {
+  transform: scale(1.005);
+}
+
+/* Template Showcase Cards */
+.cq-template-card-hover {
+  transition: all 0.3s ease;
+}
+
+.cq-template-card-hover:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 16px 35px rgba(0, 0, 0, 0.08);
+}
+
+/* ==========================================================================
+   BLOG PAGINATION STYLING
+   ========================================================================== */
+.cq-pagination-wrap {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.cq-pagination-wrap .page-numbers {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 42px;
+  height: 42px;
+  padding: 0 16px;
+  border-radius: 50px;
+  font-family: var(--cq-font-body);
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--cq-text-dark);
+  background-color: #ffffff;
+  border: 1px solid var(--cq-border-light);
+  text-decoration: none;
+  transition: all 0.25s ease;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+}
+
+.cq-pagination-wrap .page-numbers:hover {
+  background-color: var(--cq-royal-blue);
+  color: #ffffff;
+  border-color: var(--cq-royal-blue);
+  transform: translateY(-2px);
+}
+
+.cq-pagination-wrap .page-numbers.current {
+  background: var(--cq-gradient-cta);
+  color: #ffffff;
+  border-color: transparent;
+  box-shadow: 0 4px 15px rgba(234, 80, 31, 0.3);
+}
+
+.cq-pagination-wrap .page-numbers.dots {
+  border: none;
+  background: transparent;
+  box-shadow: none;
+}
+
+/* ==========================================================================
+   ABOUT PAGE RESPONSIVE STYLING
+   ========================================================================== */
+.cq-about-hero-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 50px;
+  align-items: center;
+}
+
+.cq-about-standar-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.cq-about-ecosystem-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+@media (max-width: 991px) {
+  .cq-about-hero-grid {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+  .cq-about-standar-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  .cq-about-ecosystem-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+  }
+}
+
+@media (max-width: 576px) {
+  .cq-about-ecosystem-grid {
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+}
+
+/* ==========================================================================
+   DOWNLOAD KATALOG & HARGA SECTION STYLING
+   ========================================================================== */
+.cq-download-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  max-width: 960px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.cq-download-grid::before {
+  content: '';
+  position: absolute;
+  top: 10%;
+  bottom: 10%;
+  left: 50%;
+  width: 1px;
+  background: rgba(255, 255, 255, 0.35);
+  transform: translateX(-50%);
+}
+
+.cq-download-col {
+  padding: 30px 40px;
+  text-align: center;
+}
+
+.cq-download-icon-wrap {
+  width: 76px;
+  height: 76px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 20px auto;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s ease;
+}
+
+.cq-download-col:hover .cq-download-icon-wrap {
+  transform: scale(1.1) rotate(4deg);
+}
+
+.cq-btn-outline-white {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12px 42px;
+  border-radius: 50px;
+  border: 2px solid #ffffff;
+  color: #ffffff;
+  font-family: var(--cq-font-body);
+  font-size: 15px;
+  font-weight: 800;
+  letter-spacing: 1px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.cq-btn-outline-white:hover {
+  background-color: #ffffff;
+  color: var(--cq-royal-blue);
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+}
+
+@media (max-width: 768px) {
+  .cq-download-grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+  .cq-download-grid::before {
+    display: none;
+  }
+  .cq-download-col {
+    padding: 10px 20px;
+  }
+}
+
+/* ==========================================================================
+   PAKET KEAGENAN PRICING SECTION STYLING
+   ========================================================================== */
+.cq-keagenan-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+  align-items: stretch;
+}
+
+.cq-keagenan-card {
+  border-radius: 24px;
+  padding: 32px 24px 28px 24px;
+  color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.12);
+  transition: all 0.35s cubic-bezier(0.165, 0.84, 0.44, 1);
+  position: relative;
+  overflow: hidden;
+}
+
+.cq-keagenan-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.22);
+}
+
+.cq-keagenan-card.starter {
+  background: linear-gradient(180deg, #10b981 0%, #15803d 100%);
+}
+
+.cq-keagenan-card.reseller {
+  background: linear-gradient(180deg, #8b5cf6 0%, #6b21a8 100%);
+}
+
+.cq-keagenan-card.agen {
+  background: linear-gradient(180deg, #0284c7 0%, #1d4ed8 100%);
+}
+
+.cq-keagenan-card.super-agen {
+  background: linear-gradient(180deg, #ef4444 0%, #b91c1c 100%);
+}
+
+.cq-keagenan-badge {
+  display: inline-block;
+  background: rgba(0, 0, 0, 0.25);
+  color: #ffffff;
+  font-family: var(--cq-font-body);
+  font-size: 12px;
+  font-weight: 900;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  padding: 6px 18px;
+  border-radius: 50px;
+  margin-bottom: 20px;
+  backdrop-filter: blur(4px);
+}
+
+.cq-keagenan-price {
+  font-family: var(--cq-font-heading);
+  font-size: 34px;
+  font-weight: 900;
+  line-height: 1.1;
+  color: #ffffff;
+}
+
+.cq-keagenan-subdisc {
+  font-size: 14px;
+  font-weight: 700;
+  color: rgba(255, 255, 255, 0.9);
+  margin-top: 4px;
+  margin-bottom: 24px;
+}
+
+.cq-keagenan-list {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 28px 0;
+}
+
+.cq-keagenan-list li {
+  position: relative;
+  padding-left: 20px;
+  font-size: 14px;
+  line-height: 1.5;
+  color: rgba(255, 255, 255, 0.95);
+  margin-bottom: 12px;
+  font-weight: 600;
+}
+
+.cq-keagenan-list li::before {
+  content: '•';
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: #fde047;
+  font-size: 18px;
+  line-height: 1;
+}
+
+.cq-keagenan-btn {
+  display: block;
+  width: 100%;
+  text-align: center;
+  padding: 12px 0;
+  border-radius: 50px;
+  border: 2px solid #ffffff;
+  color: #ffffff;
+  font-family: var(--cq-font-body);
+  font-size: 15px;
+  font-weight: 900;
+  letter-spacing: 1px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.cq-keagenan-btn:hover {
+  background: #ffffff;
+  color: #1e293b;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+}
+
+@media (max-width: 1100px) {
+  .cq-keagenan-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+}
+
+@media (max-width: 640px) {
+  .cq-keagenan-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  .cq-keagenan-card {
+    padding: 28px 20px;
+  }
+}
+

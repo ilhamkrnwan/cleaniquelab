@@ -53,6 +53,12 @@ function cleaniquelab_theme_setup() {
 
     // Responsive embedded content
     add_theme_support('responsive-embeds');
+
+    // Enforce SEO %postname% permalink structure & flush rewrite rules
+    if (get_option('permalink_structure') !== '/%postname%/') {
+        update_option('permalink_structure', '/%postname%/');
+        flush_rewrite_rules();
+    }
 }
 add_action('after_setup_theme', 'cleaniquelab_theme_setup');
 
@@ -79,7 +85,7 @@ function cleaniquelab_scripts() {
 
     // Pass dynamic WhatsApp number and site data to script
     wp_localize_script('cleaniquelab-main', 'cleaniqueData', [
-        'whatsappNumber' => '6281234567890', // Nomor WhatsApp Customer Care
+        'whatsappNumber' => '6287848120088', // Nomor WhatsApp Customer Care Resmi
         'siteUrl'        => home_url('/'),
     ]);
 }
@@ -92,9 +98,9 @@ add_action('wp_enqueue_scripts', 'cleaniquelab_scripts');
  * @return string
  */
 function cleaniquelab_get_whatsapp_url($message = '') {
-    $phone = '6281234567890';
+    $phone = '6287848120088';
     if (empty($message)) {
-        $message = "Halo Cleanique Lab, saya tertarik untuk konsultasi dan order produk kebersihan / paket sabun.";
+        $message = "Halo Cleanique Lab, saya ingin konsultasi dan pemesanan produk sabun kebersihan.";
     }
     return 'https://wa.me/' . $phone . '?text=' . urlencode($message);
 }
@@ -291,3 +297,238 @@ function cleaniquelab_seo_schema_markup() {
     }
 }
 add_action('wp_head', 'cleaniquelab_seo_schema_markup');
+
+/**
+ * Auto-publish essential Cleanique Lab Pages and assign custom page templates
+ */
+function cleaniquelab_auto_publish_pages() {
+    $pages_to_create = [
+        // 1. Katalog & Daftar Harga
+        'daftar-harga' => [
+            'title'    => 'Daftar Harga & Katalog Grosir Pabrik',
+            'content'  => 'Halaman resmi daftar harga grosir produk sabun cair curah, deterjen laundry, dan biang konsentrat Cleanique Lab.',
+            'template' => 'page-pricelist.php'
+        ],
+        'pricelist' => [
+            'title'    => 'Pricelist & Bulk Soap Wholesale Catalog',
+            'content'  => 'Transparent pricing matrix for liquid soap, laundry detergent, and concentrated formula.',
+            'template' => 'page-pricelist.php'
+        ],
+        'katalog-produk' => [
+            'title'    => 'Katalog Produk Sabun Curah Jerigen 5L & Drum',
+            'content'  => 'Katalog lengkap aneka produk sabun cuci piring, deterjen, hand soap, dan karbol desinfektan.',
+            'template' => 'page-pricelist.php'
+        ],
+        'biang-sabun' => [
+            'title'    => 'Paket Biang Sabun Konsentrat Super Hemat',
+            'content'  => 'Formula biang sabun murni konsentrat tinggi hemat ongkos kirim ke seluruh 38 provinsi di Indonesia.',
+            'template' => 'page-pricelist.php'
+        ],
+
+        // 2. Profil & Tentang Kami
+        'tentang-kami' => [
+            'title'    => 'Tentang Cleanique Lab & Profil Pabrik',
+            'content'  => 'Profil lengkap pabrik produsen sabun, standar laboratorium, dan garansi mutu Cleanique Lab.',
+            'template' => 'page-about.php'
+        ],
+        'about' => [
+            'title'    => 'About Cleanique Lab & Manufacturing Facility',
+            'content'  => 'Company profile, ISO manufacturing standards, eco-friendly formulation lab, and production capacity.',
+            'template' => 'page-about.php'
+        ],
+        'maklon-sabun' => [
+            'title'    => 'Layanan Maklon Sabun & OEM Private Label',
+            'content'  => 'Jasa maklon produksi sabun cair, deterjen, dan pembersih dengan brand dan formulasi kustom Anda sendiri.',
+            'template' => 'page-about.php'
+        ],
+
+        // 3. Kontak & Kemitraan
+        'hubungi-kami' => [
+            'title'    => 'Hubungi Kami & Pemesanan B2B',
+            'content'  => 'Layanan konsultasi kebutuhan sabun industri, restoran, hotel, serta kemitraan distributor.',
+            'template' => 'page-contact.php'
+        ],
+        'contact' => [
+            'title'    => 'Contact Us & B2B Customer Care',
+            'content'  => 'Direct WhatsApp consultation, wholesale price inquiry, and workshop facility address.',
+            'template' => 'page-contact.php'
+        ],
+        'kontak' => [
+            'title'    => 'Kontak Customer Care & Layanan Order',
+            'content'  => 'Pusat bantuan dan saluran komunikasi cepat Cleanique Lab.',
+            'template' => 'page-contact.php'
+        ],
+        'kemitraan-agen' => [
+            'title'    => 'Peluang Kemitraan Distributor & Agen Sabun',
+            'content'  => 'Program keagenan dan reseller sabun curah dengan margin keuntungan menarik di seluruh daerah.',
+            'template' => 'page-contact.php'
+        ],
+
+        // 4. Koleksi & Katalog Template
+        'koleksi-template' => [
+            'title'    => 'Koleksi Template Halaman Web Cleanique Lab',
+            'content'  => 'Galeri dan katalog lengkap template halaman web Cleanique Lab untuk B2B, landing page, dan e-commerce.',
+            'template' => 'page-templates.php'
+        ],
+        'templates' => [
+            'title'    => 'Cleanique Lab Web Page Templates Showcase',
+            'content'  => 'Standardized digital architecture templates for Cleanique Lab web pages and landing layouts.',
+            'template' => 'page-templates.php'
+        ],
+
+        // 5. Legal & Kebijakan
+        'kebijakan-privasi' => [
+            'title'    => 'Kebijakan Privasi Cleanique Lab',
+            'content'  => 'Kebijakan privasi dan keamanan data pelanggan Cleanique Lab.',
+            'template' => 'page-privacy-policy.php'
+        ],
+        'privacy-policy' => [
+            'title'    => 'Privacy Policy & Data Security Statement',
+            'content'  => 'Official privacy policy and security protocols for Cleanique Lab customers.',
+            'template' => 'page-privacy-policy.php'
+        ],
+        'syarat-dan-ketentuan' => [
+            'title'    => 'Syarat & Ketentuan Layanan',
+            'content'  => 'Syarat dan ketentuan pembelian grosir, garansi pengiriman kargo, dan maklon sabun.',
+            'template' => 'page-terms.php'
+        ],
+        'terms' => [
+            'title'    => 'Terms of Service & SLA Delivery Guarantee',
+            'content'  => 'Terms of service, liquid cargo packaging safety, and wholesale return policies.',
+            'template' => 'page-terms.php'
+        ],
+        'kebijakan-cookie' => [
+            'title'    => 'Kebijakan Cookie & Data Hygiene',
+            'content'  => 'Penggunaan cookie dan analisis pengalaman pengguna di platform Cleanique Lab.',
+            'template' => 'page-cookie-policy.php'
+        ],
+        'cookie-policy' => [
+            'title'    => 'Cookie Policy & User Preference Settings',
+            'content'  => 'Cookie usage terms and browser session policies.',
+            'template' => 'page-cookie-policy.php'
+        ],
+
+        // 6. Blog & Artikel Archive
+        'blog' => [
+            'title'    => 'Artikel & Edukasi Sabun Cleanique Lab',
+            'content'  => 'Pusat informasi, tips kebersihan industri, panduan laundry, dan riset formulasi sabun.',
+            'template' => 'home.php'
+        ],
+        'artikel' => [
+            'title'    => 'Pusat Berita & Artikel Teknis Sabun',
+            'content'  => 'Kumpulan artikel dan panduan teknis formulasi pembersih komersial.',
+            'template' => 'home.php'
+        ]
+    ];
+
+    foreach ($pages_to_create as $slug => $page_data) {
+        $existing_page = get_page_by_path($slug, OBJECT, 'page');
+        if (!$existing_page) {
+            $page_id = wp_insert_post([
+                'post_title'     => $page_data['title'],
+                'post_name'      => $slug,
+                'post_content'   => $page_data['content'],
+                'post_status'    => 'publish',
+                'post_type'      => 'page',
+                'post_author'    => 1,
+                'comment_status' => 'closed',
+            ]);
+            if ($page_id && !is_wp_error($page_id)) {
+                update_post_meta($page_id, '_wp_page_template', $page_data['template']);
+            }
+        } else {
+            // Ensure status is published and template assigned
+            if ($existing_page->post_status !== 'publish') {
+                wp_update_post([
+                    'ID'          => $existing_page->ID,
+                    'post_status' => 'publish'
+                ]);
+            }
+            update_post_meta($existing_page->ID, '_wp_page_template', $page_data['template']);
+        }
+    }
+
+    $blog_page = get_page_by_path('blog', OBJECT, 'page');
+    if ($blog_page) {
+        update_option('page_for_posts', $blog_page->ID);
+    }
+}
+add_action('after_setup_theme', 'cleaniquelab_auto_publish_pages');
+
+/**
+ * Auto-publish rich sample Blog Posts for Cleanique Lab
+ */
+function cleaniquelab_auto_publish_blog_posts() {
+    $blog_posts = [
+        'panduan-lengkap-formulasi-sabun-2026' => [
+            'title'    => 'Panduan Lengkap Standar Mutu Formulasi Sabun & Peluang Kemitraan Curah 2026',
+            'excerpt'  => 'Pelajari bagaimana memilih bahan pembersih dengan surfaktan biodegradable, menjaga keseimbangan pH 6.5 - 7.5 agar ramah kulit, dan strategi membangun usaha distributor sabun curah dengan margin keuntungan tinggi.',
+            'category' => 'Formulasi Kimia',
+            'tags'     => ['Formulasi Sabun', 'Biang Sabun', 'Peluang Usaha'],
+            'content'  => '<h2>Standar Kualitas Formulasi Sabun Industri</h2><p>Industri pembuatan sabun dan pembersih komersial menuntut presisi tinggi dalam penentuan kadar surfaktan aktif, agen penyeimbang pH, serta pengstabil busa. Cleanique Lab memproduksi seluruh varian sabun cair dan biang konsentrat berdasarkan riset laboratorium ketat.</p><h3>1. Konsentrasi Surfaktan Aktif Biodegradable</h3><p>Penggunaan surfaktan ramah lingkungan memastikan limbah sabun dapat terurai secara alami oleh mikroorganisme perairan tanpa merusak ekosistem atau menyumbat instalasi pengolahan air limbah (IPAL).</p><h3>2. Keseimbangan pH dan Pelembap Kulit</h3><p>Nilai pH ideal untuk sabun cuci tangan dan pembersih harian berada pada kisaran 6.5 hingga 7.5, yang dilengkapi pelembap alami Aloe Vera untuk mencegah iritasi kulit.</p>'
+        ],
+        '5-cara-menghemat-biaya-deterjen-laundry' => [
+            'title'    => '5 Cara Menghemat Biaya Operasional Deterjen untuk Usaha Laundry Kiloan & Hotel',
+            'excerpt'  => 'Strategi menekan pengeluaran deterjen cair hingga 35% tanpa mengurangi daya bersih dan keharuman pakaian pelanggan laundry Anda.',
+            'category' => 'Tips Laundry',
+            'tags'     => ['Deterjen Laundry', 'Laundry Kiloan', 'Efisiensi Biaya'],
+            'content'  => '<h2>Efisiensi Operasional Laundry Komersial</h2><p>Pengeluaran untuk deterjen cair dan pewangi laundry merupakan komponen biaya terbesar kedua setelah listrik dan air pada bisnis laundry kiloan. Berikut adalah panduan praktis dari Cleanique Lab untuk mengoptimalkan takaran deterjen tanpa mengorbankan kepuasan pelanggan.</p><h3>1. Gunakan Formulasi Low-Foam Khusus Mesin Front-Loading</h3><p>Deterjen tinggi busa dapat merusak modul elektronik mesin cuci pintu depan dan menyisakan kerak. Gunakan deterjen cair rendah busa Cleanique Lab yang mudah dibilas dan hemat air.</p>'
+        ],
+        'cara-tepat-melarutkan-biang-sabun-konsentrat' => [
+            'title'    => 'Cara Tepat Melarutkan Biang Sabun Konsentrat Agar Kental & Berbusa Melimpah',
+            'excerpt'  => 'Langkah demi langkah mencampurkan biang sabun konsentrat Cleanique Lab dengan air bersih untuk hasil yang sempurna dan stabil.',
+            'category' => 'Panduan Biang Sabun',
+            'tags'     => ['Biang Sabun', 'Tutorial Pencampuran', 'Hemat Ongkir'],
+            'content'  => '<h2>Panduan Pencampuran Biang Sabun Konsentrat</h2><p>Paket biang sabun konsentrat Cleanique Lab dirancang khusus untuk memangkas biaya pengiriman luar pulau Jawa hingga 80%. Satu paket biang 1 kg dapat dicampur air bersih menjadi 5 liter sabun kental siap pakai.</p><h3>Langkah-Langkah Pencampuran:</h3><ol><li>Siapkan wadah ember bersih berkapasitas minimal 10 liter.</li><li>Tuangkan 4 liter air bersih (air isi ulang/PAM) ke dalam wadah.</li><li>Masukkan biang konsentrat Cleanique Lab secara perlahan sambil diaduk searah jarum jam.</li><li>Aduk terus selama 5–10 menit hingga seluruh butiran biang larut sempurna dan larutan mengental.</li><li>Diamkan larutan selama 2-3 jam hingga busa permukaan menyusut, lalu kemas ke dalam jerigen 5 Liter.</li></ol>'
+        ],
+        'standar-kebersihan-haccp-restoran-sabun' => [
+            'title'    => 'Standar Kebersihan HACCP Restoran: Pentingnya Hand Soap Antiseptik & Dishwashing Liquid',
+            'excerpt'  => 'Mengapa restoran dan dapur komersial wajib menggunakan sabun cuci piring berformula grease-cutter dan hand soap anti-bakteri standar laboratorium.',
+            'category' => 'Standar Hygiene',
+            'tags'     => ['HACCP Dapur', 'Sabun Cuci Piring', 'Hand Soap Restoran'],
+            'content'  => '<h2>Manajemen Kebersihan Dapur Komersial & Restoran</h2><p>Standar Hazard Analysis Critical Control Point (HACCP) mewajibkan seluruh fasilitas F&B menjaga kebersihan peralatan masak dan higienitas staf dapur. Cleanique Lab menyediakan sabun cuci piring ekstrak jeruk nipis dengan konsentrasi tinggi pelarut lemak.</p>'
+        ],
+        'mengenal-karbol-sereh-alami-disinfektan' => [
+            'title'    => 'Mengenal Karbol Sereh Alami: Pengusir Serangga & Desinfektan Lantai Rumah Sakit',
+            'excerpt'  => 'Keunggulan minyak sereh alami (citronella oil) dalam membunuh 99.9% kuman sekaligus menjaga ruangan bebas dari nyamuk dan lalat.',
+            'category' => 'Disinfektan Lantai',
+            'tags'     => ['Karbol Sereh', 'Disinfektan Lantai', 'Minyak Sereh'],
+            'content'  => '<h2>Manfaat Karbol Sereh Alami untuk Kebersihan Ruangan</h2><p>Karbol wangi sereh buatan Cleanique Lab memanfaatkan kestabilan ekstrak minyak sereh (citronella oil) alami yang terbukti efektif mengusir nyamuk, lalat, dan kecoa tanpa menggunakan bahan kimia sintetis yang berbahaya.</p>'
+        ],
+        'strategi-membuka-depo-sabun-curah-modal-1-8-jt' => [
+            'title'    => 'Strategi Membuka Depo Sabun Curah Modal 1,8 Juta Beromzet Jutaan Rupiah',
+            'excerpt'  => 'Panduan praktis bagi pemula untuk memulai usaha penjualan sabun isi ulang rumah tangga dengan modal terjangkau dan garansi pasokan pabrik.',
+            'category' => 'Peluang Bisnis',
+            'tags'     => ['Keagenan Sabun', 'Depo Sabun Curah', 'Kemitraan Usaha'],
+            'content'  => '<h2>Peluang Usaha Agen & Depo Sabun Curah</h2><p>Kebutuhan sabun cuci piring, deterjen, dan pembersih lantai merupakan kebutuhan pokok harian yang selalu dicari konsumen. Dengan modal awal Rp 1.800.000, Anda sudah bisa mendapatkan paket perdana keagenan Cleanique Lab lengkap dengan spanduk promosi, jerigen display, dan stok sabun siap jual.</p>'
+        ]
+    ];
+
+    foreach ($blog_posts as $slug => $post_data) {
+        $existing_post = get_page_by_path($slug, OBJECT, 'post');
+        if (!$existing_post) {
+            $post_id = wp_insert_post([
+                'post_title'   => $post_data['title'],
+                'post_name'    => $slug,
+                'post_excerpt' => $post_data['excerpt'],
+                'post_content' => $post_data['content'],
+                'post_status'  => 'publish',
+                'post_type'    => 'post',
+                'post_author'  => 1,
+            ]);
+            if ($post_id && !is_wp_error($post_id)) {
+                if (!function_exists('wp_create_category')) {
+                    require_once ABSPATH . 'wp-admin/includes/taxonomy.php';
+                }
+                $cat_id = wp_create_category($post_data['category']);
+                if ($cat_id && !is_wp_error($cat_id)) {
+                    wp_set_post_categories($post_id, [$cat_id]);
+                }
+                wp_set_post_tags($post_id, $post_data['tags']);
+            }
+        }
+    }
+}
+add_action('after_setup_theme', 'cleaniquelab_auto_publish_blog_posts');
+
+

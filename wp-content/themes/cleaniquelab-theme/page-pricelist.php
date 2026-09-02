@@ -25,6 +25,60 @@ get_header();
     </div>
 </section>
 
+<!-- INTERACTIVE PDF PRICELIST VIEWER & DOWNLOAD SECTION -->
+<section class="cq-section" style="background-color: #ffffff; padding-top: 50px; padding-bottom: 50px;">
+    <div class="cq-container">
+        <div style="background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%); border-radius: 24px; border: 1px solid var(--cq-border-light); padding: 32px; box-shadow: 0 12px 36px rgba(0,0,0,0.05);">
+            <!-- Header bar for PDF Viewer -->
+            <div style="display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 16px; margin-bottom: 24px; padding-bottom: 20px; border-bottom: 1px solid var(--cq-border-light);">
+                <div>
+                    <span style="display: inline-flex; align-items: center; gap: 6px; font-size: 13px; font-weight: 800; color: #c61111; background: #fff0f0; padding: 4px 12px; border-radius: 50px; border: 1px solid #ffd6d6; margin-bottom: 8px;">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5L14.5 2z"/><polyline points="14 2 14 8 20 8"/><path d="M10 12v6"/><path d="m13 15-3 3-3-3"/></svg>
+                        PDF Dokumen Resmi
+                    </span>
+                    <h2 style="font-size: clamp(22px, 3.2vw, 32px); color: var(--cq-text-dark); margin: 0;">
+                        Katalog & Price List Lengkap
+                    </h2>
+                    <p style="font-size: 14px; color: var(--cq-text-muted); margin-top: 4px;">
+                        Pratinjau dokumen daftar harga resmi Cleanique Lab. Klik tombol di kanan untuk membuka atau mengunduh langsung dari Google Drive.
+                    </p>
+                </div>
+
+                <div style="display: flex; align-items: center; gap: 12px; flex-wrap: wrap;">
+                    <a href="https://drive.google.com/file/d/1rZk5N3N1P7gJWDF6cjfjbPBoNNJTmrnW/view?usp=drive_link" 
+                       target="_blank" 
+                       rel="noopener" 
+                       class="cq-btn-primary" 
+                       style="background: var(--cq-gradient-cta); padding: 12px 24px;">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+                        Download PDF
+                    </a>
+                    <a href="https://drive.google.com/file/d/1rZk5N3N1P7gJWDF6cjfjbPBoNNJTmrnW/view?usp=drive_link" 
+                       target="_blank" 
+                       rel="noopener" 
+                       class="cq-btn-outline cq-btn-outline-dark" 
+                       style="padding: 12px 20px;">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+                        Buka Drive
+                    </a>
+                </div>
+            </div>
+
+            <!-- PDF Viewer Iframe Container -->
+            <div style="position: relative; width: 100%; min-height: 550px; height: 75vh; border-radius: 16px; overflow: hidden; background: #ffffff; border: 1px solid var(--cq-border-light); box-shadow: inset 0 2px 6px rgba(0,0,0,0.04);">
+                <iframe 
+                    src="https://drive.google.com/file/d/1rZk5N3N1P7gJWDF6cjfjbPBoNNJTmrnW/preview" 
+                    title="Pratinjau Katalog & Price List Cleanique Lab" 
+                    width="100%" 
+                    height="100%" 
+                    style="border: 0; position: absolute; top: 0; left: 0; width: 100%; height: 100%;" 
+                    allow="autoplay">
+                </iframe>
+            </div>
+        </div>
+    </div>
+</section>
+
 <!-- 1. SOROTAN PRODUK UNGGULAN & PAKET BIANG KONSENTRAT -->
 <section class="cq-section" style="background-color: #ffffff; padding-bottom: 40px;">
     <div class="cq-container">
@@ -38,7 +92,7 @@ get_header();
         </div>
 
         <!-- Spotlight Card 1: Paket Biang Sabun Konsentrat -->
-        <div class="cq-spotlight-card" style="border-left: 6px solid var(--cq-green-deep);">
+        <div class="cq-spotlight-card">
             <div class="cq-spotlight-inner">
                 <div>
                     <div class="cq-spotlight-badge" style="color: var(--cq-green-deep); background: #eafaf1; border-color: #bbf2d0;">
@@ -68,7 +122,7 @@ get_header();
                            rel="noopener" 
                            class="cq-btn-primary cq-btn-sm" 
                            style="background: var(--cq-gradient-green);">
-                            Pesan Paket Biang via WA &rarr;
+                            Pesan Paket &rarr;
                         </a>
                     </div>
                 </div>
@@ -81,180 +135,123 @@ get_header();
     </div>
 </section>
 
-<!-- 2. DAFTAR HARGA & TABEL LENGKAP -->
-<section class="cq-section" style="background-color: var(--cq-bg-soft); padding-top: 40px;">
+<!-- PAKET KEAGENAN PRICING SECTION -->
+<section id="paket-keagenan" class="cq-section" style="background-color: var(--cq-bg-soft); padding: 90px 0;">
     <div class="cq-container">
-        <div style="text-align: center; margin-bottom: 30px;">
-            <h2 style="font-size: clamp(24px, 3.5vw, 34px); color: var(--cq-text-dark);">
-                Tabel Katalog Harga Lengkap
+        <div style="text-align: center; max-width: 820px; margin: 0 auto 50px auto;">
+            <span style="font-family: var(--cq-font-body); font-size: 16px; font-weight: 900; color: #7edb0d; text-transform: uppercase; letter-spacing: 3px; display: inline-block; margin-bottom: 8px;">
+                DAFTAR HARGA
+            </span>
+            <h2 style="font-size: clamp(32px, 5vw, 52px); margin-top: 4px; color: var(--cq-royal-blue); font-weight: 900; font-family: var(--cq-font-heading);">
+                Paket Keagenan
             </h2>
-            <p style="font-size: 15px; color: var(--cq-text-muted); margin-top: 6px;">
-                Pilih kategori di bawah untuk menyaring daftar produk dan harga satuan / grosir.
+            <p style="font-size: 16px; color: var(--cq-text-muted); margin-top: 10px; line-height: 1.6; font-weight: 500;">
+                Anda akan mendapatkan produk senilai uang yang anda investasikan dan juga diskon dengan besaran sesuai paket keagenan yang anda pilih
             </p>
         </div>
 
-        <!-- Filter Tabs -->
-        <div class="cq-tabs-nav">
-            <button class="cq-tab-btn active" data-filter="all">Semua Produk</button>
-            <button class="cq-tab-btn" data-filter="dishwash">Cuci Piring</button>
-            <button class="cq-tab-btn" data-filter="laundry">Laundry</button>
-            <button class="cq-tab-btn" data-filter="handsoap">Hand Soap</button>
-            <button class="cq-tab-btn" data-filter="floor">Karbol & Lantai</button>
-            <button class="cq-tab-btn" data-filter="biang">Paket Biang / Bahan</button>
-        </div>
+        <div class="cq-keagenan-grid">
+            <!-- 1. STARTER (Green) -->
+            <div class="cq-keagenan-card starter">
+                <div>
+                    <div style="text-align: center;">
+                        <span class="cq-keagenan-badge">STARTER</span>
+                        <div class="cq-keagenan-price">1,8 JUTA</div>
+                        <div class="cq-keagenan-subdisc">Diskon 5-10%</div>
+                    </div>
+                    <ul class="cq-keagenan-list">
+                        <li>Bebas Pilih Produk Senilai 1.8 Juta Rupiah</li>
+                        <li>Dapat Diskon Pembelian sebesar 5-10% per transaksi</li>
+                        <li>Limited hanya berlaku hingga akhir bulan ini</li>
+                        <li>Bonus Gambar Media Promosi Produk</li>
+                    </ul>
+                </div>
+                <div>
+                    <a href="<?php echo esc_url(cleaniquelab_get_whatsapp_url('Halo Cleanique Lab, saya ingin daftar Paket Keagenan STARTER 1.8 Juta.')); ?>" 
+                       target="_blank" 
+                       rel="noopener" 
+                       class="cq-keagenan-btn">
+                        DAFTAR
+                    </a>
+                </div>
+            </div>
 
-        <!-- Tabel Harga -->
-        <div class="cq-table-responsive">
-            <table class="cq-price-table">
-                <thead>
-                    <tr>
-                        <th>Nama Produk & Varian</th>
-                        <th>Kategori</th>
-                        <th>Kemasan</th>
-                        <th>Harga Ecer</th>
-                        <th>Harga Grosir (Min 5)</th>
-                        <th>Aksi</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <!-- Dishwashing -->
-                    <tr data-category="dishwash">
-                        <td>
-                            <strong>Sabun Cuci Piring Jeruk Nipis 5L</strong>
-                            <div style="font-size: 13px; color: var(--cq-text-muted);">Busa melimpah, kesat instan, ekstrak jeruk nipis alami</div>
-                        </td>
-                        <td><span class="cq-tag cq-tag-green">Cuci Piring</span></td>
-                        <td>Jerigen 5 Liter</td>
-                        <td><strong>Rp 35.000</strong></td>
-                        <td><strong style="color: var(--cq-green-deep);">Rp 30.000</strong></td>
-                        <td>
-                            <a href="<?php echo esc_url(cleaniquelab_get_whatsapp_url('Halo Cleanique Lab, saya ingin pesan Sabun Cuci Piring Jeruk Nipis 5L')); ?>" target="_blank" rel="noopener" class="cq-btn-primary cq-btn-sm">
-                                Pesan
-                            </a>
-                        </td>
-                    </tr>
+            <!-- 2. RESELLER (Purple) -->
+            <div class="cq-keagenan-card reseller">
+                <div>
+                    <div style="text-align: center;">
+                        <span class="cq-keagenan-badge">RESELLER</span>
+                        <div class="cq-keagenan-price">7,5 JUTA</div>
+                        <div class="cq-keagenan-subdisc">Diskon 10-15%</div>
+                    </div>
+                    <ul class="cq-keagenan-list">
+                        <li>Bebas Pilih Produk Senilai 7.5 Juta Rupiah</li>
+                        <li>Dapat Diskon Pembelian sebesar 10-15% per transaksi</li>
+                        <li>Order berikutnya tetap dapat diskon tanpa min. order</li>
+                        <li>Bonus Gambar Media Promosi Produk</li>
+                    </ul>
+                </div>
+                <div>
+                    <a href="<?php echo esc_url(cleaniquelab_get_whatsapp_url('Halo Cleanique Lab, saya ingin daftar Paket Keagenan RESELLER 7.5 Juta.')); ?>" 
+                       target="_blank" 
+                       rel="noopener" 
+                       class="cq-keagenan-btn">
+                        DAFTAR
+                    </a>
+                </div>
+            </div>
 
-                    <!-- Laundry -->
-                    <tr data-category="laundry">
-                        <td>
-                            <strong>Deterjen Cair Laundry (Liquid Detergent) 5L</strong>
-                            <div style="font-size: 13px; color: var(--cq-text-muted);">Rendah busa khusus mesin matic & manual, aroma floral segar</div>
-                        </td>
-                        <td><span class="cq-tag cq-tag-purple">Laundry</span></td>
-                        <td>Jerigen 5 Liter</td>
-                        <td><strong>Rp 45.000</strong></td>
-                        <td><strong style="color: var(--cq-green-deep);">Rp 38.000</strong></td>
-                        <td>
-                            <a href="<?php echo esc_url(cleaniquelab_get_whatsapp_url('Halo Cleanique Lab, saya ingin pesan Deterjen Cair Laundry 5L')); ?>" target="_blank" rel="noopener" class="cq-btn-primary cq-btn-sm">
-                                Pesan
-                            </a>
-                        </td>
-                    </tr>
+            <!-- 3. AGEN (Blue) -->
+            <div class="cq-keagenan-card agen">
+                <div>
+                    <div style="text-align: center;">
+                        <span class="cq-keagenan-badge">AGEN</span>
+                        <div class="cq-keagenan-price">15 JUTA</div>
+                        <div class="cq-keagenan-subdisc">Diskon 15-20%</div>
+                    </div>
+                    <ul class="cq-keagenan-list">
+                        <li>Bebas Pilih Produk Senilai 15 Juta Rupiah</li>
+                        <li>Dapat Diskon Pembelian sebesar 15-20% per transaksi</li>
+                        <li>Order berikutnya tetap dapat diskon tanpa min. order</li>
+                        <li>Bonus Gambar Media Promosi Produk</li>
+                    </ul>
+                </div>
+                <div>
+                    <a href="<?php echo esc_url(cleaniquelab_get_whatsapp_url('Halo Cleanique Lab, saya ingin daftar Paket Keagenan AGEN 15 Juta.')); ?>" 
+                       target="_blank" 
+                       rel="noopener" 
+                       class="cq-keagenan-btn">
+                        DAFTAR
+                    </a>
+                </div>
+            </div>
 
-                    <tr data-category="laundry">
-                        <td>
-                            <strong>Pelembut & Pewangi Pakaian (Softener) 5L</strong>
-                            <div style="font-size: 13px; color: var(--cq-text-muted);">Melembutkan serat kain, anti kusut, wangi tahan berminggu-minggu</div>
-                        </td>
-                        <td><span class="cq-tag cq-tag-purple">Laundry</span></td>
-                        <td>Jerigen 5 Liter</td>
-                        <td><strong>Rp 42.000</strong></td>
-                        <td><strong style="color: var(--cq-green-deep);">Rp 36.000</strong></td>
-                        <td>
-                            <a href="<?php echo esc_url(cleaniquelab_get_whatsapp_url('Halo Cleanique Lab, saya ingin pesan Softener Pewangi Laundry 5L')); ?>" target="_blank" rel="noopener" class="cq-btn-primary cq-btn-sm">
-                                Pesan
-                            </a>
-                        </td>
-                    </tr>
-
-                    <!-- Hand Soap -->
-                    <tr data-category="handsoap">
-                        <td>
-                            <strong>Sabun Cuci Tangan (Hand Soap Anti-Bacterial) 5L</strong>
-                            <div style="font-size: 13px; color: var(--cq-text-muted);">Varian Strawberry / Apple / Lemon, plus moisturizer lembut</div>
-                        </td>
-                        <td><span class="cq-tag cq-tag-blue">Hand Soap</span></td>
-                        <td>Jerigen 5 Liter</td>
-                        <td><strong>Rp 38.000</strong></td>
-                        <td><strong style="color: var(--cq-green-deep);">Rp 32.000</strong></td>
-                        <td>
-                            <a href="<?php echo esc_url(cleaniquelab_get_whatsapp_url('Halo Cleanique Lab, saya ingin pesan Hand Soap Anti-Bacterial 5L')); ?>" target="_blank" rel="noopener" class="cq-btn-primary cq-btn-sm">
-                                Pesan
-                            </a>
-                        </td>
-                    </tr>
-
-                    <!-- Floor & Karbol -->
-                    <tr data-category="floor">
-                        <td>
-                            <strong>Karbol Wangi Sereh Alami (Citronella) 5L</strong>
-                            <div style="font-size: 13px; color: var(--cq-text-muted);">Minyak sereh murni, pengusir lalat & serangga, disinfektan lantai</div>
-                        </td>
-                        <td><span class="cq-tag cq-tag-red">Karbol</span></td>
-                        <td>Jerigen 5 Liter</td>
-                        <td><strong>Rp 42.000</strong></td>
-                        <td><strong style="color: var(--cq-green-deep);">Rp 36.000</strong></td>
-                        <td>
-                            <a href="<?php echo esc_url(cleaniquelab_get_whatsapp_url('Halo Cleanique Lab, saya ingin pesan Karbol Wangi Sereh 5L')); ?>" target="_blank" rel="noopener" class="cq-btn-primary cq-btn-sm">
-                                Pesan
-                            </a>
-                        </td>
-                    </tr>
-
-                    <tr data-category="floor">
-                        <td>
-                            <strong>Pembersih Lantai Super Kilap (Floor Cleaner) 5L</strong>
-                            <div style="font-size: 13px; color: var(--cq-text-muted);">Aroma Lavender / Apel / Citrus, cepat kering & tidak lengket</div>
-                        </td>
-                        <td><span class="cq-tag cq-tag-red">Lantai</span></td>
-                        <td>Jerigen 5 Liter</td>
-                        <td><strong>Rp 32.000</strong></td>
-                        <td><strong style="color: var(--cq-green-deep);">Rp 27.000</strong></td>
-                        <td>
-                            <a href="<?php echo esc_url(cleaniquelab_get_whatsapp_url('Halo Cleanique Lab, saya ingin pesan Pembersih Lantai 5L')); ?>" target="_blank" rel="noopener" class="cq-btn-primary cq-btn-sm">
-                                Pesan
-                            </a>
-                        </td>
-                    </tr>
-
-                    <!-- Biang / Paket Konsentrat -->
-                    <tr data-category="biang">
-                        <td>
-                            <strong>Paket Biang Sabun Cuci Piring (Konsentrat)</strong>
-                            <div style="font-size: 13px; color: var(--cq-text-muted);">1 Paket biang cukup ditambah air jadi 25-30 Liter sabun kental siap pakai!</div>
-                        </td>
-                        <td><span class="cq-tag cq-tag-green">Paket Biang</span></td>
-                        <td>Paket 1 Kg</td>
-                        <td><strong>Rp 55.000</strong></td>
-                        <td><strong style="color: var(--cq-green-deep);">Rp 48.000</strong></td>
-                        <td>
-                            <a href="<?php echo esc_url(cleaniquelab_get_whatsapp_url('Halo Cleanique Lab, saya ingin pesan Paket Biang Cuci Piring')); ?>" target="_blank" rel="noopener" class="cq-btn-primary cq-btn-sm">
-                                Pesan
-                            </a>
-                        </td>
-                    </tr>
-
-                    <tr data-category="biang">
-                        <td>
-                            <strong>Paket Biang Deterjen Laundry Konsentrat</strong>
-                            <div style="font-size: 13px; color: var(--cq-text-muted);">1 Paket biang cukup ditambah air jadi 25 Liter deterjen matic premium</div>
-                        </td>
-                        <td><span class="cq-tag cq-tag-purple">Paket Biang</span></td>
-                        <td>Paket 1 Kg</td>
-                        <td><strong>Rp 65.000</strong></td>
-                        <td><strong style="color: var(--cq-green-deep);">Rp 58.000</strong></td>
-                        <td>
-                            <a href="<?php echo esc_url(cleaniquelab_get_whatsapp_url('Halo Cleanique Lab, saya ingin pesan Paket Biang Deterjen Laundry')); ?>" target="_blank" rel="noopener" class="cq-btn-primary cq-btn-sm">
-                                Pesan
-                            </a>
-                        </td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>
-
-        <div style="margin-top: 30px; padding: 20px; background-color: #ffffff; border: 1px solid var(--cq-border-light); border-radius: 14px; font-size: 14px; color: var(--cq-text-muted);">
-            * Harga belum termasuk ongkos kirim. Untuk pembelian drum (200 Liter) atau pemesanan skala industri/maklon brand sendiri, silakan hubungi tim sales kami untuk penawaran khusus.
+            <!-- 4. SUPER AGEN (Red) -->
+            <div class="cq-keagenan-card super-agen">
+                <div>
+                    <div style="text-align: center;">
+                        <span class="cq-keagenan-badge">SUPER AGEN</span>
+                        <div class="cq-keagenan-price">50 JUTA</div>
+                        <div class="cq-keagenan-subdisc">Diskon 16-23%</div>
+                    </div>
+                    <ul class="cq-keagenan-list">
+                        <li>Bebas Pilih Produk Senilai 50 Juta Rupiah</li>
+                        <li>Dapat Diskon Pembelian sebesar 16-23% per transaksi</li>
+                        <li>Limited hanya berlaku hingga akhir bulan ini</li>
+                        <li>Bonus Gambar Media Promosi Produk</li>
+                        <li>Hak Eksklusifitas wilayah</li>
+                        <li>Voucher Belanja</li>
+                    </ul>
+                </div>
+                <div>
+                    <a href="<?php echo esc_url(cleaniquelab_get_whatsapp_url('Halo Cleanique Lab, saya ingin daftar Paket Keagenan SUPER AGEN 50 Juta.')); ?>" 
+                       target="_blank" 
+                       rel="noopener" 
+                       class="cq-keagenan-btn">
+                        DAFTAR
+                    </a>
+                </div>
+            </div>
         </div>
     </div>
 </section>

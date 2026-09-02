@@ -28,7 +28,7 @@ get_header();
 <!-- KONTEN PROFIL -->
 <section class="cq-section" style="background-color: #ffffff;">
     <div class="cq-container">
-        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 50px; align-items: center;">
+        <div class="cq-about-hero-grid">
             <div>
                 <span style="font-family: var(--cq-font-body); font-size: 16px; font-weight: 800; color: var(--cq-royal-blue); text-transform: uppercase; letter-spacing: 2px;">
                     Dedikasi & Inovasi Formulasi
@@ -44,19 +44,27 @@ get_header();
                 </p>
                 <div style="display: flex; gap: 16px;">
                     <a href="<?php echo esc_url(home_url('/pricelist/')); ?>" class="cq-btn-primary cq-btn-sm">
-                        Lihat Produk & Harga
+                        Daftar Harga
                     </a>
                 </div>
             </div>
             <div>
-                <div style="background: var(--cq-bg-soft); border: 2px dashed var(--cq-royal-blue); border-radius: 24px; padding: 40px; text-align: center;">
-                    <div style="width: 72px; height: 72px; border-radius: 50%; background: #e8f3ff; margin: 0 auto 16px auto; display: flex; align-items: center; justify-content: center; color: var(--cq-royal-blue);">
-                        <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 20a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V8l-7 5V8l-7 5V4a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2Z"/><path d="M18 16h2"/><path d="M18 12h2"/><path d="M14 16h2"/><path d="M14 12h2"/></svg>
+                <div style="position: relative; text-align: center;">
+                    <img src="<?php echo esc_url(get_template_directory_uri() . '/assets/images/allinone.png'); ?>" 
+                         alt="Katalog Varian Produk Cleanique Lab All In One" 
+                         style="width: 100%; max-width: 520px; height: auto; border-radius: 24px; filter: drop-shadow(0 20px 40px rgba(0,0,0,0.12)); display: block; margin: 0 auto;">
+                    
+                    <div style="background: #ffffff; border: 1px solid var(--cq-border-light); border-radius: 20px; padding: 20px 24px; margin-top: -30px; position: relative; z-index: 3; max-width: 440px; margin-left: auto; margin-right: auto; box-shadow: 0 12px 30px rgba(0,0,0,0.08); text-align: left; display: flex; align-items: center; gap: 16px;">
+                        <div style="width: 52px; height: 52px; border-radius: 50%; background: #e8f3ff; color: var(--cq-royal-blue); display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
+                            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 20a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V8l-7 5V8l-7 5V4a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2Z"/><path d="M18 16h2"/><path d="M18 12h2"/><path d="M14 16h2"/><path d="M14 12h2"/></svg>
+                        </div>
+                        <div>
+                            <h3 style="font-size: 17px; font-weight: 800; margin-bottom: 4px; color: var(--cq-text-dark);">Kapasitas Produksi Pabrik</h3>
+                            <p style="font-size: 13px; color: var(--cq-text-muted); margin: 0; line-height: 1.4;">
+                                Suplai rutin ribuan liter per hari untuk hotel, resto, RS & laundry se-Indonesia.
+                            </p>
+                        </div>
                     </div>
-                    <h3 style="font-size: 24px; font-weight: 800; margin-bottom: 10px; color: var(--cq-text-dark);">Kapasitas Produksi Pabrik</h3>
-                    <p style="font-size: 15px; color: var(--cq-text-muted); line-height: 1.6;">
-                        Mampu memenuhi kebutuhan suplai rutin ribuan liter per hari untuk jaringan hotel, restoran, rumah sakit, laundry kiloan, dan distributor se-Indonesia.
-                    </p>
                 </div>
             </div>
         </div>
@@ -75,7 +83,7 @@ get_header();
             </h2>
         </div>
 
-        <div class="cq-step-grid" style="grid-template-columns: repeat(3, 1fr);">
+        <div class="cq-about-standar-grid">
             <div class="cq-step-card">
                 <div style="width: 48px; height: 48px; border-radius: 50%; background: #eafaf1; color: var(--cq-green-deep); display: flex; align-items: center; justify-content: center; margin: 0 auto 16px auto;">
                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 2v7.31M14 9.3V1.99M8.5 2h7M14 9.3a6.5 6.5 0 1 1-4 0"/></svg>
@@ -103,8 +111,48 @@ get_header();
     </div>
 </section>
 
-<!-- JARINGAN EKOSISTEM BISNIS & MITRA STRATEGIS (SEO BACKLINK SECTION) -->
+<!-- ALUR PEMESANAN & STANDAR KEAMANAN PENGIRIMAN CAIRAN -->
 <section class="cq-section" style="background-color: #ffffff;">
+    <div class="cq-container">
+        <div style="text-align: center; max-width: 760px; margin: 0 auto 50px auto;">
+            <span style="font-family: var(--cq-font-body); font-size: 16px; font-weight: 800; color: var(--cq-green-deep); text-transform: uppercase; letter-spacing: 2px;">
+                Prosedur Standar Pabrik
+            </span>
+            <h2 style="font-size: clamp(28px, 4vw, 40px); margin-top: 8px; color: var(--cq-text-dark);">
+                4 Langkah Mudah Pemesanan Sabun
+            </h2>
+        </div>
+
+        <div class="cq-about-ecosystem-grid">
+            <div class="cq-step-card">
+                <div class="cq-step-num">01</div>
+                <h4 style="font-size: 18px; font-weight: 800; margin-bottom: 8px;">Konsultasi Kebutuhan</h4>
+                <p style="font-size: 14px; color: var(--cq-text-muted);">Sampaikan jenis sabun, kuantitas volume (jerigen/drum/biang), serta lokasi pengiriman kepada Customer Care via WhatsApp.</p>
+            </div>
+
+            <div class="cq-step-card">
+                <div class="cq-step-num">02</div>
+                <h4 style="font-size: 18px; font-weight: 800; margin-bottom: 8px;">Faktur & Ekspedisi Terbaik</h4>
+                <p style="font-size: 14px; color: var(--cq-text-muted);">Tim kami akan menerbitkan invoice resmi dan memilihkan opsi ekspedisi kargo termurah dan tercepat ke kota Anda.</p>
+            </div>
+
+            <div class="cq-step-card">
+                <div class="cq-step-num">03</div>
+                <h4 style="font-size: 18px; font-weight: 800; margin-bottom: 8px;">Produksi & Packing Anti-Bocor</h4>
+                <p style="font-size: 14px; color: var(--cq-text-muted);">Pesanan dipersiapkan dengan segel ganda, lakban pengaman tebal, dan plastik pembungkus berlapis standar kargo cairan.</p>
+            </div>
+
+            <div class="cq-step-card">
+                <div class="cq-step-num">04</div>
+                <h4 style="font-size: 18px; font-weight: 800; margin-bottom: 8px;">Resi & Pelacakan Live</h4>
+                <p style="font-size: 14px; color: var(--cq-text-muted);">Nomor resi kargo resmi dibagikan segera setelah paket diserahkan, dengan pendampingan pelacakan hingga barang tiba di tujuan.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- JARINGAN EKOSISTEM BISNIS & MITRA STRATEGIS (SEO BACKLINK SECTION) -->
+<section class="cq-section" style="background-color: var(--cq-bg-soft);">
     <div class="cq-container">
         <div style="text-align: center; max-width: 760px; margin: 0 auto 40px auto;">
             <span style="font-family: var(--cq-font-body); font-size: 16px; font-weight: 800; color: var(--cq-royal-blue); text-transform: uppercase; letter-spacing: 2px;">
@@ -118,7 +166,7 @@ get_header();
             </p>
         </div>
 
-        <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px;">
+        <div class="cq-about-ecosystem-grid">
             <!-- 1. Indotech Berkah Abadi -->
             <a href="https://indotech.id/" target="_blank" rel="noopener" class="cq-channel-card" style="padding: 24px 16px; text-align: left; align-items: flex-start;">
                 <strong style="font-size: 16px; color: var(--cq-royal-blue); margin-bottom: 4px;">Indotech Berkah Abadi</strong>
@@ -191,7 +239,7 @@ get_header();
                rel="noopener" 
                class="cq-btn-primary">
                 <svg class="cq-icon" width="20" height="20" fill="currentColor" viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
-                Hubungi Kami Sekarang
+                Hubungi Kami
             </a>
         </div>
     </div>

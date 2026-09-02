@@ -112,7 +112,7 @@ get_header();
             <section class="cq-legal-section">
                 <h2>5. Pertanyaan Mengenai Cookie</h2>
                 <p>
-                    Jika Anda memiliki pertanyaan mengenai penggunaan teknologi cookie di situs web kami, silakan hubungi tim teknis kami melalui email di <a href="mailto:admin@cleaniquelab.com">admin@cleaniquelab.com</a> atau WhatsApp <a href="<?php echo esc_url(cleaniquelab_get_whatsapp_url('Halo Cleanique Lab, saya ingin bertanya perihal Kebijakan Cookie')); ?>" target="_blank" rel="noopener">0812-3456-7890</a>.
+                    Jika Anda memiliki pertanyaan mengenai penggunaan teknologi cookie di situs web kami, silakan hubungi tim teknis kami melalui email di <a href="mailto:admin@cleaniquelab.com">admin@cleaniquelab.com</a> atau WhatsApp <a href="<?php echo esc_url(cleaniquelab_get_whatsapp_url('Halo Cleanique Lab, saya ingin bertanya perihal Kebijakan Cookie')); ?>" target="_blank" rel="noopener">0878-4812-0088</a>.
                 </p>
             </section>
         </div>

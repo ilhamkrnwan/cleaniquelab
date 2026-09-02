@@ -10,6 +10,13 @@
     <meta charset="<?php bloginfo('charset'); ?>">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="profile" href="https://gmpg.org/xfn/11">
+
+    <!-- Favicon & Touch Icons -->
+    <link rel="icon" type="image/x-icon" href="<?php echo esc_url(get_template_directory_uri() . '/assets/images/favicon.ico'); ?>">
+    <link rel="icon" type="image/png" sizes="32x32" href="<?php echo esc_url(get_template_directory_uri() . '/assets/images/favicon-32x32.png'); ?>">
+    <link rel="icon" type="image/png" sizes="16x16" href="<?php echo esc_url(get_template_directory_uri() . '/assets/images/favicon-16x16.png'); ?>">
+    <link rel="apple-touch-icon" sizes="180x180" href="<?php echo esc_url(get_template_directory_uri() . '/assets/images/apple-touch-icon.png'); ?>">
+
     <?php wp_head(); ?>
 </head>
 <body <?php body_class(); ?>>
@@ -30,16 +37,16 @@
                 <a href="https://instagram.com/cleaniquelab" target="_blank" rel="noopener" title="Instagram @cleaniquelab" style="color: #ffffff; opacity: 0.85; transition: opacity 0.2s;" onmouseover="this.style.opacity=1" onmouseout="this.style.opacity=0.85">
                     <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/></svg>
                 </a>
-                <a href="https://shopee.co.id/cleaniquelab" target="_blank" rel="noopener" title="Shopee Official Cleanique Lab" style="color: #ffffff; opacity: 0.85; transition: opacity 0.2s;" onmouseover="this.style.opacity=1" onmouseout="this.style.opacity=0.85">
+                <a href="https://id.shp.ee/6dkm3Liy" target="_blank" rel="noopener" title="Shopee Official Cleanique Lab" style="color: #ffffff; opacity: 0.85; transition: opacity 0.2s;" onmouseover="this.style.opacity=1" onmouseout="this.style.opacity=0.85">
                     <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M19.5 7.5h-2.25V6.25a5.25 5.25 0 0 0-10.5 0V7.5H4.5A1.5 1.5 0 0 0 3 9l1.4 11.2a2.5 2.5 0 0 0 2.48 2.3h10.24a2.5 2.5 0 0 0 2.48-2.3L21 9a1.5 1.5 0 0 0-1.5-1.5zm-10.75-1.25a3.25 3.25 0 0 1 6.5 0V7.5h-6.5V6.25zm2.33 11.45c-1.3-.23-1.84-.8-1.84-1.72 0-1.1.95-1.76 2.32-1.9l1.34-.14c.64-.07.96-.28.96-.66 0-.47-.46-.76-1.2-.76-.8 0-1.37.31-1.55.83l-1.33-.39c.34-.94 1.37-1.58 2.83-1.58 1.63 0 2.63.74 2.63 1.85 0 1.04-.77 1.63-2.15 1.78l-1.4.15c-.72.08-1.08.31-1.08.72 0 .51.52.83 1.34.83.89 0 1.58-.38 1.77-.92l1.3.43c-.39 1.08-1.53 1.7-3.08 1.58z"/></svg>
                 </a>
-                <a href="https://tiktok.com/@cleaniquelab" target="_blank" rel="noopener" title="TikTok Shop Cleanique Lab" style="color: #ffffff; opacity: 0.85; transition: opacity 0.2s;" onmouseover="this.style.opacity=1" onmouseout="this.style.opacity=0.85">
+                <a href="https://www.tiktok.com/@orchidcareofficial?_r=1" target="_blank" rel="noopener" title="TikTok Shop Cleanique Lab" style="color: #ffffff; opacity: 0.85; transition: opacity 0.2s;" onmouseover="this.style.opacity=1" onmouseout="this.style.opacity=0.85">
                     <svg width="14" height="14" fill="currentColor" viewBox="0 0 24 24"><path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64c.298-.002.595.042.88.13V9.4a6.33 6.33 0 0 0-1-.08A6.34 6.34 0 0 0 3 15.66a6.34 6.34 0 0 0 10.81 4.48 6.26 6.26 0 0 0 1.87-4.47V8.71a8.18 8.18 0 0 0 4.91 1.65V6.91a4.86 4.86 0 0 1-1-.22z"/></svg>
                 </a>
             </span>
             <span class="cq-topbar-item" style="border-left: 1px solid rgba(255,255,255,0.2); padding-left: 12px;">
                 <svg class="cq-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
-                <a href="tel:081234567890">0812-3456-7890</a>
+                <a href="tel:087848120088">0878-4812-0088</a>
             </span>
             <span class="cq-topbar-badge">
                 <svg class="cq-icon" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 18H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h3.19M15 6h2a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2h-3.19"/><circle cx="7" cy="18" r="2"/><circle cx="17" cy="18" r="2"/><path d="M9 18h6"/></svg>
@@ -54,13 +61,8 @@
     <div class="cq-container cq-header-inner">
         <!-- Logo -->
         <a href="<?php echo esc_url(home_url('/')); ?>" class="cq-logo" rel="home">
-            <?php
-            if (has_custom_logo()) {
-                the_custom_logo();
-            } else {
-                echo 'CLEANIQUE<span>LAB</span>';
-            }
-            ?>
+            <img src="<?php echo esc_url(get_template_directory_uri() . '/assets/images/logo.png'); ?>" alt="Cleanique Lab Logo" width="40" height="40">
+            CLEANIQUE<span>LAB</span>
         </a>
 
         <!-- Desktop Navigation Menu -->
@@ -117,7 +119,10 @@
 
 <aside id="mobile-drawer" class="cq-mobile-drawer" aria-hidden="true">
     <div class="cq-drawer-header">
-        <span class="cq-logo">CLEANIQUE<span>LAB</span></span>
+        <a href="<?php echo esc_url(home_url('/')); ?>" class="cq-logo" rel="home">
+            <img src="<?php echo esc_url(get_template_directory_uri() . '/assets/images/logo.png'); ?>" alt="Cleanique Lab Logo" width="34" height="34">
+            CLEANIQUE<span>LAB</span>
+        </a>
         <button id="drawer-close" class="cq-drawer-close" aria-label="<?php esc_attr_e('Tutup Menu', 'cleaniquelab'); ?>">
             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg>
         </button>
@@ -132,27 +137,42 @@
             <li><a href="<?php echo esc_url(home_url('/contact/')); ?>">Hubungi Kami</a></li>
         </ul>
 
-        <!-- Official Channels on Mobile -->
-        <div style="margin-bottom: 24px; padding: 16px; background: var(--cq-bg-soft); border-radius: 12px;">
-            <strong style="display: block; font-size: 13px; color: var(--cq-text-dark); margin-bottom: 10px; text-transform: uppercase; letter-spacing: 0.5px;">Toko Resmi & Sosmed:</strong>
-            <div style="display: flex; gap: 10px;">
-                <a href="https://instagram.com/cleaniquelab" target="_blank" rel="noopener" class="cq-social-btn cq-social-ig" title="Instagram">
-                    <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/></svg>
+        <!-- Official Channels & Address - Full Width Section -->
+        <div style="margin-top: auto; padding-top: 24px; border-top: 1px solid var(--cq-border-light);">
+            <strong style="display: block; font-size: 12px; font-weight: 800; color: var(--cq-text-dark); margin-bottom: 12px; text-transform: uppercase; letter-spacing: 0.8px;">Toko Resmi & Sosmed:</strong>
+            <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 10px; margin-bottom: 20px; width: 100%;">
+                <a href="https://instagram.com/cleaniquelab" target="_blank" rel="noopener" class="cq-social-btn cq-social-ig" title="Instagram" style="width: 100%; height: 44px; display: flex; align-items: center; justify-content: center; border-radius: 10px;">
+                    <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/></svg>
                 </a>
-                <a href="https://shopee.co.id/cleaniquelab" target="_blank" rel="noopener" class="cq-social-btn cq-social-shopee" title="Shopee">
-                    <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M19.5 7.5h-2.25V6.25a5.25 5.25 0 0 0-10.5 0V7.5H4.5A1.5 1.5 0 0 0 3 9l1.4 11.2a2.5 2.5 0 0 0 2.48 2.3h10.24a2.5 2.5 0 0 0 2.48-2.3L21 9a1.5 1.5 0 0 0-1.5-1.5zm-10.75-1.25a3.25 3.25 0 0 1 6.5 0V7.5h-6.5V6.25zm2.33 11.45c-1.3-.23-1.84-.8-1.84-1.72 0-1.1.95-1.76 2.32-1.9l1.34-.14c.64-.07.96-.28.96-.66 0-.47-.46-.76-1.2-.76-.8 0-1.37.31-1.55.83l-1.33-.39c.34-.94 1.37-1.58 2.83-1.58 1.63 0 2.63.74 2.63 1.85 0 1.04-.77 1.63-2.15 1.78l-1.4.15c-.72.08-1.08.31-1.08.72 0 .51.52.83 1.34.83.89 0 1.58-.38 1.77-.92l1.3.43c-.39 1.08-1.53 1.7-3.08 1.58z"/></svg>
+                <a href="https://id.shp.ee/6dkm3Liy" target="_blank" rel="noopener" class="cq-social-btn cq-social-shopee" title="Shopee" style="width: 100%; height: 44px; display: flex; align-items: center; justify-content: center; border-radius: 10px;">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M19.5 7.5h-2.25V6.25a5.25 5.25 0 0 0-10.5 0V7.5H4.5A1.5 1.5 0 0 0 3 9l1.4 11.2a2.5 2.5 0 0 0 2.48 2.3h10.24a2.5 2.5 0 0 0 2.48-2.3L21 9a1.5 1.5 0 0 0-1.5-1.5zm-10.75-1.25a3.25 3.25 0 0 1 6.5 0V7.5h-6.5V6.25zm2.33 11.45c-1.3-.23-1.84-.8-1.84-1.72 0-1.1.95-1.76 2.32-1.9l1.34-.14c.64-.07.96-.28.96-.66 0-.47-.46-.76-1.2-.76-.8 0-1.37.31-1.55.83l-1.33-.39c.34-.94 1.37-1.58 2.83-1.58 1.63 0 2.63.74 2.63 1.85 0 1.04-.77 1.63-2.15 1.78l-1.4.15c-.72.08-1.08.31-1.08.72 0 .51.52.83 1.34.83.89 0 1.58-.38 1.77-.92l1.3.43c-.39 1.08-1.53 1.7-3.08 1.58z"/></svg>
                 </a>
-                <a href="https://tiktok.com/@cleaniquelab" target="_blank" rel="noopener" class="cq-social-btn cq-social-tiktok" title="TikTok Shop">
-                    <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24"><path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64c.298-.002.595.042.88.13V9.4a6.33 6.33 0 0 0-1-.08A6.34 6.34 0 0 0 3 15.66a6.34 6.34 0 0 0 10.81 4.48 6.26 6.26 0 0 0 1.87-4.47V8.71a8.18 8.18 0 0 0 4.91 1.65V6.91a4.86 4.86 0 0 1-1-.22z"/></svg>
+                <a href="https://www.tiktok.com/@orchidcareofficial?_r=1" target="_blank" rel="noopener" class="cq-social-btn cq-social-tiktok" title="TikTok Shop" style="width: 100%; height: 44px; display: flex; align-items: center; justify-content: center; border-radius: 10px;">
+                    <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24"><path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64c.298-.002.595.042.88.13V9.4a6.33 6.33 0 0 0-1-.08A6.34 6.34 0 0 0 3 15.66a6.34 6.34 0 0 0 10.81 4.48 6.26 6.26 0 0 0 1.87-4.47V8.71a8.18 8.18 0 0 0 4.91 1.65V6.91a4.86 4.86 0 0 1-1-.22z"/></svg>
                 </a>
-                <a href="<?php echo esc_url(cleaniquelab_get_whatsapp_url('Halo Cleanique Lab')); ?>" target="_blank" rel="noopener" class="cq-social-btn cq-social-wa" title="WhatsApp">
-                    <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
+                <a href="<?php echo esc_url(cleaniquelab_get_whatsapp_url('Halo Cleanique Lab')); ?>" target="_blank" rel="noopener" class="cq-social-btn cq-social-wa" title="WhatsApp" style="width: 100%; height: 44px; display: flex; align-items: center; justify-content: center; border-radius: 10px;">
+                    <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
+                </a>
+            </div>
+
+            <!-- Address Block - Full Width -->
+            <div style="padding-top: 16px; border-top: 1px dashed var(--cq-border-light); margin-bottom: 20px;">
+                <strong style="display: flex; align-items: center; gap: 6px; font-size: 12px; color: var(--cq-text-dark); margin-bottom: 6px; text-transform: uppercase; letter-spacing: 0.8px;">
+                    <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="var(--cq-royal-blue)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+                    Alamat Pabrik & Workshop:
+                </strong>
+                <p style="font-size: 13px; color: var(--cq-text-muted); line-height: 1.5; margin: 0 0 8px 0;">
+                    <strong style="color: var(--cq-text-dark);">PT Indotech Berkah Abadi (Cleanique Lab)</strong><br>
+                    Jongke Tengah No. 30, RT.01/RW.23, Sendangadi, Kec. Mlati, Kab. Sleman, D.I. Yogyakarta 55285
+                </p>
+                <a href="https://maps.app.goo.gl/cNvQcYrS57BvLqrc6" target="_blank" rel="noopener" style="display: inline-flex; align-items: center; gap: 4px; font-size: 12px; font-weight: 700; color: var(--cq-royal-blue); text-decoration: underline;">
+                    Buka Google Maps &rarr;
                 </a>
             </div>
         </div>
 
-        <div class="cq-drawer-footer">
-            <a href="<?php echo esc_url(cleaniquelab_get_whatsapp_url('Halo Cleanique Lab')); ?>" target="_blank" rel="noopener" class="cq-btn-primary" style="width: 100%;">
+        <div class="cq-drawer-footer" style="padding-top: 16px; border-top: 1px solid var(--cq-border-light); margin-top: 0;">
+            <a href="<?php echo esc_url(cleaniquelab_get_whatsapp_url('Halo Cleanique Lab')); ?>" target="_blank" rel="noopener" class="cq-btn-primary" style="width: 100%; text-align: center; justify-content: center; padding: 14px 20px; font-size: 15px;">
                 Konsultasi WhatsApp
             </a>
         </div>
