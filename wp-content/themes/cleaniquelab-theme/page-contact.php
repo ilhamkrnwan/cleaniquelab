@@ -28,7 +28,7 @@ get_header();
 <!-- SECTION KONTEN & FORMULIR DENGAN LUCIDE ICONS & MARKETPLACE CHANNELS -->
 <section class="cq-section" style="background-color: #ffffff; padding-bottom: 40px;">
     <div class="cq-container">
-        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 50px; align-items: flex-start;">
+        <div class="cq-contact-hero-grid">
             <!-- Kolom Kiri: Info Kontak & Marketplace -->
             <div>
                 <h2 style="font-size: clamp(26px, 4vw, 36px); margin-bottom: 16px; color: var(--cq-text-dark);">
@@ -56,7 +56,7 @@ get_header();
                     </div>
 
                     <!-- Item 2: Sosmed & Marketplace Strip -->
-                    <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px;">
+                    <div class="cq-contact-channels-grid">
                         <!-- Instagram Card -->
                         <a href="https://instagram.com/cleaniquelab" target="_blank" rel="noopener" class="cq-channel-card cq-channel-ig" title="Instagram @cleaniquelab">
                             <div class="cq-channel-icon" style="background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888);">
@@ -156,7 +156,7 @@ get_header();
             </p>
         </div>
 
-        <div style="display: grid; grid-template-columns: 1.3fr 0.9fr; gap: 30px; align-items: stretch;">
+        <div class="cq-contact-map-grid">
             <!-- Embedded Interactive Map Card -->
             <div style="background: #ffffff; border-radius: 20px; overflow: hidden; border: 1px solid var(--cq-border-light); box-shadow: 0 10px 30px rgba(0,0,0,0.06); display: flex; flex-direction: column; min-height: 420px;">
                 <div style="padding: 16px 20px; background: #ffffff; border-bottom: 1px solid var(--cq-border-light); display: flex; align-items: center; justify-content: space-between;">

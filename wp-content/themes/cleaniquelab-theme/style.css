@@ -2957,3 +2957,44 @@ h1, h2, h3, h4, h5, h6 {
   }
 }
 
+/* ==========================================================================
+   CONTACT PAGE RESPONSIVE STYLING
+   ========================================================================== */
+.cq-contact-hero-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 50px;
+  align-items: flex-start;
+}
+
+.cq-contact-channels-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+}
+
+.cq-contact-map-grid {
+  display: grid;
+  grid-template-columns: 1.3fr 0.9fr;
+  gap: 30px;
+  align-items: stretch;
+}
+
+@media (max-width: 991px) {
+  .cq-contact-hero-grid {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+  .cq-contact-map-grid {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+}
+
+@media (max-width: 480px) {
+  .cq-contact-channels-grid {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+}
+
