@@ -101,7 +101,7 @@ get_header();
             </div>
 
             <!-- Kolom Kanan: Formulir Cepat WhatsApp -->
-            <div style="background: #ffffff; border: 1px solid var(--cq-border-light); border-radius: 24px; padding: 36px; box-shadow: 0 15px 40px rgba(0,0,0,0.06);">
+            <div class="cq-contact-form-card" style="background: #ffffff; border: 1px solid var(--cq-border-light); border-radius: 24px; padding: 36px; box-shadow: 0 15px 40px rgba(0,0,0,0.06);">
                 <h3 style="font-size: 22px; font-weight: 800; margin-bottom: 8px; color: var(--cq-text-dark);">
                     Formulir Konsultasi Cepat
                 </h3>
@@ -112,12 +112,12 @@ get_header();
                 <form id="cq-contact-form" onsubmit="event.preventDefault(); window.cleaniqueSendContactWA();">
                     <div style="margin-bottom: 18px;">
                         <label for="contact-name" style="display: block; font-size: 14px; font-weight: 700; margin-bottom: 6px;">Nama Lengkap / Usaha:</label>
-                        <input type="text" id="contact-name" required placeholder="Contoh: Budi Santoso / Laundry Berkah" style="width: 100%; padding: 12px 16px; border: 1px solid var(--cq-border-light); border-radius: 10px; font-size: 15px; outline: none; font-family: inherit;">
+                        <input type="text" id="contact-name" required placeholder="Contoh: Budi Santoso / Laundry Berkah" style="width: 100%; padding: 12px 16px; border: 1px solid var(--cq-border-light); border-radius: 10px; font-size: 15px; outline: none; font-family: inherit; box-sizing: border-box;">
                     </div>
 
                     <div style="margin-bottom: 18px;">
                         <label for="contact-interest" style="display: block; font-size: 14px; font-weight: 700; margin-bottom: 6px;">Minat Kebutuhan:</label>
-                        <select id="contact-interest" style="width: 100%; padding: 12px 16px; border: 1px solid var(--cq-border-light); border-radius: 10px; font-size: 15px; outline: none; font-family: inherit;">
+                        <select id="contact-interest" style="width: 100%; padding: 12px 16px; border: 1px solid var(--cq-border-light); border-radius: 10px; font-size: 15px; outline: none; font-family: inherit; box-sizing: border-box;">
                             <option value="Paket Kemitraan Reseller / Agen">Peluang Usaha & Kemitraan Agen Sabun</option>
                             <option value="Suplai Rutin Usaha Laundry / Hotel / Resto">Suplai Rutin Laundry / Hotel / Restoran</option>
                             <option value="Pembelian Sabun Jerigen Siap Pakai 5L">Pembelian Eceran / Jerigen 5L Siap Pakai</option>
@@ -128,7 +128,7 @@ get_header();
 
                     <div style="margin-bottom: 24px;">
                         <label for="contact-message" style="display: block; font-size: 14px; font-weight: 700; margin-bottom: 6px;">Pesan / Pertanyaan Tambahan:</label>
-                        <textarea id="contact-message" rows="4" placeholder="Tuliskan kota Anda dan pertanyaan yang ingin diajukan..." style="width: 100%; padding: 12px 16px; border: 1px solid var(--cq-border-light); border-radius: 10px; font-size: 15px; outline: none; font-family: inherit; resize: vertical;"></textarea>
+                        <textarea id="contact-message" rows="4" placeholder="Tuliskan kota Anda dan pertanyaan yang ingin diajukan..." style="width: 100%; padding: 12px 16px; border: 1px solid var(--cq-border-light); border-radius: 10px; font-size: 15px; outline: none; font-family: inherit; resize: vertical; box-sizing: border-box;"></textarea>
                     </div>
 
                     <button type="submit" class="cq-btn-primary" style="width: 100%;">

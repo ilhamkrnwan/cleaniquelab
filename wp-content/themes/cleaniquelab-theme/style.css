@@ -2980,21 +2980,69 @@ h1, h2, h3, h4, h5, h6 {
   align-items: stretch;
 }
 
+/* Fix box-sizing so width: 100% inputs don't overflow on mobile */
+#cq-contact-form input,
+#cq-contact-form select,
+#cq-contact-form textarea {
+  box-sizing: border-box;
+  max-width: 100%;
+}
+
 @media (max-width: 991px) {
   .cq-contact-hero-grid {
     grid-template-columns: 1fr;
-    gap: 32px;
+    gap: 28px;
   }
   .cq-contact-map-grid {
     grid-template-columns: 1fr;
-    gap: 24px;
+    gap: 20px;
   }
 }
 
+/* Tablet: channels tetap 3 kolom tapi lebih compact */
+@media (max-width: 767px) {
+  .cq-contact-channels-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 8px;
+  }
+  /* Form card: kurangi padding di tablet */
+  .cq-contact-form-card {
+    padding: 24px !important;
+  }
+}
+
+/* Mobile kecil: channels 1 kolom */
 @media (max-width: 480px) {
   .cq-contact-channels-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 8px;
+  }
+  /* Channel card lebih compact */
+  .cq-channel-card {
+    padding: 12px 6px;
+  }
+  .cq-channel-card strong {
+    font-size: 12px;
+  }
+  .cq-channel-card span {
+    font-size: 11px;
+  }
+  /* Form card: padding minimal di HP kecil */
+  .cq-contact-form-card {
+    padding: 20px !important;
+    border-radius: 18px !important;
+  }
+  /* Contact info items: padding lebih kecil */
+  .cq-contact-hero-grid > div:first-child [style*="padding: 18px 20px"] {
+    padding: 14px 14px !important;
+  }
+}
+
+/* Untuk layar sangat kecil di bawah 380px, channels ke 1 kolom */
+@media (max-width: 360px) {
+  .cq-contact-channels-grid {
     grid-template-columns: 1fr;
-    gap: 10px;
+    gap: 8px;
   }
 }
 
