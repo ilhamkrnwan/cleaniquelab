@@ -9,7 +9,7 @@ if (!defined('ABSPATH')) {
     exit; // Exit if accessed directly.
 }
 
-define('CLEANIQUELAB_VERSION', '1.3.6');
+define('CLEANIQUELAB_VERSION', '1.3.8');
 
 /**
  * Sets up theme defaults and registers support for various WordPress features.

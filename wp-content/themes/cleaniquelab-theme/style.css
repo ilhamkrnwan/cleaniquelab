@@ -4174,100 +4174,119 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .cq-layer-sec-icon {
-  width: 32px;
-  height: 32px;
-  border-radius: 10px;
-  background: #eef6ff;
-  color: var(--cq-royal-blue);
+  width: 36px;
+  height: 36px;
+  border-radius: 12px;
+  background: rgba(0, 210, 255, 0.14);
+  color: #00d2ff;
+  border: 1px solid rgba(0, 210, 255, 0.4);
   display: flex;
   align-items: center;
   justify-content: center;
   flex-shrink: 0;
+  box-shadow: 0 0 14px rgba(0, 210, 255, 0.25);
 }
 
 .cq-layer-sec-title {
-  font-size: 15px;
+  font-size: 17px;
   font-weight: 800;
-  color: var(--cq-text-dark);
+  color: #ffffff;
+  letter-spacing: 0.3px;
   margin: 0;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
 }
 
 /* Layer Dilution Table */
 .cq-layer-table-wrap {
-  background: #f8fafc;
-  border: 1px solid var(--cq-border-light);
+  background: #060b16;
+  border: 1px solid rgba(58, 123, 213, 0.4);
   border-radius: 14px;
   overflow: hidden;
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.4), inset 0 1px 0 rgba(255, 255, 255, 0.05);
 }
 
 .cq-layer-table {
   width: 100%;
   border-collapse: collapse;
-  font-size: 13px;
+  font-size: 13.5px;
   text-align: left;
 }
 
 .cq-layer-table th {
-  background: #edf2f7;
-  padding: 10px 14px;
+  background: #0d172e;
+  padding: 12px 18px;
   font-weight: 800;
-  color: var(--cq-text-dark);
+  color: #38bdf8;
+  text-transform: uppercase;
+  font-size: 12px;
+  letter-spacing: 0.6px;
+  border-bottom: 1px solid rgba(58, 123, 213, 0.3);
 }
 
 .cq-layer-table td {
-  padding: 10px 14px;
-  border-top: 1px solid var(--cq-border-light);
-  color: var(--cq-text-dark);
+  padding: 13px 18px;
+  border-top: 1px solid rgba(58, 123, 213, 0.2);
+  color: #f1f5f9;
+  font-size: 14px;
 }
 
 .cq-ratio-pill {
   font-weight: 800;
-  color: #15803d;
-  background: #dcfce7;
-  padding: 3px 8px;
-  border-radius: 6px;
+  color: #aef711;
+  background: rgba(174, 247, 17, 0.16);
+  border: 1.5px solid rgba(174, 247, 17, 0.55);
+  padding: 5px 14px;
+  border-radius: 50px;
+  display: inline-block;
+  box-shadow: 0 0 14px rgba(174, 247, 17, 0.25);
+  font-size: 13px;
+  letter-spacing: 0.3px;
 }
 
 /* Steps List */
 .cq-layer-steps-list {
   margin: 0;
-  padding-left: 20px;
+  padding: 0;
+  list-style: none;
+  counter-reset: cq-step-counter-base;
   display: flex;
   flex-direction: column;
-  gap: 8px;
-  font-size: 13.5px;
-  color: var(--cq-text-dark);
-  line-height: 1.5;
+  gap: 12px;
+  font-size: 14px;
+  color: #e2e8f0;
+  line-height: 1.6;
 }
 
 /* Specs Grid */
 .cq-layer-specs-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 10px;
+  gap: 12px;
 }
 
 .cq-spec-item {
-  background: #f8fafc;
-  border: 1px solid var(--cq-border-light);
-  border-radius: 10px;
-  padding: 8px 12px;
+  background: #080f1e;
+  border: 1px solid rgba(58, 123, 213, 0.3);
+  border-radius: 12px;
+  padding: 12px 16px;
   display: flex;
   flex-direction: column;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.04);
 }
 
 .cq-spec-key {
   font-size: 11px;
   font-weight: 800;
   text-transform: uppercase;
-  color: var(--cq-text-muted);
+  letter-spacing: 0.5px;
+  color: #64748b;
 }
 
 .cq-spec-val {
-  font-size: 13px;
-  font-weight: 700;
-  color: var(--cq-text-dark);
-  margin-top: 2px;
+  font-size: 14px;
+  font-weight: 800;
+  color: #38bdf8;
+  margin-top: 4px;
 }
 
 /* Packs Wrap */
@@ -4280,9 +4299,9 @@ h1, h2, h3, h4, h5, h6 {
 .cq-pack-pill {
   font-size: 12px;
   font-weight: 800;
-  background: #f1f5f9;
-  border: 1px solid var(--cq-border-light);
-  color: var(--cq-text-dark);
+  background: #0d172e;
+  border: 1px solid rgba(58, 123, 213, 0.3);
+  color: #38bdf8;
   padding: 6px 14px;
   border-radius: 50px;
 }
@@ -4836,6 +4855,9 @@ body.cq-otomotif-landing-page {
   color: #ffffff !important;
   border: none !important;
   text-decoration: none !important;
+  white-space: nowrap !important;
+  flex-shrink: 0 !important;
+  line-height: 1 !important;
   transition: transform 0.2s ease, box-shadow 0.2s ease !important;
 }
 
@@ -4849,7 +4871,55 @@ body.cq-otomotif-landing-page {
     display: none;
   }
   .cq-otomotif-nav-inner {
-    padding: 12px 16px;
+    padding: 10px 14px !important;
+    gap: 8px !important;
+  }
+  .cq-otomotif-brand {
+    gap: 8px !important;
+    min-width: 0 !important;
+    flex-shrink: 1 !important;
+  }
+  .cq-otomotif-brand img {
+    width: 28px !important;
+    height: 28px !important;
+    flex-shrink: 0 !important;
+  }
+  .cq-otomotif-brand-text {
+    font-size: 14.5px !important;
+    gap: 6px !important;
+    white-space: nowrap !important;
+  }
+  .cq-otomotif-brand-pill {
+    font-size: 8.5px !important;
+    padding: 2px 6px !important;
+    flex-shrink: 0 !important;
+  }
+  .cq-otomotif-nav-btn {
+    padding: 7px 12px !important;
+    font-size: 11.5px !important;
+    gap: 5px !important;
+    min-height: 32px !important;
+    white-space: nowrap !important;
+    flex-shrink: 0 !important;
+    letter-spacing: 0.3px !important;
+  }
+  .cq-otomotif-nav-btn svg {
+    width: 14px !important;
+    height: 14px !important;
+    flex-shrink: 0 !important;
+  }
+}
+
+@media (max-width: 380px) {
+  .cq-otomotif-brand-pill {
+    display: none !important;
+  }
+  .cq-otomotif-brand-text {
+    font-size: 13.5px !important;
+  }
+  .cq-otomotif-nav-btn {
+    padding: 6px 10px !important;
+    font-size: 11px !important;
   }
 }
 
@@ -5103,139 +5173,628 @@ body.cq-otomotif-landing-page {
   box-shadow: 0 6px 20px rgba(0, 210, 255, 0.35) !important;
 }
 
-/* Layering Drawer & Bottom Sheet - Hitam Biru */
-.cq-otomotif-landing-page .cq-layering-backdrop {
-  background: rgba(3, 7, 18, 0.82) !important;
+/* ==========================================================================
+   INTERACTIVE FULL-SCREEN PRODUCT DETAIL LAYER ("LAYER PENUH") & PHOTO GALLERY
+   ========================================================================== */
+.cq-full-layer-overlay {
+  position: fixed;
+  inset: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 999999;
+  background: radial-gradient(circle at 50% 0%, #0e1d3a 0%, #081120 45%, #04060d 100%) !important;
+  display: flex;
+  flex-direction: column;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transition: opacity 0.35s cubic-bezier(0.16, 1, 0.3, 1), visibility 0.35s;
+  box-sizing: border-box;
 }
 
-.cq-otomotif-landing-page .cq-layering-sheet {
-  background: #0a0f1d !important;
-  border-left: 1px solid rgba(0, 210, 255, 0.25) !important;
-  box-shadow: -15px 0 50px rgba(0, 0, 0, 0.7) !important;
+.cq-full-layer-overlay.cq-full-layer-active {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
 }
 
-.cq-otomotif-landing-page .cq-layering-handle-bar {
-  background: #0a0f1d !important;
+/* Sticky Header Bar */
+.cq-full-layer-header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: rgba(7, 13, 24, 0.94) !important;
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border-bottom: 1px solid rgba(0, 210, 255, 0.3) !important;
+  box-shadow: 0 4px 25px rgba(0, 0, 0, 0.6);
+  padding: 14px 0;
+  flex-shrink: 0;
 }
 
-.cq-otomotif-landing-page .cq-layering-handle {
-  background: #334155 !important;
+.cq-full-layer-header-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
 }
 
-.cq-otomotif-landing-page .cq-layering-topbar {
-  background: rgba(10, 15, 29, 0.95) !important;
-  border-bottom: 1px solid rgba(58, 123, 213, 0.2) !important;
+.cq-full-layer-header-left {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  flex-wrap: wrap;
 }
 
-.cq-otomotif-landing-page .cq-layering-close-btn {
-  background: #172136 !important;
-  border-color: rgba(58, 123, 213, 0.3) !important;
-  color: #e2e8f0 !important;
+.cq-full-layer-back-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(15, 23, 42, 0.9);
+  border: 1.5px solid rgba(0, 210, 255, 0.45);
+  color: #ffffff;
+  padding: 8px 18px;
+  border-radius: 50px;
+  font-size: 13px;
+  font-weight: 800;
+  cursor: pointer;
+  transition: all 0.25s ease;
 }
 
-.cq-otomotif-landing-page .cq-layering-close-btn:hover {
-  background: #1e293b !important;
-  color: #00d2ff !important;
+.cq-full-layer-back-btn:hover {
+  background: linear-gradient(135deg, #00d2ff 0%, #2563eb 100%);
+  color: #ffffff;
+  border-color: #00d2ff;
+  box-shadow: 0 0 20px rgba(0, 210, 255, 0.55);
+  transform: translateX(-3px);
 }
 
-.cq-otomotif-landing-page .cq-layer-card {
-  background: #111827 !important;
-  border: 1px solid rgba(58, 123, 213, 0.25) !important;
-  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.4) !important;
+.cq-full-layer-badges {
+  display: flex;
+  align-items: center;
+  gap: 8px;
 }
 
-.cq-otomotif-landing-page .cq-layer-hero {
-  background: linear-gradient(135deg, #111827 0%, #152238 100%) !important;
-  border-color: rgba(0, 210, 255, 0.3) !important;
-}
-
-.cq-otomotif-landing-page .cq-layer-icon-box {
-  background: #172136 !important;
-  border-color: rgba(58, 123, 213, 0.3) !important;
-}
-
-.cq-otomotif-landing-page .cq-layering-title {
-  color: #ffffff !important;
-}
-
-.cq-otomotif-landing-page .cq-layering-summary {
-  color: #94a3b8 !important;
-}
-
-.cq-otomotif-landing-page .cq-layering-tag {
-  background: #1a243b !important;
-  border-color: rgba(58, 123, 213, 0.25) !important;
-  color: #38bdf8 !important;
-}
-
-.cq-otomotif-landing-page .cq-layer-sec-icon {
-  background: rgba(0, 210, 255, 0.12) !important;
-  color: #00d2ff !important;
-}
-
-.cq-otomotif-landing-page .cq-layer-sec-title {
-  color: #ffffff !important;
-}
-
-.cq-otomotif-landing-page .cq-layer-table-wrap {
-  background: #090d16 !important;
-  border-color: rgba(58, 123, 213, 0.25) !important;
-}
-
-.cq-otomotif-landing-page .cq-layer-table th {
-  background: #141c2e !important;
-  color: #38bdf8 !important;
-}
-
-.cq-otomotif-landing-page .cq-layer-table td {
-  color: #e2e8f0 !important;
-  border-top-color: rgba(58, 123, 213, 0.15) !important;
-}
-
-.cq-otomotif-landing-page .cq-ratio-pill {
+.cq-full-layer-badges .cq-layering-badge-cat {
+  font-size: 12px !important;
+  font-weight: 800 !important;
   background: rgba(0, 210, 255, 0.15) !important;
   color: #00d2ff !important;
+  border: 1.5px solid rgba(0, 210, 255, 0.45) !important;
+  padding: 5px 14px !important;
+  border-radius: 50px !important;
+  letter-spacing: 0.3px !important;
 }
 
-.cq-otomotif-landing-page .cq-layer-steps-list {
+.cq-full-layer-badges .cq-layering-badge-highlight {
+  font-size: 11px !important;
+  font-weight: 800 !important;
+  text-transform: uppercase !important;
+  background: rgba(174, 247, 17, 0.16) !important;
+  color: #aef711 !important;
+  border: 1.5px solid rgba(174, 247, 17, 0.55) !important;
+  padding: 5px 14px !important;
+  border-radius: 50px !important;
+  letter-spacing: 0.6px !important;
+  box-shadow: 0 0 14px rgba(174, 247, 17, 0.25) !important;
+}
+
+.cq-full-layer-header-right {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.cq-full-layer-top-wa {
+  background: linear-gradient(135deg, #ea501f 0%, #ff6900 100%) !important;
+  color: #ffffff !important;
+  border: none !important;
+  box-shadow: 0 4px 18px rgba(234, 80, 31, 0.5) !important;
+  padding: 9px 22px !important;
+  font-size: 13.5px !important;
+  font-weight: 800 !important;
+  border-radius: 50px !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 8px !important;
+  transition: all 0.25s ease !important;
+}
+
+.cq-full-layer-top-wa:hover {
+  transform: scale(1.05) !important;
+  box-shadow: 0 6px 24px rgba(234, 80, 31, 0.7) !important;
+}
+
+.cq-full-layer-close-btn {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  background: rgba(15, 23, 42, 0.9);
+  border: 1.5px solid rgba(58, 123, 213, 0.4);
+  color: #cbd5e1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+
+.cq-full-layer-close-btn:hover {
+  background: #ef4444;
+  border-color: #ef4444;
+  color: #ffffff;
+  transform: rotate(90deg) scale(1.08);
+  box-shadow: 0 0 20px rgba(239, 68, 68, 0.6);
+}
+
+/* Scrollable Container */
+.cq-full-layer-scroll {
+  flex: 1;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+  padding: 36px 0 60px;
+}
+
+.cq-full-layer-content-grid {
+  display: grid;
+  grid-template-columns: 1fr 1.15fr;
+  gap: 40px;
+  align-items: stretch;
+}
+
+.cq-full-layer-gallery-col {
+  height: 100%;
+}
+
+/* Gallery Column Styles */
+.cq-gallery-sticky-wrap {
+  position: sticky;
+  top: 24px;
+}
+
+.cq-gallery-main-viewport {
+  position: relative;
+  width: 100%;
+  height: 440px;
+  background: radial-gradient(circle at 50% 38%, #ffffff 0%, #f6f8fc 45%, #e6ecf5 85%, #dce4f0 100%);
+  border: 2px solid rgba(0, 210, 255, 0.45);
+  border-radius: 22px;
+  padding: 26px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.7), 0 0 45px rgba(0, 210, 255, 0.22), inset 0 0 25px rgba(0, 210, 255, 0.08);
+  overflow: hidden;
+}
+
+.cq-gallery-main-img {
+  width: 100%;
+  height: 100%;
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+  filter: drop-shadow(0 12px 24px rgba(0, 0, 0, 0.2));
+  transition: opacity 0.25s ease, transform 0.3s ease;
+}
+
+.cq-gallery-main-badge {
+  position: absolute;
+  bottom: 16px;
+  left: 16px;
+  background: rgba(6, 12, 24, 0.94);
+  backdrop-filter: blur(12px);
+  border: 1.5px solid #00d2ff;
+  color: #ffffff;
+  font-size: 13px;
+  font-weight: 800;
+  padding: 7px 18px;
+  border-radius: 50px;
+  pointer-events: none;
+  z-index: 2;
+  box-shadow: 0 4px 18px rgba(0, 210, 255, 0.45);
+  letter-spacing: 0.3px;
+}
+
+.cq-gallery-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  background: rgba(8, 16, 32, 0.92);
+  backdrop-filter: blur(8px);
+  border: 1.5px solid rgba(0, 210, 255, 0.5);
+  color: #00d2ff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  z-index: 3;
+}
+
+.cq-gallery-arrow:hover {
+  background: linear-gradient(135deg, #00d2ff 0%, #2563eb 100%);
+  color: #ffffff;
+  border-color: #00d2ff;
+  transform: translateY(-50%) scale(1.12);
+  box-shadow: 0 0 22px rgba(0, 210, 255, 0.75);
+}
+
+.cq-gallery-arrow-prev {
+  left: 14px;
+}
+
+.cq-gallery-arrow-next {
+  right: 14px;
+}
+
+.cq-gallery-thumbs-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 18px 0 10px;
+  color: #cbd5e1;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.cq-gallery-thumbs-label {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  color: #00d2ff;
+  font-weight: 800;
+  font-size: 13.5px;
+}
+
+.cq-gallery-thumbs-hint {
+  font-size: 11.5px;
+  color: #94a3b8;
+}
+
+.cq-gallery-thumbs-grid {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 10px;
+}
+
+.cq-thumb-item {
+  background: radial-gradient(circle at 50% 30%, #ffffff 0%, #f1f5f9 100%);
+  border: 2px solid rgba(58, 123, 213, 0.35);
+  border-radius: 12px;
+  padding: 6px;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  position: relative;
+  text-align: center;
+}
+
+.cq-thumb-item:hover {
+  border-color: #00d2ff;
+  transform: translateY(-3px);
+  box-shadow: 0 6px 18px rgba(0, 210, 255, 0.35);
+}
+
+.cq-thumb-item.active {
+  border-color: #00d2ff !important;
+  box-shadow: 0 0 22px rgba(0, 210, 255, 0.7), inset 0 0 8px rgba(0, 210, 255, 0.25) !important;
+  transform: translateY(-4px) scale(1.04) !important;
+}
+
+.cq-thumb-item img {
+  width: 100%;
+  height: 58px;
+  object-fit: contain;
+}
+
+.cq-thumb-label {
+  display: block;
+  font-size: 10.5px;
+  font-weight: 800;
+  color: #0f172a;
+  margin-top: 5px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 100%;
+}
+
+.cq-thumb-item.active .cq-thumb-label {
+  color: #0284c7;
+  font-weight: 900;
+}
+
+/* ==========================================================================
+   PRODUCT DETAIL CARDS IN FULL LAYER (HIGH-CONTRAST DARK THEME OVERRIDES)
+   ========================================================================== */
+.cq-full-layer-details-col .cq-layer-card {
+  background: linear-gradient(145deg, #0e172a 0%, #08101f 100%) !important;
+  border: 1px solid rgba(58, 123, 213, 0.35) !important;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5), inset 0 1px 0 rgba(255, 255, 255, 0.06) !important;
+  border-radius: 20px !important;
+  padding: 24px !important;
+  margin-bottom: 22px !important;
+}
+
+.cq-full-layer-details-col .cq-layer-hero {
+  background: linear-gradient(145deg, #111e38 0%, #0a1224 100%) !important;
+  border: 1.5px solid rgba(0, 210, 255, 0.4) !important;
+  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.6), 0 0 35px rgba(0, 210, 255, 0.16) !important;
+}
+
+.cq-layer-header-meta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 14px;
+  flex-wrap: wrap;
+}
+
+.cq-full-layer-details-col .cq-otomotif-cat-badge {
+  background: rgba(0, 210, 255, 0.14) !important;
+  color: #00d2ff !important;
+  border: 1px solid rgba(0, 210, 255, 0.45) !important;
+  font-weight: 800 !important;
+  font-size: 12px !important;
+  padding: 5px 14px !important;
+  border-radius: 50px !important;
+}
+
+.cq-layer-price-badge {
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 6px !important;
+  background: rgba(174, 247, 17, 0.16) !important;
+  color: #aef711 !important;
+  border: 1.5px solid rgba(174, 247, 17, 0.55) !important;
+  font-weight: 800 !important;
+  font-size: 14px !important;
+  padding: 6px 18px !important;
+  border-radius: 50px !important;
+  box-shadow: 0 0 18px rgba(174, 247, 17, 0.3) !important;
+  letter-spacing: 0.3px !important;
+}
+
+.cq-full-layer-title {
+  font-size: 32px !important;
+  font-weight: 900 !important;
+  color: #ffffff !important;
+  margin: 0 0 8px !important;
+  line-height: 1.2 !important;
+  letter-spacing: -0.3px !important;
+}
+
+.cq-full-layer-tagline {
+  color: #00d2ff !important;
+  font-weight: 700 !important;
+  font-size: 16px !important;
+  margin: 0 0 12px !important;
+  letter-spacing: 0.2px !important;
+}
+
+.cq-full-layer-summary {
   color: #cbd5e1 !important;
+  font-size: 15px !important;
+  line-height: 1.65 !important;
+  margin-bottom: 0 !important;
 }
 
-.cq-otomotif-landing-page .cq-spec-item {
-  background: #0d1424 !important;
-  border-color: rgba(58, 123, 213, 0.2) !important;
+/* Section Card Header (Icon & Title Fixes) */
+.cq-full-layer-details-col .cq-layer-sec-header {
+  display: flex !important;
+  align-items: center !important;
+  gap: 12px !important;
+  margin-bottom: 18px !important;
 }
 
-.cq-otomotif-landing-page .cq-spec-key {
+.cq-full-layer-details-col .cq-layer-sec-icon {
+  width: 38px !important;
+  height: 38px !important;
+  border-radius: 12px !important;
+  background: rgba(0, 210, 255, 0.14) !important;
+  color: #00d2ff !important;
+  border: 1px solid rgba(0, 210, 255, 0.4) !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  flex-shrink: 0 !important;
+  box-shadow: 0 0 14px rgba(0, 210, 255, 0.25) !important;
+}
+
+.cq-full-layer-details-col .cq-layer-sec-title {
+  font-size: 17px !important;
+  font-weight: 800 !important;
+  color: #ffffff !important;
+  letter-spacing: 0.3px !important;
+  margin: 0 !important;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.5) !important;
+}
+
+/* Dilution Ratio Table (High Contrast Automotive Dark Theme) */
+.cq-full-layer-details-col .cq-layer-table-wrap {
+  background: #060b16 !important;
+  border: 1px solid rgba(58, 123, 213, 0.4) !important;
+  border-radius: 14px !important;
+  overflow: hidden !important;
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.4), inset 0 1px 0 rgba(255, 255, 255, 0.05) !important;
+}
+
+.cq-full-layer-details-col .cq-layer-table {
+  width: 100% !important;
+  border-collapse: collapse !important;
+  font-size: 13.5px !important;
+  text-align: left !important;
+}
+
+.cq-full-layer-details-col .cq-layer-table th {
+  background: #0d172e !important;
+  padding: 12px 18px !important;
+  font-weight: 800 !important;
+  color: #38bdf8 !important;
+  text-transform: uppercase !important;
+  font-size: 12px !important;
+  letter-spacing: 0.6px !important;
+  border-bottom: 1px solid rgba(58, 123, 213, 0.3) !important;
+}
+
+.cq-full-layer-details-col .cq-layer-table td {
+  padding: 13px 18px !important;
+  border-top: 1px solid rgba(58, 123, 213, 0.2) !important;
+  color: #f1f5f9 !important;
+  font-size: 14px !important;
+}
+
+.cq-full-layer-details-col .cq-layer-table td strong {
+  color: #ffffff !important;
+  font-weight: 700 !important;
+}
+
+.cq-full-layer-details-col .cq-ratio-pill {
+  font-weight: 800 !important;
+  color: #aef711 !important;
+  background: rgba(174, 247, 17, 0.16) !important;
+  border: 1.5px solid rgba(174, 247, 17, 0.55) !important;
+  padding: 5px 14px !important;
+  border-radius: 50px !important;
+  display: inline-block !important;
+  box-shadow: 0 0 14px rgba(174, 247, 17, 0.25) !important;
+  font-size: 13px !important;
+  letter-spacing: 0.3px !important;
+}
+
+/* Application Steps List (Glowing Numbered Bullets) */
+.cq-full-layer-details-col .cq-layer-steps-list {
+  margin: 0 !important;
+  padding: 0 !important;
+  list-style: none !important;
+  counter-reset: cq-step-counter !important;
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 12px !important;
+}
+
+.cq-full-layer-details-col .cq-layer-steps-list li {
+  position: relative !important;
+  counter-increment: cq-step-counter !important;
+  display: flex !important;
+  align-items: flex-start !important;
+  gap: 14px !important;
+  color: #e2e8f0 !important;
+  font-size: 14px !important;
+  line-height: 1.6 !important;
+  background: rgba(13, 22, 41, 0.6) !important;
+  border: 1px solid rgba(58, 123, 213, 0.25) !important;
+  border-radius: 12px !important;
+  padding: 12px 16px !important;
+  transition: border-color 0.2s ease !important;
+}
+
+.cq-full-layer-details-col .cq-layer-steps-list li:hover {
+  border-color: rgba(0, 210, 255, 0.4) !important;
+}
+
+.cq-full-layer-details-col .cq-layer-steps-list li::before {
+  content: counter(cq-step-counter) !important;
+  width: 26px !important;
+  height: 26px !important;
+  flex-shrink: 0 !important;
+  border-radius: 50% !important;
+  background: linear-gradient(135deg, #00d2ff 0%, #2563eb 100%) !important;
+  color: #ffffff !important;
+  font-size: 12px !important;
+  font-weight: 900 !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  box-shadow: 0 0 12px rgba(0, 210, 255, 0.45) !important;
+}
+
+/* Formula Specs Grid */
+.cq-full-layer-details-col .cq-layer-specs-grid {
+  display: grid !important;
+  grid-template-columns: repeat(2, 1fr) !important;
+  gap: 12px !important;
+}
+
+.cq-full-layer-details-col .cq-spec-item {
+  background: #080f1e !important;
+  border: 1px solid rgba(58, 123, 213, 0.3) !important;
+  border-radius: 12px !important;
+  padding: 12px 16px !important;
+  display: flex !important;
+  flex-direction: column !important;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.04) !important;
+}
+
+.cq-full-layer-details-col .cq-spec-key {
+  font-size: 11px !important;
+  font-weight: 800 !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.5px !important;
   color: #64748b !important;
 }
 
-.cq-otomotif-landing-page .cq-spec-val {
-  color: #ffffff !important;
-}
-
-.cq-otomotif-landing-page .cq-pack-pill {
-  background: #172136 !important;
-  border-color: rgba(58, 123, 213, 0.3) !important;
+.cq-full-layer-details-col .cq-spec-val {
+  font-size: 14px !important;
+  font-weight: 800 !important;
   color: #38bdf8 !important;
+  margin-top: 4px !important;
 }
 
-.cq-otomotif-landing-page .cq-layering-footer {
-  background: rgba(10, 15, 29, 0.95) !important;
-  border-top: 1px solid rgba(58, 123, 213, 0.25) !important;
-  box-shadow: 0 -10px 25px rgba(0, 0, 0, 0.5) !important;
+/* Action Buttons Bar Inside Detail */
+.cq-full-layer-actions-bar {
+  display: flex;
+  gap: 14px;
+  flex-wrap: wrap;
+  margin-top: 24px;
+  padding-top: 22px;
+  border-top: 1px solid rgba(58, 123, 213, 0.25);
 }
 
-.cq-otomotif-landing-page .cq-layering-cta-btn {
-  background: linear-gradient(135deg, #00d2ff 0%, #2563eb 100%) !important;
+.cq-full-layer-actions-bar .cq-layering-cta-btn {
+  background: linear-gradient(135deg, #ea501f 0%, #ff6900 100%) !important;
   color: #ffffff !important;
-  box-shadow: 0 4px 18px rgba(0, 210, 255, 0.35) !important;
+  border: none !important;
+  box-shadow: 0 6px 22px rgba(234, 80, 31, 0.5) !important;
+  padding: 13px 28px !important;
+  font-size: 15px !important;
+  font-weight: 800 !important;
+  border-radius: 50px !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 8px !important;
+  transition: all 0.25s ease !important;
 }
 
-.cq-otomotif-landing-page .cq-layering-close-alt {
-  background: #172136 !important;
-  border-color: rgba(58, 123, 213, 0.3) !important;
-  color: #e2e8f0 !important;
+.cq-full-layer-actions-bar .cq-layering-cta-btn:hover {
+  transform: translateY(-2px) scale(1.03) !important;
+  box-shadow: 0 8px 28px rgba(234, 80, 31, 0.7) !important;
+}
+
+.cq-full-layer-actions-bar .cq-layering-close-alt {
+  background: #0f1a30 !important;
+  border: 1.5px solid rgba(0, 210, 255, 0.45) !important;
+  color: #ffffff !important;
+  padding: 13px 24px !important;
+  font-size: 14px !important;
+  font-weight: 700 !important;
+  border-radius: 50px !important;
+  cursor: pointer !important;
+  transition: all 0.25s ease !important;
+}
+
+.cq-full-layer-actions-bar .cq-layering-close-alt:hover {
+  background: #00d2ff !important;
+  color: #080c14 !important;
+  border-color: #00d2ff !important;
+  box-shadow: 0 0 20px rgba(0, 210, 255, 0.6) !important;
+  transform: translateY(-2px) !important;
 }
 
 /* Dedicated Otomotif Footer - Hitam Biru */
@@ -5420,30 +5979,41 @@ body.cq-otomotif-landing-page {
   font-weight: 700;
 }
 
-/* Card Image Box */
+/* Card Image Box - Showcase Bersih & Ukuran Lebih Besar */
 .cq-otomotif-card-img-wrap {
   width: 100%;
-  height: 170px;
+  height: 270px;
   display: flex;
   align-items: center;
   justify-content: center;
-  background: radial-gradient(circle at center, rgba(0, 210, 255, 0.1) 0%, transparent 70%);
-  margin-bottom: 12px;
-  border-radius: 12px;
+  background: #ffffff;
+  border: 1px solid rgba(0, 210, 255, 0.28);
+  border-radius: 16px;
+  padding: 14px;
+  margin-bottom: 16px;
   position: relative;
   overflow: hidden;
+  box-shadow: inset 0 2px 6px rgba(0, 0, 0, 0.03), 0 8px 24px rgba(0, 0, 0, 0.35);
+  transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.cq-otomotif-card:hover .cq-otomotif-card-img-wrap {
+  border-color: #00d2ff;
+  box-shadow: inset 0 2px 6px rgba(0, 0, 0, 0.03), 0 12px 32px rgba(0, 210, 255, 0.3);
+  transform: translateY(-2px);
 }
 
 .cq-otomotif-card-img {
-  max-height: 155px;
+  width: 100%;
+  height: 100%;
   max-width: 100%;
+  max-height: 100%;
   object-fit: contain;
-  filter: drop-shadow(0 8px 16px rgba(0, 0, 0, 0.6));
   transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .cq-otomotif-card:hover .cq-otomotif-card-img {
-  transform: scale(1.08) translateY(-4px);
+  transform: scale(1.06);
 }
 
 /* Layering Hero with Product Image */
@@ -5460,7 +6030,7 @@ body.cq-otomotif-landing-page {
   display: flex;
   align-items: center;
   justify-content: center;
-  background: radial-gradient(circle at center, rgba(0, 210, 255, 0.15) 0%, rgba(17, 24, 39, 0.8) 70%);
+  background: #ffffff;
   border: 1px solid rgba(0, 210, 255, 0.3);
   border-radius: 14px;
   padding: 8px;
@@ -5470,7 +6040,6 @@ body.cq-otomotif-landing-page {
   max-height: 100%;
   max-width: 100%;
   object-fit: contain;
-  filter: drop-shadow(0 6px 14px rgba(0, 0, 0, 0.5));
 }
 
 .cq-layer-hero-info {
@@ -5571,18 +6140,36 @@ body.cq-otomotif-landing-page {
   font-weight: 700;
 }
 
-/* Responsive Mobile Adjustments */
+/* Responsive Mobile & Tablet Adjustments */
+@media (max-width: 992px) {
+  .cq-full-layer-content-grid {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+  .cq-gallery-sticky-wrap {
+    position: static;
+  }
+  .cq-gallery-main-viewport {
+    height: 380px;
+  }
+  .cq-gallery-main-img {
+    max-height: 340px;
+  }
+}
+
 @media (max-width: 768px) {
   .cq-otomotif-hero-grid {
     grid-template-columns: 1fr;
     gap: 28px;
   }
+  /* Card Image Ukuran Lebih Besar di Mobile */
   .cq-otomotif-card-img-wrap {
-    height: 125px;
-    margin-bottom: 8px;
+    height: 220px;
+    padding: 10px;
+    margin-bottom: 12px;
   }
   .cq-otomotif-card-img {
-    max-height: 115px;
+    max-height: 200px;
   }
   .cq-otomotif-addons-grid {
     grid-template-columns: repeat(2, 1fr);
@@ -5605,14 +6192,259 @@ body.cq-otomotif-landing-page {
     font-size: 11px;
     margin-bottom: 8px;
   }
-  .cq-layer-hero {
-    flex-direction: column;
-    text-align: center;
+  
+  /* Layer Penuh di Mobile - Anti-Penyet & Sleek Responsive Layout */
+  .cq-full-layer-header {
+    padding: 10px 0 !important;
   }
-  .cq-layer-hero-visual {
-    width: 120px;
-    height: 140px;
-    margin: 0 auto;
+  .cq-full-layer-header-inner {
+    display: flex !important;
+    justify-content: space-between !important;
+    align-items: center !important;
+    gap: 8px !important;
+  }
+  .cq-full-layer-header-left {
+    display: flex !important;
+    align-items: center !important;
+    gap: 8px !important;
+    flex-wrap: nowrap !important;
+  }
+  .cq-full-layer-badges {
+    display: none !important; /* Sembunyikan badge ganda di header mobile agar tidak turun baris menjadi penyet */
+  }
+  .cq-full-layer-back-btn {
+    padding: 7px 14px !important;
+    font-size: 12.5px !important;
+    white-space: nowrap !important;
+  }
+  .cq-full-layer-top-wa {
+    padding: 7px 14px !important;
+    font-size: 12px !important;
+    border-radius: 50px !important;
+    width: auto !important;
+    height: auto !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    gap: 6px !important;
+  }
+  .cq-full-layer-top-wa span {
+    display: inline !important;
+  }
+  .cq-full-layer-close-btn {
+    width: 38px !important;
+    height: 38px !important;
+    flex-shrink: 0 !important;
+  }
+  .cq-full-layer-scroll {
+    padding: 16px 0 45px !important;
+  }
+  .cq-full-layer-content-grid {
+    gap: 20px !important;
+  }
+
+  /* Main Viewport & Gambar Produk (Dijamin Proporsional & Tidak Penyet) */
+  .cq-gallery-main-viewport {
+    width: 100% !important;
+    height: 340px !important;
+    max-height: 52vh !important;
+    padding: 16px !important;
+    border-radius: 18px !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+  }
+  .cq-gallery-main-img {
+    width: 100% !important;
+    height: 100% !important;
+    max-width: 100% !important;
+    max-height: 100% !important;
+    object-fit: contain !important;
+  }
+  .cq-gallery-arrow {
+    width: 38px !important;
+    height: 38px !important;
+  }
+
+  /* Thumbnails Single Row Horizontal Swipe (Bukan 2 Baris Penyet) */
+  .cq-gallery-thumbs-header {
+    margin: 14px 0 8px !important;
+  }
+  .cq-gallery-thumbs-grid {
+    display: flex !important;
+    flex-wrap: nowrap !important;
+    overflow-x: auto !important;
+    -webkit-overflow-scrolling: touch !important;
+    gap: 10px !important;
+    padding: 4px 2px 10px !important;
+    scrollbar-width: thin !important;
+    scroll-snap-type: x mandatory !important;
+  }
+  .cq-gallery-thumbs-grid::-webkit-scrollbar {
+    height: 4px !important;
+  }
+  .cq-gallery-thumbs-grid::-webkit-scrollbar-thumb {
+    background: rgba(0, 210, 255, 0.4) !important;
+    border-radius: 4px !important;
+  }
+  .cq-thumb-item {
+    flex: 0 0 86px !important;
+    width: 86px !important;
+    min-width: 86px !important;
+    padding: 6px !important;
+    border-radius: 12px !important;
+    scroll-snap-align: start !important;
+  }
+  .cq-thumb-item img {
+    width: 100% !important;
+    height: 52px !important;
+    object-fit: contain !important;
+  }
+  .cq-thumb-label {
+    font-size: 10px !important;
+    margin-top: 4px !important;
+    white-space: nowrap !important;
+    overflow: hidden !important;
+    text-overflow: ellipsis !important;
+  }
+
+  /* Kartu Detail Produk di Mobile */
+  .cq-full-layer-title {
+    font-size: 24px !important;
+    line-height: 1.25 !important;
+  }
+  .cq-full-layer-tagline {
+    font-size: 14.5px !important;
+    margin-bottom: 8px !important;
+  }
+  .cq-full-layer-summary {
+    font-size: 14px !important;
+    line-height: 1.6 !important;
+  }
+  .cq-full-layer-details-col .cq-layer-card {
+    padding: 18px 16px !important;
+    margin-bottom: 16px !important;
+    border-radius: 16px !important;
+  }
+  .cq-full-layer-actions-bar {
+    margin-top: 18px !important;
+    padding-top: 16px !important;
+    flex-direction: column !important;
+    gap: 10px !important;
+  }
+  .cq-full-layer-actions-bar .cq-layering-cta-btn,
+  .cq-full-layer-actions-bar .cq-layering-close-alt {
+    width: 100% !important;
+    justify-content: center !important;
+    text-align: center !important;
+    box-sizing: border-box !important;
   }
 }
+
+/* ==========================================================================
+   MOBILE BUTTON CONSISTENCY & REFINEMENTS (ANTI-DISTORTION)
+   ========================================================================== */
+.cq-otomotif-landing-page .cq-otomotif-sample-btn {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  width: 100% !important;
+  padding: 13px 24px !important;
+  font-size: 14.5px !important;
+  font-weight: 800 !important;
+  letter-spacing: 0.8px !important;
+  border-radius: 50px !important;
+  min-height: 44px !important;
+  box-sizing: border-box !important;
+  white-space: nowrap !important;
+  background: linear-gradient(135deg, #00d2ff 0%, #2563eb 100%) !important;
+  color: #ffffff !important;
+  box-shadow: 0 6px 20px rgba(0, 210, 255, 0.35) !important;
+  text-decoration: none !important;
+}
+
+@media (max-width: 768px) {
+  /* Hero Actions on Mobile */
+  .cq-hero-actions {
+    display: flex !important;
+    flex-direction: column !important;
+    width: 100% !important;
+    max-width: 340px !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    gap: 10px !important;
+  }
+  .cq-otomotif-btn-cta,
+  .cq-otomotif-btn-outline {
+    width: 100% !important;
+    padding: 12px 18px !important;
+    font-size: 13.5px !important;
+    letter-spacing: 0.4px !important;
+    min-height: 42px !important;
+    text-align: center !important;
+    justify-content: center !important;
+    white-space: nowrap !important;
+    border-radius: 50px !important;
+    box-sizing: border-box !important;
+  }
+
+  /* Catalog Card Buttons (2-Kolom Grid) */
+  .cq-otomotif-card-footer {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 6px !important;
+    padding-top: 10px !important;
+    width: 100% !important;
+  }
+  .cq-btn-otomotif-detail {
+    width: 100% !important;
+    padding: 8px 6px !important;
+    font-size: 11px !important;
+    font-weight: 700 !important;
+    letter-spacing: 0.2px !important;
+    min-height: 34px !important;
+    justify-content: center !important;
+    text-align: center !important;
+    white-space: nowrap !important;
+    border-radius: 50px !important;
+    box-sizing: border-box !important;
+    text-transform: none !important;
+  }
+  .cq-btn-otomotif-wa {
+    width: 100% !important;
+    padding: 7px 6px !important;
+    font-size: 11px !important;
+    font-weight: 700 !important;
+    letter-spacing: 0.2px !important;
+    min-height: 32px !important;
+    justify-content: center !important;
+    text-align: center !important;
+    white-space: nowrap !important;
+    border-radius: 50px !important;
+    box-sizing: border-box !important;
+    text-transform: none !important;
+  }
+
+  /* Sample Section Button */
+  .cq-otomotif-landing-page .cq-otomotif-sample-btn {
+    padding: 11px 18px !important;
+    font-size: 13.5px !important;
+    letter-spacing: 0.5px !important;
+    min-height: 40px !important;
+  }
+
+  /* Floating WhatsApp Button */
+  .cq-otomotif-floating-wa {
+    bottom: 18px !important;
+    right: 18px !important;
+    width: 48px !important;
+    height: 48px !important;
+    z-index: 9999 !important;
+    box-shadow: 0 6px 20px rgba(0, 210, 255, 0.45) !important;
+  }
+  .cq-otomotif-floating-wa svg {
+    width: 24px !important;
+    height: 24px !important;
+  }
+}
+
 

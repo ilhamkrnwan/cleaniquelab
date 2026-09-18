@@ -79,25 +79,7 @@ $otomotif_products = function_exists('cleaniquelab_get_otomotif_products')
                     Formulasi kimia kendaraan standar pabrik tangan pertama untuk usaha cuci mobil/motor, salon detailing, rental, dan armada. Bersih tuntas, kilap tahan lama, aman cat &amp; coating, dengan pilihan kemasan botol retail hingga curah drum.
                 </p>
 
-                <!-- Trust Badges Strip (2x2 Kanan Kiri di Mobile, Semua Maksimal 2 Kata) -->
-                <div class="cq-otomotif-badges-strip">
-                    <div class="cq-otomotif-badge-item">
-                        <span class="cq-otomotif-badge-num">100%</span>
-                        <span class="cq-otomotif-badge-txt">Pabrik Asli</span>
-                    </div>
-                    <div class="cq-otomotif-badge-item">
-                        <span class="cq-otomotif-badge-num">8 Varian</span>
-                        <span class="cq-otomotif-badge-txt">Produk Lengkap</span>
-                    </div>
-                    <div class="cq-otomotif-badge-item">
-                        <span class="cq-otomotif-badge-num">100ml &ndash; 200L</span>
-                        <span class="cq-otomotif-badge-txt">Pilihan Kemasan</span>
-                    </div>
-                    <div class="cq-otomotif-badge-item">
-                        <span class="cq-otomotif-badge-num">38 Provinsi</span>
-                        <span class="cq-otomotif-badge-txt">Kargo Nasional</span>
-                    </div>
-                </div>
+
 
                 <!-- Banner Actions (Maksimal 2 Kata) -->
                 <div class="cq-hero-actions cq-otomotif-hero-actions">
@@ -171,9 +153,6 @@ $otomotif_products = function_exists('cleaniquelab_get_otomotif_products')
                     <!-- Top Ribbon / Category Badge (Maksimal 2 Kata) -->
                     <div class="cq-otomotif-card-header">
                         <span class="cq-otomotif-cat-badge"><?php echo esc_html($p['cat_name']); ?></span>
-                        <span class="cq-otomotif-highlight-badge" style="border-color: <?php echo esc_attr($p['badge_color']); ?>; color: <?php echo esc_attr($p['badge_color']); ?>;">
-                            <?php echo esc_html($p['badge']); ?>
-                        </span>
                     </div>
 
                     <!-- Product Bottle Image Showcase -->
@@ -192,18 +171,6 @@ $otomotif_products = function_exists('cleaniquelab_get_otomotif_products')
                         <h3 class="cq-otomotif-card-title"><?php echo esc_html($p['title']); ?></h3>
                         <p class="cq-otomotif-card-desc"><?php echo esc_html($p['summary']); ?></p>
 
-                        <!-- Feature Tags (Maksimal 2 Kata) -->
-                        <div class="cq-otomotif-tags-wrap">
-                            <?php foreach ($p['tags'] as $tag) : ?>
-                                <span class="cq-otomotif-tag"><?php echo esc_html($tag); ?></span>
-                            <?php endforeach; ?>
-                        </div>
-
-                        <!-- Pack Sizes Bar (Label Maksimal 2 Kata) -->
-                        <div class="cq-otomotif-pack-bar">
-                            <span class="cq-otomotif-pack-label">Pilihan Kemasan:</span>
-                            <span class="cq-otomotif-pack-val"><?php echo esc_html(implode(' &bull; ', $p['pack_sizes'])); ?></span>
-                        </div>
                     </div>
 
                     <!-- Card Actions (Semua Label Maksimal 2 Kata) -->
@@ -316,7 +283,7 @@ $otomotif_products = function_exists('cleaniquelab_get_otomotif_products')
                     <li>Pengiriman Kargo Cepat Seluruh Indonesia</li>
                 </ul>
 
-                <a href="<?php echo esc_url(cleaniquelab_get_whatsapp_url('Halo Cleanique Lab, saya pemilik usaha dan ingin memesan sampel formula kimia otomotif.')); ?>" target="_blank" rel="noopener" class="cq-btn-primary" style="width: 100%; text-align: center; justify-content: center;">
+                <a href="<?php echo esc_url(cleaniquelab_get_whatsapp_url('Halo Cleanique Lab, saya pemilik usaha dan ingin memesan sampel formula kimia otomotif.')); ?>" target="_blank" rel="noopener" class="cq-btn-primary cq-otomotif-sample-btn" style="width: 100%; text-align: center; justify-content: center;">
                     Minta Sampel
                 </a>
             </div>
@@ -324,130 +291,365 @@ $otomotif_products = function_exists('cleaniquelab_get_otomotif_products')
     </div>
 </section>
 
-<!-- 6. INTERACTIVE PRODUCT DETAIL LAYERING (SLIDE-OVER DRAWER / BOTTOM-SHEET) -->
-<div id="cq-product-layering" class="cq-layering-overlay" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="layering-product-title">
-    <!-- Frosted Dark Backdrop Layer -->
-    <div class="cq-layering-backdrop" onclick="window.cqCloseOtomotifLayering()"></div>
+<style>
+/* Navbar & Button Anti-Deformasi Mobile */
+.cq-otomotif-nav-btn {
+    white-space: nowrap !important;
+    flex-shrink: 0 !important;
+    line-height: 1 !important;
+}
+@media (max-width: 768px) {
+    .cq-otomotif-nav-inner {
+        padding: 10px 14px !important;
+        gap: 8px !important;
+    }
+    .cq-otomotif-brand {
+        gap: 8px !important;
+        min-width: 0 !important;
+        flex-shrink: 1 !important;
+    }
+    .cq-otomotif-brand img {
+        width: 28px !important;
+        height: 28px !important;
+        flex-shrink: 0 !important;
+    }
+    .cq-otomotif-brand-text {
+        font-size: 14.5px !important;
+        gap: 6px !important;
+        white-space: nowrap !important;
+    }
+    .cq-otomotif-brand-pill {
+        font-size: 8.5px !important;
+        padding: 2px 6px !important;
+        flex-shrink: 0 !important;
+    }
+    .cq-otomotif-nav-btn {
+        padding: 7px 12px !important;
+        font-size: 11.5px !important;
+        gap: 5px !important;
+        min-height: 32px !important;
+        white-space: nowrap !important;
+        flex-shrink: 0 !important;
+        letter-spacing: 0.3px !important;
+    }
+    .cq-otomotif-nav-btn svg {
+        width: 14px !important;
+        height: 14px !important;
+    }
+    .cq-hero-actions {
+        display: flex !important;
+        flex-direction: column !important;
+        width: 100% !important;
+        max-width: 340px !important;
+        margin: 0 auto 24px !important;
+        gap: 10px !important;
+    }
+    .cq-otomotif-btn-cta,
+    .cq-otomotif-btn-outline {
+        width: 100% !important;
+        padding: 12px 18px !important;
+        font-size: 13.5px !important;
+        letter-spacing: 0.4px !important;
+        min-height: 42px !important;
+        text-align: center !important;
+        justify-content: center !important;
+        white-space: nowrap !important;
+        border-radius: 50px !important;
+        box-sizing: border-box !important;
+    }
+    .cq-otomotif-card-footer {
+        display: flex !important;
+        flex-direction: column !important;
+        gap: 6px !important;
+        padding-top: 10px !important;
+        width: 100% !important;
+    }
+    .cq-btn-otomotif-detail {
+        width: 100% !important;
+        padding: 8px 6px !important;
+        font-size: 11px !important;
+        font-weight: 700 !important;
+        letter-spacing: 0.2px !important;
+        min-height: 34px !important;
+        justify-content: center !important;
+        text-align: center !important;
+        white-space: nowrap !important;
+        border-radius: 50px !important;
+        box-sizing: border-box !important;
+        text-transform: none !important;
+    }
+    .cq-btn-otomotif-wa {
+        width: 100% !important;
+        padding: 7px 6px !important;
+        font-size: 11px !important;
+        font-weight: 700 !important;
+        letter-spacing: 0.2px !important;
+        min-height: 32px !important;
+        justify-content: center !important;
+        text-align: center !important;
+        white-space: nowrap !important;
+        border-radius: 50px !important;
+        box-sizing: border-box !important;
+        text-transform: none !important;
+    }
+    .cq-otomotif-landing-page .cq-otomotif-sample-btn {
+        padding: 11px 18px !important;
+        font-size: 13.5px !important;
+        letter-spacing: 0.5px !important;
+        min-height: 40px !important;
+    }
+    .cq-otomotif-floating-wa {
+        bottom: 18px !important;
+        right: 18px !important;
+        width: 48px !important;
+        height: 48px !important;
+        z-index: 9999 !important;
+    }
+}
+@media (max-width: 380px) {
+    .cq-otomotif-brand-pill {
+        display: none !important;
+    }
+    .cq-otomotif-brand-text {
+        font-size: 13.5px !important;
+    }
+    .cq-otomotif-nav-btn {
+        padding: 6px 10px !important;
+        font-size: 11px !important;
+    }
+}
+
+/* Anti-Penyet & Mobile Responsive Guarantees for Otomotif Layer */
+.cq-gallery-main-viewport {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    overflow: hidden !important;
+}
+.cq-gallery-main-img {
+    width: 100% !important;
+    height: 100% !important;
+    max-width: 100% !important;
+    max-height: 100% !important;
+    object-fit: contain !important;
+}
+@media (max-width: 768px) {
+    .cq-full-layer-header-inner {
+        flex-wrap: nowrap !important;
+        gap: 8px !important;
+    }
+    .cq-full-layer-header-left {
+        flex-wrap: nowrap !important;
+        gap: 8px !important;
+    }
+    .cq-full-layer-badges {
+        display: none !important;
+    }
+    .cq-full-layer-back-btn {
+        padding: 7px 14px !important;
+        font-size: 12.5px !important;
+        white-space: nowrap !important;
+    }
+    .cq-full-layer-top-wa {
+        padding: 7px 14px !important;
+        font-size: 12px !important;
+        border-radius: 50px !important;
+        width: auto !important;
+        height: auto !important;
+    }
+    .cq-full-layer-top-wa span {
+        display: inline !important;
+    }
+    .cq-gallery-main-viewport {
+        height: 340px !important;
+        max-height: 52vh !important;
+        padding: 16px !important;
+    }
+    .cq-gallery-thumbs-header {
+        margin: 14px 0 8px !important;
+    }
+    .cq-gallery-thumbs-grid {
+        display: flex !important;
+        flex-wrap: nowrap !important;
+        overflow-x: auto !important;
+        -webkit-overflow-scrolling: touch !important;
+        gap: 10px !important;
+        padding: 4px 2px 10px !important;
+        scrollbar-width: thin !important;
+    }
+    .cq-thumb-item {
+        flex: 0 0 86px !important;
+        width: 86px !important;
+        min-width: 86px !important;
+        padding: 6px !important;
+    }
+    .cq-thumb-item img {
+        width: 100% !important;
+        height: 52px !important;
+        object-fit: contain !important;
+    }
+    .cq-thumb-label {
+        font-size: 10px !important;
+    }
+}
+</style>
+
+<!-- 6. INTERACTIVE FULL-SCREEN PRODUCT DETAIL LAYER ("LAYER PENUH") -->
+<div id="cq-product-layering" class="cq-full-layer-overlay" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="layering-product-title">
     
-    <!-- Animated Slide Sheet Layer (Tema Hitam Biru) -->
-    <div class="cq-layering-sheet">
-        <!-- Mobile Drag / Handle Bar -->
-        <div class="cq-layering-handle-bar">
-            <span class="cq-layering-handle"></span>
-        </div>
-
-        <!-- Sticky Layering Top Bar -->
-        <div class="cq-layering-topbar">
-            <div class="cq-layering-badges">
-                <span id="layering-product-cat" class="cq-layering-badge-cat">Kategori</span>
-                <span id="layering-product-badge" class="cq-layering-badge-highlight">Highlight</span>
-            </div>
-            <button type="button" class="cq-layering-close-btn" onclick="window.cqCloseOtomotifLayering()" aria-label="Tutup Detail">
-                <span class="cq-close-text">Tutup Detail</span>
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
-            </button>
-        </div>
-
-        <!-- Scrollable Layered Content Container -->
-        <div class="cq-layering-scroll">
-            <!-- Layer 1: Hero Identity Card with Bottle Image -->
-            <div class="cq-layer-card cq-layer-hero">
-                <div class="cq-layer-hero-visual">
-                    <img id="layering-product-image" src="" alt="Kemasan Botol Produk" class="cq-layer-img">
-                </div>
-                <div class="cq-layer-hero-info">
-                    <h3 id="layering-product-title" class="cq-layering-title">Nama Produk</h3>
-                    <p id="layering-product-tagline" style="color: #38bdf8; font-weight: 700; font-size: 13px; margin: 0 0 6px;"></p>
-                    <p id="layering-product-summary" class="cq-layering-summary">Ringkasan produk...</p>
-                    <div id="layering-product-tags" class="cq-layering-tags"></div>
+    <!-- Top Sticky Header Bar -->
+    <header class="cq-full-layer-header">
+        <div class="cq-container cq-full-layer-header-inner">
+            <div class="cq-full-layer-header-left">
+                <button type="button" class="cq-full-layer-back-btn" onclick="window.cqCloseOtomotifLayering()" aria-label="Kembali ke Katalog">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m15 18-6-6 6-6"/></svg>
+                    <span>Kembali ke Katalog</span>
+                </button>
+                <div class="cq-full-layer-badges">
+                    <span id="layering-product-cat" class="cq-layering-badge-cat">Kategori</span>
+                    <span id="layering-product-badge" class="cq-layering-badge-highlight">Highlight</span>
                 </div>
             </div>
 
-            <!-- Layer 2: Section Rasio Pengenceran (Maksimal 2 Kata) -->
-            <div class="cq-layer-card cq-layer-section">
-                <div class="cq-layer-sec-header">
-                    <div class="cq-layer-sec-icon">
-                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
-                    </div>
-                    <h4 class="cq-layer-sec-title">Rasio Pengenceran</h4>
-                </div>
-                <div class="cq-layer-table-wrap">
-                    <table class="cq-layer-table">
-                        <thead>
-                            <tr>
-                                <th>Metode Aplikasi</th>
-                                <th>Rasio Takaran</th>
-                            </tr>
-                        </thead>
-                        <tbody id="layering-product-dilution-body">
-                            <!-- Dynamic Dilution Rows -->
-                        </tbody>
-                    </table>
-                </div>
-            </div>
-
-            <!-- Layer 3: Section Petunjuk Pemakaian (Maksimal 2 Kata) -->
-            <div class="cq-layer-card cq-layer-section">
-                <div class="cq-layer-sec-header">
-                    <div class="cq-layer-sec-icon">
-                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 11 12 14 22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>
-                    </div>
-                    <h4 class="cq-layer-sec-title">Cara Pakai</h4>
-                </div>
-                <ol id="layering-product-steps-list" class="cq-layer-steps-list">
-                    <!-- Dynamic Steps List -->
-                </ol>
-            </div>
-
-            <!-- Layer 3b: Section Peringatan Produk (Maksimal 2 Kata) -->
-            <div class="cq-layer-card cq-layer-warning-card" id="layering-warning-card" style="display: none;">
-                <div class="cq-layer-sec-header">
-                    <div class="cq-layer-sec-icon" style="background: rgba(239, 68, 68, 0.15); color: #ef4444;">
-                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3Z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
-                    </div>
-                    <h4 class="cq-layer-sec-title">Peringatan Produk</h4>
-                </div>
-                <ul id="layering-product-warnings-list" class="cq-layer-warnings-list">
-                    <!-- Dynamic Warnings List -->
-                </ul>
-            </div>
-
-            <!-- Layer 4: Section Spesifikasi Formula (Maksimal 2 Kata) -->
-            <div class="cq-layer-card cq-layer-section">
-                <div class="cq-layer-sec-header">
-                    <div class="cq-layer-sec-icon">
-                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="16" x2="12" y2="12"/><line x1="12" y1="8" x2="12.01" y2="8"/></svg>
-                    </div>
-                    <h4 class="cq-layer-sec-title">Spesifikasi Formula</h4>
-                </div>
-                <div id="layering-product-specs-grid" class="cq-layer-specs-grid">
-                    <!-- Dynamic Specs Items -->
-                </div>
-            </div>
-
-            <!-- Layer 5: Section Pilihan Kemasan (Maksimal 2 Kata) -->
-            <div class="cq-layer-card cq-layer-section">
-                <div class="cq-layer-sec-header">
-                    <div class="cq-layer-sec-icon">
-                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect width="18" height="18" x="3" y="3" rx="2"/><path d="M3 9h18"/><path d="M9 21V9"/></svg>
-                    </div>
-                    <h4 class="cq-layer-sec-title">Pilihan Kemasan</h4>
-                </div>
-                <div id="layering-product-packs-wrap" class="cq-layer-packs-wrap">
-                    <!-- Dynamic Pack Badges -->
-                </div>
+            <div class="cq-full-layer-header-right">
+                <a id="layering-top-wa-btn" href="#" target="_blank" rel="noopener" class="cq-btn-primary cq-full-layer-top-wa">
+                    <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
+                    <span>Order via WA</span>
+                </a>
+                <button type="button" class="cq-full-layer-close-btn" onclick="window.cqCloseOtomotifLayering()" aria-label="Tutup Detail" title="Tutup Detail (Esc)">
+                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+                </button>
             </div>
         </div>
+    </header>
 
-        <!-- Sticky Floating Footer Bar (Hitam Biru) -->
-        <div class="cq-layering-footer">
-            <a id="layering-product-wa-btn" href="#" target="_blank" rel="noopener" class="cq-btn-primary cq-layering-cta-btn">
-                <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
-                <span>Order WhatsApp</span>
-            </a>
-            <button type="button" class="cq-btn-outline cq-btn-outline-dark cq-layering-close-alt" onclick="window.cqCloseOtomotifLayering()">
-                <span>Tutup Detail</span>
-            </button>
+    <!-- Scrollable Full Layer Content Container -->
+    <div class="cq-full-layer-scroll">
+        <div class="cq-container cq-full-layer-content-grid">
+            
+            <!-- LEFT COLUMN: PRODUCT IMAGES GALLERY (SEMUA GAMBAR PRODUK TAMPIL DI SINI) -->
+            <div class="cq-full-layer-gallery-col">
+                <div class="cq-gallery-sticky-wrap">
+                    <!-- Main Big Feature Photo Showcase -->
+                    <div class="cq-gallery-main-viewport">
+                        <img id="layering-product-image" src="" alt="Kemasan Produk" class="cq-gallery-main-img">
+                        <span id="layering-active-img-badge" class="cq-gallery-main-badge">Lini Lengkap</span>
+                        
+                        <!-- Nav Prev/Next Buttons -->
+                        <button type="button" class="cq-gallery-arrow cq-gallery-arrow-prev" onclick="window.cqGalleryPrev()" aria-label="Foto Sebelumnya" title="Foto Sebelumnya">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m15 18-6-6 6-6"/></svg>
+                        </button>
+                        <button type="button" class="cq-gallery-arrow cq-gallery-arrow-next" onclick="window.cqGalleryNext()" aria-label="Foto Selanjutnya" title="Foto Selanjutnya">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg>
+                        </button>
+                    </div>
+
+                    <!-- Gallery Thumbnails Header -->
+                    <div class="cq-gallery-thumbs-header">
+                        <span class="cq-gallery-thumbs-label">
+                            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect width="18" height="18" x="3" y="3" rx="2"/><circle cx="9" cy="9" r="2"/><path d="m21 15-3.086-3.086a2 2 0 0 0-2.828 0L6 21"/></svg>
+                            Semua Foto Kemasan (<span id="layering-img-count">0</span>):
+                        </span>
+                        <span class="cq-gallery-thumbs-hint">Klik foto untuk ganti tampilan</span>
+                    </div>
+
+                    <!-- Thumbnails List (Semua Image Ditampilkan!) -->
+                    <div id="layering-gallery-thumbs" class="cq-gallery-thumbs-grid">
+                        <!-- Populated dynamically via JS -->
+                    </div>
+                </div>
+            </div>
+
+            <!-- RIGHT COLUMN: FULL PRODUCT DETAILS & SPECIFICATIONS -->
+            <div class="cq-full-layer-details-col">
+                
+                <!-- Product Overview Card -->
+                <div class="cq-layer-card cq-layer-hero">
+                    <div class="cq-layer-hero-info">
+                        <div class="cq-layer-header-meta">
+                            <span id="layering-product-cat-pill" class="cq-otomotif-cat-badge">Kategori</span>
+                            <span id="layering-product-price-est" class="cq-layer-price-badge"></span>
+                        </div>
+                        <h1 id="layering-product-title" class="cq-full-layer-title">Nama Produk</h1>
+                        <p id="layering-product-tagline" class="cq-full-layer-tagline"></p>
+                        <p id="layering-product-summary" class="cq-full-layer-summary">Ringkasan produk...</p>
+                    </div>
+                </div>
+
+                <!-- Layer 2: Section Rasio Pengenceran -->
+                <div class="cq-layer-card cq-layer-section">
+                    <div class="cq-layer-sec-header">
+                        <div class="cq-layer-sec-icon">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+                        </div>
+                        <h4 class="cq-layer-sec-title">Rasio Pengenceran</h4>
+                    </div>
+                    <div class="cq-layer-table-wrap">
+                        <table class="cq-layer-table">
+                            <thead>
+                                <tr>
+                                    <th>Metode Aplikasi</th>
+                                    <th>Rasio Takaran</th>
+                                </tr>
+                            </thead>
+                            <tbody id="layering-product-dilution-body">
+                                <!-- Dynamic Dilution Rows -->
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <!-- Layer 3: Section Petunjuk Pemakaian -->
+                <div class="cq-layer-card cq-layer-section">
+                    <div class="cq-layer-sec-header">
+                        <div class="cq-layer-sec-icon">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 11 12 14 22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>
+                        </div>
+                        <h4 class="cq-layer-sec-title">Cara Pakai</h4>
+                    </div>
+                    <ol id="layering-product-steps-list" class="cq-layer-steps-list">
+                        <!-- Dynamic Steps List -->
+                    </ol>
+                </div>
+
+                <!-- Layer 3b: Section Peringatan Produk -->
+                <div class="cq-layer-card cq-layer-warning-card" id="layering-warning-card" style="display: none;">
+                    <div class="cq-layer-sec-header">
+                        <div class="cq-layer-sec-icon" style="background: rgba(239, 68, 68, 0.15); color: #ef4444;">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3Z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+                        </div>
+                        <h4 class="cq-layer-sec-title">Peringatan Produk</h4>
+                    </div>
+                    <ul id="layering-product-warnings-list" class="cq-layer-warnings-list">
+                        <!-- Dynamic Warnings List -->
+                    </ul>
+                </div>
+
+                <!-- Layer 4: Section Spesifikasi Formula -->
+                <div class="cq-layer-card cq-layer-section">
+                    <div class="cq-layer-sec-header">
+                        <div class="cq-layer-sec-icon">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="16" x2="12" y2="12"/><line x1="12" y1="8" x2="12.01" y2="8"/></svg>
+                        </div>
+                        <h4 class="cq-layer-sec-title">Spesifikasi Formula</h4>
+                    </div>
+                    <div id="layering-product-specs-grid" class="cq-layer-specs-grid">
+                        <!-- Dynamic Specs Items -->
+                    </div>
+                </div>
+
+                <!-- Action Bar Inside Detail -->
+                <div class="cq-full-layer-actions-bar">
+                    <a id="layering-product-wa-btn" href="#" target="_blank" rel="noopener" class="cq-btn-primary cq-layering-cta-btn">
+                        <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
+                        <span>Order via WhatsApp</span>
+                    </a>
+                    <button type="button" class="cq-btn-outline cq-btn-outline-dark cq-layering-close-alt" onclick="window.cqCloseOtomotifLayering()">
+                        <span>Kembali ke Katalog</span>
+                    </button>
+                </div>
+            </div>
+
         </div>
     </div>
 </div>
@@ -532,7 +734,60 @@ window.cqCardClick = function(event, productId) {
     window.cqOpenOtomotifLayering(productId);
 };
 
-// Interactive Layering Controller (Slide-Over Drawer & Bottom-Sheet)
+// State Galeri Foto Produk Aktif
+window.cqCurrentGallery = [];
+window.cqCurrentGalleryIndex = 0;
+
+window.cqSetGalleryImage = function(index) {
+    if (!window.cqCurrentGallery || !window.cqCurrentGallery.length) return;
+    if (index < 0) index = window.cqCurrentGallery.length - 1;
+    if (index >= window.cqCurrentGallery.length) index = 0;
+    
+    window.cqCurrentGalleryIndex = index;
+    const item = window.cqCurrentGallery[index];
+    const layerImg = document.getElementById('layering-product-image');
+    const badgeEl = document.getElementById('layering-active-img-badge');
+
+    if (layerImg && item) {
+        const imgSrc = (item.url.indexOf('http') === 0) ? item.url : window.cqThemeUrl + item.url;
+        layerImg.style.opacity = '0.6';
+        layerImg.src = imgSrc;
+        layerImg.onload = function() {
+            layerImg.style.opacity = '1';
+        };
+        layerImg.onerror = function() {
+            if (item.png) {
+                layerImg.src = (item.png.indexOf('http') === 0) ? item.png : window.cqThemeUrl + item.png;
+            }
+            layerImg.style.opacity = '1';
+        };
+    }
+
+    if (badgeEl && item) {
+        badgeEl.innerText = item.label || 'Foto Produk';
+    }
+
+    // Update active state di daftar thumbnail
+    const thumbBtns = document.querySelectorAll('#layering-gallery-thumbs .cq-thumb-item');
+    thumbBtns.forEach((btn, idx) => {
+        if (idx === index) {
+            btn.classList.add('active');
+            btn.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' });
+        } else {
+            btn.classList.remove('active');
+        }
+    });
+};
+
+window.cqGalleryPrev = function() {
+    window.cqSetGalleryImage(window.cqCurrentGalleryIndex - 1);
+};
+
+window.cqGalleryNext = function() {
+    window.cqSetGalleryImage(window.cqCurrentGalleryIndex + 1);
+};
+
+// Interactive Full Layer Controller ("Layer Penuh")
 window.cqOpenOtomotifLayering = function(productId) {
     if (!window.cqOtomotifData || !window.cqOtomotifData[productId]) return;
 
@@ -540,42 +795,87 @@ window.cqOpenOtomotifLayering = function(productId) {
     const layering = document.getElementById('cq-product-layering');
     if (!layering) return;
 
-    // 1. Identity & Hero Layer
-    document.getElementById('layering-product-title').innerText = data.title;
-    document.getElementById('layering-product-cat').innerText = data.cat_name;
-    document.getElementById('layering-product-badge').innerText = data.badge;
-    document.getElementById('layering-product-summary').innerText = data.summary;
+    // 1. Set Identitas Produk
+    const titleEls = [document.getElementById('layering-product-title'), document.getElementById('layering-header-title')];
+    titleEls.forEach(el => { if (el) el.innerText = data.title; });
+
+    const catEl = document.getElementById('layering-product-cat');
+    if (catEl) catEl.innerText = data.cat_name || 'Otomotif';
+
+    const catPillEl = document.getElementById('layering-product-cat-pill');
+    if (catPillEl) catPillEl.innerText = data.cat_name || 'Otomotif';
+
+    const badgeEl = document.getElementById('layering-product-badge');
+    if (badgeEl) {
+        badgeEl.innerText = data.badge || '';
+        badgeEl.style.display = data.badge ? 'inline-block' : 'none';
+    }
+
+    const priceEl = document.getElementById('layering-product-price-est');
+    if (priceEl) {
+        priceEl.innerText = data.price_est ? data.price_est : 'Tersedia Eceran & Curah';
+    }
+
+    const summaryEl = document.getElementById('layering-product-summary');
+    if (summaryEl) summaryEl.innerText = data.summary;
 
     const taglineEl = document.getElementById('layering-product-tagline');
     if (taglineEl) {
         taglineEl.innerText = data.tagline ? '“' + data.tagline + '”' : '';
     }
 
-    // Product Bottle Image in Drawer
-    const layerImg = document.getElementById('layering-product-image');
-    if (layerImg) {
-        if (data.image) {
-            const imgSrc = (data.image.indexOf('http') === 0) ? data.image : window.cqThemeUrl + data.image;
-            layerImg.src = imgSrc;
-            layerImg.style.display = 'block';
-        } else {
-            layerImg.style.display = 'none';
-        }
+    // 2. Setup Galeri Foto Lengkap (Semua Foto Kemasan Produk)
+    let galleryItems = [];
+    if (data.gallery && Array.isArray(data.gallery) && data.gallery.length > 0) {
+        galleryItems = [...data.gallery];
+    } else if (data.image) {
+        galleryItems = [{
+            slug: 'main',
+            label: 'Foto Produk',
+            url: data.image,
+            png: data.image
+        }];
     }
 
-    // 2. Feature Tags
-    const tagsWrap = document.getElementById('layering-product-tags');
-    if (tagsWrap) {
-        tagsWrap.innerHTML = '';
-        if (data.tags && Array.isArray(data.tags)) {
-            data.tags.forEach(tag => {
-                const span = document.createElement('span');
-                span.className = 'cq-layering-tag';
-                span.innerText = tag;
-                tagsWrap.appendChild(span);
-            });
-        }
+    window.cqCurrentGallery = galleryItems;
+
+    // Render Thumbnail Grid
+    const thumbsContainer = document.getElementById('layering-gallery-thumbs');
+    const countEl = document.getElementById('layering-img-count');
+    if (countEl) countEl.innerText = galleryItems.length;
+
+    if (thumbsContainer) {
+        thumbsContainer.innerHTML = '';
+        galleryItems.forEach((item, idx) => {
+            const btn = document.createElement('button');
+            btn.type = 'button';
+            btn.className = 'cq-thumb-item' + (idx === 0 ? ' active' : '');
+            btn.title = item.label;
+            btn.onclick = function() { window.cqSetGalleryImage(idx); };
+
+            const imgSrc = (item.url.indexOf('http') === 0) ? item.url : window.cqThemeUrl + item.url;
+            const img = document.createElement('img');
+            img.src = imgSrc;
+            img.alt = item.label;
+            img.loading = 'lazy';
+            img.onerror = function() {
+                if (item.png) {
+                    img.src = (item.png.indexOf('http') === 0) ? item.png : window.cqThemeUrl + item.png;
+                }
+            };
+
+            const lbl = document.createElement('span');
+            lbl.className = 'cq-thumb-label';
+            lbl.innerText = item.label;
+
+            btn.appendChild(img);
+            btn.appendChild(lbl);
+            thumbsContainer.appendChild(btn);
+        });
     }
+
+    // Tampilkan foto pertama
+    window.cqSetGalleryImage(0);
 
     // 3. Dilution Ratio Table
     const dilutionBody = document.getElementById('layering-product-dilution-body');
@@ -603,7 +903,7 @@ window.cqOpenOtomotifLayering = function(productId) {
         }
     }
 
-    // 4b. Warnings List (Peringatan & Keamanan Resmi)
+    // 4b. Warnings List
     const warnCard = document.getElementById('layering-warning-card');
     const warnList = document.getElementById('layering-product-warnings-list');
     if (warnCard && warnList) {
@@ -634,31 +934,19 @@ window.cqOpenOtomotifLayering = function(productId) {
         }
     }
 
-    // 6. Packaging Options
-    const packsWrap = document.getElementById('layering-product-packs-wrap');
-    if (packsWrap) {
-        packsWrap.innerHTML = '';
-        if (data.pack_sizes && Array.isArray(data.pack_sizes)) {
-            data.pack_sizes.forEach(pack => {
-                const span = document.createElement('span');
-                span.className = 'cq-pack-pill';
-                span.innerText = pack;
-                packsWrap.appendChild(span);
-            });
-        }
-    }
-
-    // 7. Dynamic WhatsApp CTA Link
+    // 6. Dynamic WhatsApp CTA Links (Header & Body)
     const waPhone = '6287848120088';
     const waMsg = `Halo Cleanique Lab, saya berminat order produk otomotif: *${data.title}*.\nMohon info harga grosir dan ketentuan pengiriman. Terima kasih.`;
     const waUrl = `https://wa.me/${waPhone}?text=${encodeURIComponent(waMsg)}`;
+    
     const waBtn = document.getElementById('layering-product-wa-btn');
-    if (waBtn) {
-        waBtn.setAttribute('href', waUrl);
-    }
+    if (waBtn) waBtn.setAttribute('href', waUrl);
 
-    // Activate Layering
-    layering.classList.add('cq-layering-active');
+    const topWaBtn = document.getElementById('layering-top-wa-btn');
+    if (topWaBtn) topWaBtn.setAttribute('href', waUrl);
+
+    // Aktifkan Layer Penuh
+    layering.classList.add('cq-full-layer-active');
     layering.setAttribute('aria-hidden', 'false');
     document.body.classList.add('cq-layering-locked');
 };
@@ -667,7 +955,7 @@ window.cqOpenOtomotifLayering = function(productId) {
 window.cqCloseOtomotifLayering = function() {
     const layering = document.getElementById('cq-product-layering');
     if (layering) {
-        layering.classList.remove('cq-layering-active');
+        layering.classList.remove('cq-full-layer-active');
         layering.setAttribute('aria-hidden', 'true');
         document.body.classList.remove('cq-layering-locked');
     }
@@ -677,10 +965,17 @@ window.cqCloseOtomotifLayering = function() {
 window.cqOpenOtomotifModal = window.cqOpenOtomotifLayering;
 window.cqCloseOtomotifModal = window.cqCloseOtomotifLayering;
 
-// Close on Escape key
+// Keyboard navigation (Esc to close, Left/Right arrow for gallery)
 document.addEventListener('keydown', function(e) {
+    const layering = document.getElementById('cq-product-layering');
+    if (!layering || !layering.classList.contains('cq-full-layer-active')) return;
+
     if (e.key === 'Escape') {
         window.cqCloseOtomotifLayering();
+    } else if (e.key === 'ArrowLeft') {
+        window.cqGalleryPrev();
+    } else if (e.key === 'ArrowRight') {
+        window.cqGalleryNext();
     }
 });
 </script>

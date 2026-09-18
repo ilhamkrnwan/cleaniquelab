@@ -330,6 +330,77 @@ function cleaniquelab_get_default_otomotif_products() {
 }
 
 /**
+ * Daftar Galeri Foto Lengkap Kemasan Setiap Produk Otomotif
+ *
+ * @return array
+ */
+function cleaniquelab_get_otomotif_galleries() {
+    return [
+        'engine-degreaser' => [
+            ['slug' => 'lineup', 'label' => 'Lini Lengkap', 'url' => '/assets/images/otomotif/gallery/engine-degreaser/lineup.webp', 'png' => '/assets/images/otomotif/gallery/engine-degreaser/lineup.png'],
+            ['slug' => '250ml-front', 'label' => 'Botol 250ml Depan', 'url' => '/assets/images/otomotif/gallery/engine-degreaser/250ml-front.webp', 'png' => '/assets/images/otomotif/gallery/engine-degreaser/250ml-front.png'],
+            ['slug' => '250ml-back', 'label' => 'Botol 250ml Belakang', 'url' => '/assets/images/otomotif/gallery/engine-degreaser/250ml-back.webp', 'png' => '/assets/images/otomotif/gallery/engine-degreaser/250ml-back.png'],
+            ['slug' => '100ml-front', 'label' => 'Botol 100ml Depan', 'url' => '/assets/images/otomotif/gallery/engine-degreaser/100ml-front.webp', 'png' => '/assets/images/otomotif/gallery/engine-degreaser/100ml-front.png'],
+            ['slug' => '100ml-back', 'label' => 'Botol 100ml Belakang', 'url' => '/assets/images/otomotif/gallery/engine-degreaser/100ml-back.webp', 'png' => '/assets/images/otomotif/gallery/engine-degreaser/100ml-back.png'],
+            ['slug' => '1l', 'label' => 'Jerigen 1 Liter', 'url' => '/assets/images/otomotif/gallery/engine-degreaser/1l.webp', 'png' => '/assets/images/otomotif/gallery/engine-degreaser/1l.png'],
+        ],
+        'penghitam-body' => [
+            ['slug' => 'lineup', 'label' => 'Lini Lengkap', 'url' => '/assets/images/otomotif/gallery/penghitam-body/lineup.webp', 'png' => '/assets/images/otomotif/gallery/penghitam-body/lineup.png'],
+            ['slug' => '250ml-front', 'label' => 'Botol 250ml Depan', 'url' => '/assets/images/otomotif/gallery/penghitam-body/250ml-front.webp', 'png' => '/assets/images/otomotif/gallery/penghitam-body/250ml-front.png'],
+            ['slug' => '250ml-back', 'label' => 'Botol 250ml Belakang', 'url' => '/assets/images/otomotif/gallery/penghitam-body/250ml-back.webp', 'png' => '/assets/images/otomotif/gallery/penghitam-body/250ml-back.png'],
+            ['slug' => '100ml-front', 'label' => 'Botol 100ml Depan', 'url' => '/assets/images/otomotif/gallery/penghitam-body/100ml-front.webp', 'png' => '/assets/images/otomotif/gallery/penghitam-body/100ml-front.png'],
+            ['slug' => '100ml-back', 'label' => 'Botol 100ml Belakang', 'url' => '/assets/images/otomotif/gallery/penghitam-body/100ml-back.webp', 'png' => '/assets/images/otomotif/gallery/penghitam-body/100ml-back.png'],
+            ['slug' => '1l', 'label' => 'Jerigen 1 Liter', 'url' => '/assets/images/otomotif/gallery/penghitam-body/1l.webp', 'png' => '/assets/images/otomotif/gallery/penghitam-body/1l.png'],
+        ],
+        'pembersih-kaca' => [
+            ['slug' => 'lineup', 'label' => 'Lini Lengkap', 'url' => '/assets/images/otomotif/gallery/pembersih-kaca/lineup.webp', 'png' => '/assets/images/otomotif/gallery/pembersih-kaca/lineup.png'],
+            ['slug' => '250ml-front', 'label' => 'Botol 250ml Depan', 'url' => '/assets/images/otomotif/gallery/pembersih-kaca/250ml-front.webp', 'png' => '/assets/images/otomotif/gallery/pembersih-kaca/250ml-front.png'],
+            ['slug' => '250ml-back', 'label' => 'Botol 250ml Belakang', 'url' => '/assets/images/otomotif/gallery/pembersih-kaca/250ml-back.webp', 'png' => '/assets/images/otomotif/gallery/pembersih-kaca/250ml-back.png'],
+            ['slug' => '100ml-front', 'label' => 'Botol 100ml Depan', 'url' => '/assets/images/otomotif/gallery/pembersih-kaca/100ml-front.webp', 'png' => '/assets/images/otomotif/gallery/pembersih-kaca/100ml-front.png'],
+            ['slug' => '100ml-back', 'label' => 'Botol 100ml Belakang', 'url' => '/assets/images/otomotif/gallery/pembersih-kaca/100ml-back.webp', 'png' => '/assets/images/otomotif/gallery/pembersih-kaca/100ml-back.png'],
+            ['slug' => '1l', 'label' => 'Jerigen 1 Liter', 'url' => '/assets/images/otomotif/gallery/pembersih-kaca/1l.webp', 'png' => '/assets/images/otomotif/gallery/pembersih-kaca/1l.png'],
+        ],
+        'semir-ban' => [
+            ['slug' => 'lineup', 'label' => 'Lini Lengkap', 'url' => '/assets/images/otomotif/gallery/semir-ban/lineup.webp', 'png' => '/assets/images/otomotif/gallery/semir-ban/lineup.png'],
+            ['slug' => '250ml-front', 'label' => 'Botol 250ml Depan', 'url' => '/assets/images/otomotif/gallery/semir-ban/250ml-front.webp', 'png' => '/assets/images/otomotif/gallery/semir-ban/250ml-front.png'],
+            ['slug' => '250ml-back', 'label' => 'Botol 250ml Belakang', 'url' => '/assets/images/otomotif/gallery/semir-ban/250ml-back.webp', 'png' => '/assets/images/otomotif/gallery/semir-ban/250ml-back.png'],
+            ['slug' => '100ml-front', 'label' => 'Botol 100ml Depan', 'url' => '/assets/images/otomotif/gallery/semir-ban/100ml-front.webp', 'png' => '/assets/images/otomotif/gallery/semir-ban/100ml-front.png'],
+            ['slug' => '100ml-back', 'label' => 'Botol 100ml Belakang', 'url' => '/assets/images/otomotif/gallery/semir-ban/100ml-back.webp', 'png' => '/assets/images/otomotif/gallery/semir-ban/100ml-back.png'],
+            ['slug' => '1l', 'label' => 'Jerigen 1 Liter', 'url' => '/assets/images/otomotif/gallery/semir-ban/1l.webp', 'png' => '/assets/images/otomotif/gallery/semir-ban/1l.png'],
+        ],
+        'pengkilap-body' => [
+            ['slug' => 'lineup', 'label' => 'Lini Lengkap', 'url' => '/assets/images/otomotif/gallery/pengkilap-body/lineup.webp', 'png' => '/assets/images/otomotif/gallery/pengkilap-body/lineup.png'],
+            ['slug' => '250ml-front', 'label' => 'Botol 250ml Depan', 'url' => '/assets/images/otomotif/gallery/pengkilap-body/250ml-front.webp', 'png' => '/assets/images/otomotif/gallery/pengkilap-body/250ml-front.png'],
+            ['slug' => '250ml-back', 'label' => 'Botol 250ml Belakang', 'url' => '/assets/images/otomotif/gallery/pengkilap-body/250ml-back.webp', 'png' => '/assets/images/otomotif/gallery/pengkilap-body/250ml-back.png'],
+            ['slug' => '100ml-front', 'label' => 'Botol 100ml Depan', 'url' => '/assets/images/otomotif/gallery/pengkilap-body/100ml-front.webp', 'png' => '/assets/images/otomotif/gallery/pengkilap-body/100ml-front.png'],
+            ['slug' => '100ml-back', 'label' => 'Botol 100ml Belakang', 'url' => '/assets/images/otomotif/gallery/pengkilap-body/100ml-back.webp', 'png' => '/assets/images/otomotif/gallery/pengkilap-body/100ml-back.png'],
+            ['slug' => '1l', 'label' => 'Jerigen 1 Liter', 'url' => '/assets/images/otomotif/gallery/pengkilap-body/1l.webp', 'png' => '/assets/images/otomotif/gallery/pengkilap-body/1l.png'],
+        ],
+        'pembersih-interior' => [
+            ['slug' => 'lineup', 'label' => 'Lini Lengkap', 'url' => '/assets/images/otomotif/gallery/pembersih-interior/lineup.webp', 'png' => '/assets/images/otomotif/gallery/pembersih-interior/lineup.png'],
+            ['slug' => '250ml-front', 'label' => 'Botol 250ml Depan', 'url' => '/assets/images/otomotif/gallery/pembersih-interior/250ml-front.webp', 'png' => '/assets/images/otomotif/gallery/pembersih-interior/250ml-front.png'],
+            ['slug' => '250ml-back', 'label' => 'Botol 250ml Belakang', 'url' => '/assets/images/otomotif/gallery/pembersih-interior/250ml-back.webp', 'png' => '/assets/images/otomotif/gallery/pembersih-interior/250ml-back.png'],
+            ['slug' => '100ml-front', 'label' => 'Botol 100ml Depan', 'url' => '/assets/images/otomotif/gallery/pembersih-interior/100ml-front.webp', 'png' => '/assets/images/otomotif/gallery/pembersih-interior/100ml-front.png'],
+            ['slug' => '100ml-back', 'label' => 'Botol 100ml Belakang', 'url' => '/assets/images/otomotif/gallery/pembersih-interior/100ml-back.webp', 'png' => '/assets/images/otomotif/gallery/pembersih-interior/100ml-back.png'],
+            ['slug' => '1l', 'label' => 'Jerigen 1 Liter', 'url' => '/assets/images/otomotif/gallery/pembersih-interior/1l.webp', 'png' => '/assets/images/otomotif/gallery/pembersih-interior/1l.png'],
+        ],
+        'compound-body' => [
+            ['slug' => 'lineup', 'label' => 'Lini Lengkap', 'url' => '/assets/images/otomotif/gallery/compound/lineup.webp', 'png' => '/assets/images/otomotif/gallery/compound/lineup.png'],
+            ['slug' => 'detail-1', 'label' => 'Kemasan Compound', 'url' => '/assets/images/otomotif/gallery/compound/detail-1.webp', 'png' => '/assets/images/otomotif/gallery/compound/detail-1.png'],
+            ['slug' => 'detail-2', 'label' => 'Aplikasi Compound', 'url' => '/assets/images/otomotif/gallery/compound/detail-2.webp', 'png' => '/assets/images/otomotif/gallery/compound/detail-2.png'],
+        ],
+        'pengusir-tikus' => [
+            ['slug' => 'lineup', 'label' => 'Lini Lengkap', 'url' => '/assets/images/otomotif/gallery/pengusir-tikus/lineup.webp', 'png' => '/assets/images/otomotif/gallery/pengusir-tikus/lineup.png'],
+            ['slug' => '250ml-front', 'label' => 'Botol 250ml Depan', 'url' => '/assets/images/otomotif/gallery/pengusir-tikus/250ml-front.webp', 'png' => '/assets/images/otomotif/gallery/pengusir-tikus/250ml-front.png'],
+            ['slug' => '250ml-back', 'label' => 'Botol 250ml Belakang', 'url' => '/assets/images/otomotif/gallery/pengusir-tikus/250ml-back.webp', 'png' => '/assets/images/otomotif/gallery/pengusir-tikus/250ml-back.png'],
+            ['slug' => '100ml-front', 'label' => 'Botol 100ml Depan', 'url' => '/assets/images/otomotif/gallery/pengusir-tikus/100ml-front.webp', 'png' => '/assets/images/otomotif/gallery/pengusir-tikus/100ml-front.png'],
+            ['slug' => '100ml-back', 'label' => 'Botol 100ml Belakang', 'url' => '/assets/images/otomotif/gallery/pengusir-tikus/100ml-back.webp', 'png' => '/assets/images/otomotif/gallery/pengusir-tikus/100ml-back.png'],
+            ['slug' => '1l', 'label' => 'Jerigen 1 Liter', 'url' => '/assets/images/otomotif/gallery/pengusir-tikus/1l.webp', 'png' => '/assets/images/otomotif/gallery/pengusir-tikus/1l.png'],
+        ],
+    ];
+}
+
+/**
  * Mengambil Data Produk Otomotif Aktif (Database / Default Fallback)
  *
  * @return array
@@ -337,8 +408,18 @@ function cleaniquelab_get_default_otomotif_products() {
 function cleaniquelab_get_otomotif_products() {
     $products = get_option('cleaniquelab_otomotif_products');
     if (!is_array($products) || empty($products)) {
-        return cleaniquelab_get_default_otomotif_products();
+        $products = cleaniquelab_get_default_otomotif_products();
     }
+
+    // Pastikan seluruh varian foto/gambar kemasan (gallery) selalu tersedia
+    $galleries = cleaniquelab_get_otomotif_galleries();
+    foreach ($products as $id => &$p) {
+        if (empty($p['gallery']) && isset($galleries[$id])) {
+            $p['gallery'] = $galleries[$id];
+        }
+    }
+    unset($p);
+
     return $products;
 }
 
