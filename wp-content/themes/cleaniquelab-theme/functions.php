@@ -324,6 +324,11 @@ function cleaniquelab_auto_publish_pages() {
             'content'  => 'Formula biang sabun murni konsentrat tinggi hemat ongkos kirim ke seluruh 38 provinsi di Indonesia.',
             'template' => 'page-pricelist.php'
         ],
+        'otomotif' => [
+            'title'    => 'Kimia Pembersih & Perawatan Otomotif Profesional',
+            'content'  => 'Katalog lengkap kimia perawatan otomotif, sampo salju car wash, semir ban, engine degreaser, pembersih jamur kaca, dan detailing Cleanique Lab.',
+            'template' => 'page-otomotif.php'
+        ],
 
         // 2. Profil & Tentang Kami
         'tentang-kami' => [
@@ -531,4 +536,7 @@ function cleaniquelab_auto_publish_blog_posts() {
 }
 add_action('after_setup_theme', 'cleaniquelab_auto_publish_blog_posts');
 
-
+/**
+ * Modul Manajemen Admin: Katalog Produk Otomotif
+ */
+require_once get_template_directory() . '/inc/otomotif-admin.php';
